@@ -85,7 +85,7 @@
                         HorizontalAlignment="Stretch"
                         Padding="20,10"
                         HorizontalContentAlignment="Left"
-                        Cursor="Hand"/>
+                        Cursor="Hand" Click="Button_Click_2"/>
 
                 <Button Content="BÁO CÁO, THỐNG KÊ"
                         Background="Transparent"

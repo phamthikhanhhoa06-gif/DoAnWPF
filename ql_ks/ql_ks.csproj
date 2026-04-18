@@ -187,6 +187,8 @@
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\Main_BaseViewModel.cs" />
     <Compile Include="ViewModels\Main_RelayCommand.cs" />
+    <Compile Include="ViewModels\TCNhanVien_RelayCommand.cs" />
+    <Compile Include="ViewModels\TraCuuNhanVienViewModel.cs" />
     <Compile Include="Views\uc_DichVuAnUongView.xaml.cs">
       <DependentUpon>uc_DichVuAnUongView.xaml</DependentUpon>
     </Compile>
@@ -198,6 +200,12 @@
     </Compile>
     <Compile Include="Views\uc_LoginView.xaml.cs">
       <DependentUpon>uc_LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_QuanLyContainer.xaml.cs">
+      <DependentUpon>UC_QuanLyContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_TraCuuNhanVien.xaml.cs">
+      <DependentUpon>UC_TraCuuNhanVien.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UC_TrangChu.xaml.cs">
       <DependentUpon>UC_TrangChu.xaml</DependentUpon>
@@ -231,6 +239,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\uc_LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_QuanLyContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_TraCuuNhanVien.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

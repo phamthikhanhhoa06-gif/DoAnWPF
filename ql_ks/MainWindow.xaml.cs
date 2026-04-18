@@ -71,5 +71,10 @@ namespace ql_ks
         {
             MainContent.Content = new UC_DichVuDiChuyen();
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new UC_TraCuuNhanVien();
+        }
     }
 }

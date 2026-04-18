@@ -61,5 +61,15 @@ namespace ql_ks
                 this.Close();
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new UC_DichVuGiatUi();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new UC_DichVuDiChuyen();
+        }
     }
 }

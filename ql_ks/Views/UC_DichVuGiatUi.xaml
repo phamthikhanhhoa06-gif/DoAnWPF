@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="ql_ks.Views.UC_DichVuGiatUi"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ql_ks.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1200">
+
+    <Grid Margin="20" Background="#F3F5FA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Header -->
+            <RowDefinition Height="*"/>
+            <!-- Content -->
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,10,0,16">
+            <TextBlock Text="PHẦN MỄM QUẢN LÍ KHÁCH SẠN" FontSize="26" FontWeight="Bold" Foreground="#30324A"/>
+            <TextBlock Text="DỊCH VỤ GIẶT ỦI" FontSize="16" Foreground="#6B7280" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+        </StackPanel>
+
+        <!-- CONTENT -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="450"/>
+                <!-- Trái: Form nhập -->
+                <ColumnDefinition Width="15"/>
+                <ColumnDefinition Width="*"/>
+                <!-- Phải: Danh sách -->
+            </Grid.ColumnDefinitions>
+
+            <!-- TRÁI: FORM NHẬP LIỆU -->
+            <Border Grid.Column="0" Background="White" CornerRadius="12" BorderBrush="#E5E7EB" BorderThickness="1" Padding="20">
+
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel>
+                        <!-- Phòng -->
+                        <TextBlock Text="1. Phòng" FontWeight="Bold" Foreground="#374151" Margin="0,0,0,8"/>
+                        <ComboBox ItemsSource="{Binding DanhSachPhong}" 
+                                  SelectedValue="{Binding MaPhong}"
+                                  DisplayMemberPath="HienThi"
+                                  SelectedValuePath="MaPhong"
+                                  Height="36"
+                                  Padding="10,0"
+                                  Background="#F9FAFB"
+                                  BorderBrush="#CBD5E1"/>
+
+                        <!-- Loại giặt ủi -->
+                        <TextBlock Text="2. Loại giặt ủi" FontWeight="Bold" Foreground="#374151" Margin="0,18,0,8"/>
+                        <ComboBox ItemsSource="{Binding DanhSachLoaiGiGui}" 
+                                  SelectedItem="{Binding SelectedLoaiGiGui}"
+                                  DisplayMemberPath="Ten_LoaiGU"
+                                  Height="36"
+                                  Padding="10,0"
+                                  Background="#F9FAFB"
+                                  BorderBrush="#CBD5E1"/>
+
+                        <!-- Cân nặng -->
+                        <TextBlock Text="3. Cân nặng (kg)" FontWeight="Bold" Foreground="#374151" Margin="0,18,0,8"/>
+                        <TextBox Text="{Binding SoCanNang, UpdateSourceTrigger=PropertyChanged}" 
+                                 Height="36" Padding="12,0" Background="#F9FAFB" BorderBrush="#CBD5E1" BorderThickness="1"/>
+
+                        <!-- Ngày bắt đầu -->
+                        <TextBlock Text="4. Ngày bắt đầu" FontWeight="Bold" Foreground="#374151" Margin="0,18,0,8"/>
+                        <DatePicker SelectedDate="{Binding NgayBatDau}" Height="36" Padding="12,0" Background="#F9FAFB" BorderBrush="#CBD5E1"/>
+
+                        <!-- Ngày kết thúc -->
+                        <TextBlock Text="5. Ngày kết thúc" FontWeight="Bold" Foreground="#374151" Margin="0,18,0,8"/>
+                        <DatePicker SelectedDate="{Binding NgayKetThuc}" Height="36" Padding="12,0" Background="#F9FAFB" BorderBrush="#CBD5E1"/>
+
+                        <!-- Tổng tiềnPreview -->
+                        <TextBlock Margin="0,22,0,8">
+                            <Run Text="Tạm tính: " FontWeight="Bold" Foreground="#555"/>
+                            <Run Text="{Binding TongTien, StringFormat={}{0:N0}}" FontWeight="Bold" Foreground="Red"/>
+                            <Run Text=" ₫"/>
+                        </TextBlock>
+
+                        <!-- Các nút chức năng -->
+                        <Button Content="➕ Thêm vào giỏ" Command="{Binding ThemVaoGioCommand}" Background="#3498DB" Foreground="White" Height="40" Margin="0,10,0,0" BorderThickness="0" FontWeight="Bold" Cursor="Hand"/>
+
+                        <Button Content="🧾 Hóa đơn giặt ủi" Command="{Binding LapHoaDonCommand}" Background="#2C3E50" Foreground="White" Height="40" Margin="0,8,0,0" BorderThickness="0" FontWeight="Bold" Cursor="Hand"/>
+
+                        <Button Content="🔄 Làm mới" Command="{Binding LamMoiCommand}" Background="#95A5A6" Foreground="White" Height="40" Margin="0,8,0,0" BorderThickness="0" Cursor="Hand"/>
+
+                        <!-- Thông báo -->
+                        <TextBlock Text="{Binding ThongBao}" Foreground="Red" FontSize="13" Margin="0,14,0,0" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+
+            <!-- PHẢI: DANH SÁCH ĐÃ CHỌN -->
+            <Border Grid.Column="2" Background="White" CornerRadius="12" BorderBrush="#E5E7EB" BorderThickness="1" Padding="16">
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Top" Text="TRANG TINH DON GIẶT ỦI" FontSize="16" FontWeight="Bold" Foreground="#111827" Margin="0,0,0,14"/>
+
+                    <DataGrid ItemsSource="{Binding DanhSachDaChon}" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" GridLinesVisibility="Horizontal" RowHeight="32">
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Tên loại giặt ủi" Binding="{Binding Ten_LoaiGU}" Width="*"/>
+                            <DataGridTextColumn Header="Số lượng (kg)" Binding="{Binding SoCanNang}" Width="100"/>
+                            <DataGridTextColumn Header="Đơn giá (₫)" Binding="{Binding DonGia_LoaiGUI, StringFormat={}{0:N0}}" Width="110"/>
+                            <DataGridTextColumn Header="Thành tiền (₫)" Binding="{Binding ThanhTien, StringFormat={}{0:N0}}" Width="120" FontWeight="Bold"/>
+
+                            <DataGridTemplateColumn Header="Xóa" Width="60">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="-" 
+                                                Command="{Binding DataContext.XoaKhoiGioCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                                CommandParameter="{Binding}"
+                                                Background="#E74C3C" Foreground="White" Height="28" Width="28" 
+                                                BorderThickness="0" FontWeight="Bold" Cursor="Hand"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

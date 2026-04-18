@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="ql_ks.Views.UC_DichVuDiChuyen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ql_ks.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1200">
+
+    <Grid Margin="20" Background="#F3F5FA">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Header -->
+            <RowDefinition Height="*"/>
+            <!-- Content -->
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,10,0,16">
+            <TextBlock Text="PHẦN MỄM QUẢN LÍ KHÁCH SẠN" FontSize="26" FontWeight="Bold" Foreground="#30324A"/>
+            <TextBlock Text="DỊCH VỤ DI CHUYỂN" FontSize="16" Foreground="#6B7280" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+        </StackPanel>
+
+        <!-- CONTENT -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="450"/>
+                <!-- Trái -->
+                <ColumnDefinition Width="15"/>
+                <ColumnDefinition Width="*"/>
+                <!-- Phải -->
+            </Grid.ColumnDefinitions>
+
+            <!-- TRÁI: FORM NHẬP LIỆU -->
+            <Border Grid.Column="0" Background="White" CornerRadius="12" BorderBrush="#E5E7EB" BorderThickness="1" Padding="20">
+                <StackPanel>
+                    <!-- O. Phòng -->
+                    <TextBlock Text="O. Phòng" FontWeight="Bold" Foreground="#374151" Margin="0,0,0,8"/>
+                    <ComboBox ItemsSource="{Binding DanhSachPhong}" 
+                              SelectedValue="{Binding MaPhong}"
+                              DisplayMemberPath="HienThi"
+                              SelectedValuePath="MaPhong"
+                              Height="36"
+                              Padding="10,0"
+                              Background="#F9FAFB"
+                              BorderBrush="#CBD5E1"/>
+
+                    <!-- O. Điểm đến (Dịch vụ Di chuyển) -->
+                    <TextBlock Text="O. Điểm đến" FontWeight="Bold" Foreground="#374151" Margin="0,18,0,8"/>
+                    <ComboBox ItemsSource="{Binding DanhSachDiemDen}" 
+                              SelectedItem="{Binding SelectedDiemDen}"
+                              DisplayMemberPath="DiemDen_CD"
+                              Height="36"
+                              Padding="10,0"
+                              Background="#F9FAFB"
+                              BorderBrush="#CBD5E1"/>
+
+                    <!-- Hiển thị giá của điểm đến -->
+                    <TextBlock Text="{Binding ThongBao}" Foreground="#666" FontSize="13" Margin="0,12,0,0" TextWrapping="Wrap"/>
+
+                    <!-- Tổng tiền -->
+                    <TextBlock Margin="0,22,0,8">
+                        <Run Text="Tạm tính tổng: " FontWeight="Bold" Foreground="#555"/>
+                        <Run Text="{Binding TongTien, StringFormat={}{0:N0}}" FontWeight="Bold" Foreground="Red"/>
+                        <Run Text=" ₫"/>
+                    </TextBlock>
+
+                    <!-- Các nút -->
+                    <Button Content="➕ Tạo đơn chuyển" Command="{Binding ThemDonCommand}" Background="#3498DB" Foreground="White" Height="40" Margin="0,14,0,0" BorderThickness="0" FontWeight="Bold" Cursor="Hand"/>
+
+                    <Button Content="🧾 Lập hóa đơn di chuyển" Command="{Binding LapHoaDonCommand}" Background="#2C3E50" Foreground="White" Height="40" Margin="0,8,0,0" BorderThickness="0" FontWeight="Bold" Cursor="Hand"/>
+
+                    <Button Content="🔄 Làm mới" Command="{Binding LamMoiCommand}" Background="#95A5A6" Foreground="White" Height="40" Margin="0,8,0,0" BorderThickness="0" Cursor="Hand"/>
+                </StackPanel>
+            </Border>
+
+            <!-- PHẢI: DANH SÁCH ĐƠN TẠO RA -->
+            <Border Grid.Column="2" Background="White" CornerRadius="12" BorderBrush="#E5E7EB" BorderThickness="1" Padding="16">
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Top" Text="TRANG TIN ĐƠN DI CHUYỂN" FontSize="16" FontWeight="Bold" Foreground="#111827" Margin="0,0,0,14"/>
+
+                    <DataGrid ItemsSource="{Binding DanhSachDon}" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" GridLinesVisibility="Horizontal" RowHeight="34">
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Phòng" Binding="{Binding MaPhong}" Width="70"/>
+                            <DataGridTextColumn Header="Điểm đến" Binding="{Binding DiemDen_CD}" Width="*"/>
+                            <DataGridTextColumn Header="Số lượng" Binding="{Binding SoLuong}" Width="80"/>
+                            <DataGridTextColumn Header="Đơn giá (₫)" Binding="{Binding DonGia_CD, StringFormat={}{0:N0}}" Width="110"/>
+                            <DataGridTextColumn Header="Thành tiền (₫)" Binding="{Binding ThanhTien, StringFormat={}{0:N0}}" Width="120" FontWeight="Bold"/>
+                            <DataGridTextColumn Header="Trạng thái" Binding="{Binding TrangThai}" Width="100"/>
+
+                            <DataGridTemplateColumn Header="Xóa" Width="60">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="-" 
+                                                Click="BtnXoa_Click" Tag="{Binding}"
+                                                Background="#E74C3C" Foreground="White" Height="28" Width="28" 
+                                                BorderThickness="0" FontWeight="Bold" Cursor="Hand"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,109 +1,154 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\KtraMauCN.net\\ql_ks\\",
+  "WorkspaceRootPath": "D:\\CN.Net\\ql_ks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\KtraMauCN.net\\ql_ks\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\ktramaucn.net\\ql_ks\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\ktramaucn.net\\ql_ks\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\LoginWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:LoginWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\KtraMauCN.net\\ql_ks\\views\\uc_loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\views\\uc_dichvudichuyen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvudichuyen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\KtraMauCN.net\\ql_ks\\views\\uc_loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\views\\uc_dichvugiatui.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvugiatui.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\ktramaucn.net\\ql_ks\\views\\uc_trangchu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\viewmodels\\dichvudichuyenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\dichvudichuyenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\views\\uc_dichvudichuyen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvudichuyen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\Models\\QLKhachSan_Model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:Models\\QLKhachSan_Model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\DichVuAnUongViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\DichVuAnUongViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\models\\chitiet_hddc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:models\\chitiet_hddc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\viewmodels\\dichuyen_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\dichuyen_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\views\\uc_dichvugiatui.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvugiatui.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\viewmodels\\dichvugiatuiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\dichvugiatuiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\viewmodels\\giatui_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\giatui_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\models\\chuyendi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:models\\chuyendi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\LoginWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:LoginWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\Views\\uc_DichVuAnUongView.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:Views\\uc_DichVuAnUongView.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\Views\\uc_DichVuAnUongView.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:Views\\uc_DichVuAnUongView.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\models\\loaigiatui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:models\\loaigiatui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\Models\\LUOTGIATUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:Models\\LUOTGIATUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\views\\uc_trangchu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_trangchu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\ktramaucn.net\\ql_ks\\views\\uc_trangchu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_trangchu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\Views\\UC_TrangChu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:Views\\UC_TrangChu.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\KtraMauCN.net\\ql_ks\\models\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:models\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_RelayCommand_T.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\AnUong_RelayCommand_T.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\KtraMauCN.net\\ql_ks\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_RelayCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\AnUong_RelayCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\KtraMauCN.net\\ql_ks\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_BaseViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\AnUong_BaseViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\KtraMauCN.net\\ql_ks\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_HelperViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\AnUong_HelperViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\ktramaucn.net\\ql_ks\\views\\uc_dichvuanuongview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvuanuongview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\Main_BaseViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\Main_BaseViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\ktramaucn.net\\ql_ks\\views\\uc_dichvuanuongview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvuanuongview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\Main_RelayCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\Main_RelayCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\ktramaucn.net\\ql_ks\\viewmodels\\dichvuanuongviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\dichvuanuongviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\MainViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\MainViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\ktramaucn.net\\ql_ks\\viewmodels\\anuong_baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\anuong_baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\ktramaucn.net\\ql_ks\\viewmodels\\anuong_relaycommand_t.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\anuong_relaycommand_t.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\Views\\uc_LoginView.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:Views\\uc_LoginView.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\ktramaucn.net\\ql_ks\\viewmodels\\anuong_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\anuong_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\Views\\uc_LoginView.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:Views\\uc_LoginView.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\ktramaucn.net\\ql_ks\\viewmodels\\anuong_helperviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\anuong_helperviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\Login_CurrentSession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\Login_CurrentSession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\KtraMauCN.net\\ql_ks\\viewmodels\\main_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\main_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\Login_RelayCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\Login_RelayCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\KtraMauCN.net\\ql_ks\\viewmodels\\main_baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\main_baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\LoginViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\LoginViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\KtraMauCN.net\\ql_ks\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\KtraMauCN.net\\ql_ks\\viewmodels\\login_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\login_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\KtraMauCN.net\\ql_ks\\viewmodels\\login_currentsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\login_currentsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\KtraMauCN.net\\ql_ks\\models\\qlkhachsan_model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:models\\qlkhachsan_model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\KtraMauCN.net\\ql_ks\\models\\luotgiatui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:models\\luotgiatui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|ql_ks||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\Models\\TAIKHOAN.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:Models\\TAIKHOAN.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -113,32 +158,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 25,
+          "SelectedChildIndex": 37,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 19,
               "Title": "LUOTGIATUI.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\Models\\LUOTGIATUI.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Models\\LUOTGIATUI.cs",
               "RelativeDocumentMoniker": "Models\\LUOTGIATUI.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\Models\\LUOTGIATUI.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Models\\LUOTGIATUI.cs",
               "RelativeToolTip": "Models\\LUOTGIATUI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-13T14:21:40.475Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginWindow.xaml.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\LoginWindow.xaml.cs",
-              "RelativeDocumentMoniker": "LoginWindow.xaml.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\LoginWindow.xaml.cs",
-              "RelativeToolTip": "LoginWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "UC_DichVuDiChuyen.xaml.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\UC_DichVuDiChuyen.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\UC_DichVuDiChuyen.xaml.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\UC_DichVuDiChuyen.xaml.cs*",
+              "RelativeToolTip": "Views\\UC_DichVuDiChuyen.xaml.cs*",
+              "ViewState": "AgIAABEAAAAAAAAAAAAvwCUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T16:05:01.522Z",
+              "WhenOpened": "2026-04-18T08:19:29.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UC_DichVuDiChuyen.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\UC_DichVuDiChuyen.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_DichVuDiChuyen.xaml",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\UC_DichVuDiChuyen.xaml*",
+              "RelativeToolTip": "Views\\UC_DichVuDiChuyen.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-18T08:19:01.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CHITIET_HDDC.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Models\\CHITIET_HDDC.cs",
+              "RelativeDocumentMoniker": "Models\\CHITIET_HDDC.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Models\\CHITIET_HDDC.cs",
+              "RelativeToolTip": "Models\\CHITIET_HDDC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T08:14:26.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DiChuyen_RelayCommand.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\DiChuyen_RelayCommand.cs",
+              "RelativeDocumentMoniker": "ViewModels\\DiChuyen_RelayCommand.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\DiChuyen_RelayCommand.cs*",
+              "RelativeToolTip": "ViewModels\\DiChuyen_RelayCommand.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T08:11:43.534Z",
               "EditorCaption": ""
             },
             {
@@ -147,36 +231,114 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\LoginWindow.xaml",
-              "RelativeDocumentMoniker": "LoginWindow.xaml",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\LoginWindow.xaml",
-              "RelativeToolTip": "LoginWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-16T16:04:29.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UC_TrangChu.xaml.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\Views\\UC_TrangChu.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\UC_TrangChu.xaml.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\Views\\UC_TrangChu.xaml.cs",
-              "RelativeToolTip": "Views\\UC_TrangChu.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAiwBkAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T15:57:34.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "DichVuDiChuyenViewModel.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\DichVuDiChuyenViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\DichVuDiChuyenViewModel.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\DichVuDiChuyenViewModel.cs*",
+              "RelativeToolTip": "ViewModels\\DichVuDiChuyenViewModel.cs*",
+              "ViewState": "AgIAALsAAAAAAAAAAAAMwM4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T08:04:26.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CHUYENDI.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Models\\CHUYENDI.cs",
+              "RelativeDocumentMoniker": "Models\\CHUYENDI.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Models\\CHUYENDI.cs",
+              "RelativeToolTip": "Models\\CHUYENDI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T07:58:51.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UC_DichVuGiatUi.xaml.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\UC_DichVuGiatUi.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\UC_DichVuGiatUi.xaml.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\UC_DichVuGiatUi.xaml.cs",
+              "RelativeToolTip": "Views\\UC_DichVuGiatUi.xaml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAiwCkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T07:34:30.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UC_DichVuGiatUi.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\UC_DichVuGiatUi.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_DichVuGiatUi.xaml",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\UC_DichVuGiatUi.xaml",
+              "RelativeToolTip": "Views\\UC_DichVuGiatUi.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-18T07:32:18.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GiatUi_RelayCommand.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\GiatUi_RelayCommand.cs",
+              "RelativeDocumentMoniker": "ViewModels\\GiatUi_RelayCommand.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\GiatUi_RelayCommand.cs",
+              "RelativeToolTip": "ViewModels\\GiatUi_RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T07:25:02.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DichVuGiatUiViewModel.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\DichVuGiatUiViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\DichVuGiatUiViewModel.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\DichVuGiatUiViewModel.cs",
+              "RelativeToolTip": "ViewModels\\DichVuGiatUiViewModel.cs",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAkwBAAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T07:22:03.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LOAIGIATUI.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Models\\LOAIGIATUI.cs",
+              "RelativeDocumentMoniker": "Models\\LOAIGIATUI.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Models\\LOAIGIATUI.cs",
+              "RelativeToolTip": "Models\\LOAIGIATUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T07:09:11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-04-18T06:07:15.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "UC_TrangChu.xaml",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\Views\\UC_TrangChu.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\UC_TrangChu.xaml",
               "RelativeDocumentMoniker": "Views\\UC_TrangChu.xaml",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\Views\\UC_TrangChu.xaml",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\UC_TrangChu.xaml",
               "RelativeToolTip": "Views\\UC_TrangChu.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-04-16T15:54:30.22Z",
@@ -184,11 +346,48 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 2,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "LoginWindow.xaml.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "LoginWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T16:05:01.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "LoginWindow.xaml",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\LoginWindow.xaml",
+              "RelativeToolTip": "LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-16T16:04:29.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UC_TrangChu.xaml.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\UC_TrangChu.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\UC_TrangChu.xaml.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\UC_TrangChu.xaml.cs",
+              "RelativeToolTip": "Views\\UC_TrangChu.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAiwBkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T15:57:34.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "uc_DichVuAnUongView.xaml.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\Views\\uc_DichVuAnUongView.xaml.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\uc_DichVuAnUongView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\uc_DichVuAnUongView.xaml.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\Views\\uc_DichVuAnUongView.xaml.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\uc_DichVuAnUongView.xaml.cs",
               "RelativeToolTip": "Views\\uc_DichVuAnUongView.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -197,11 +396,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "uc_DichVuAnUongView.xaml",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\Views\\uc_DichVuAnUongView.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\uc_DichVuAnUongView.xaml",
               "RelativeDocumentMoniker": "Views\\uc_DichVuAnUongView.xaml",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\Views\\uc_DichVuAnUongView.xaml",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\uc_DichVuAnUongView.xaml",
               "RelativeToolTip": "Views\\uc_DichVuAnUongView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-04-16T15:22:19.473Z",
@@ -209,76 +408,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "AnUong_RelayCommand_T.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\AnUong_RelayCommand_T.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_RelayCommand_T.cs",
               "RelativeDocumentMoniker": "ViewModels\\AnUong_RelayCommand_T.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\AnUong_RelayCommand_T.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_RelayCommand_T.cs",
               "RelativeToolTip": "ViewModels\\AnUong_RelayCommand_T.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAcwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T15:15:43.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T15:15:43.594Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 24,
               "Title": "AnUong_RelayCommand.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\AnUong_RelayCommand.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_RelayCommand.cs",
               "RelativeDocumentMoniker": "ViewModels\\AnUong_RelayCommand.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\AnUong_RelayCommand.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_RelayCommand.cs",
               "RelativeToolTip": "ViewModels\\AnUong_RelayCommand.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAUwCMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T15:13:48.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T15:13:48.431Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 25,
               "Title": "AnUong_BaseViewModel.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\AnUong_BaseViewModel.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_BaseViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\AnUong_BaseViewModel.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\AnUong_BaseViewModel.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_BaseViewModel.cs",
               "RelativeToolTip": "ViewModels\\AnUong_BaseViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T15:12:52.523Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T15:12:52.523Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 8,
               "Title": "DichVuAnUongViewModel.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\DichVuAnUongViewModel.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\DichVuAnUongViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\DichVuAnUongViewModel.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\DichVuAnUongViewModel.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\DichVuAnUongViewModel.cs",
               "RelativeToolTip": "ViewModels\\DichVuAnUongViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAkwFMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-16T15:06:20.62Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 26,
               "Title": "AnUong_HelperViewModel.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\AnUong_HelperViewModel.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_HelperViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\AnUong_HelperViewModel.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\AnUong_HelperViewModel.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_HelperViewModel.cs",
               "RelativeToolTip": "ViewModels\\AnUong_HelperViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T11:25:23.971Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-14T11:25:23.971Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 27,
               "Title": "Main_BaseViewModel.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\Main_BaseViewModel.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\Main_BaseViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\Main_BaseViewModel.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\Main_BaseViewModel.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\Main_BaseViewModel.cs",
               "RelativeToolTip": "ViewModels\\Main_BaseViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -286,11 +481,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 28,
               "Title": "Main_RelayCommand.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\Main_RelayCommand.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\Main_RelayCommand.cs",
               "RelativeDocumentMoniker": "ViewModels\\Main_RelayCommand.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\Main_RelayCommand.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\Main_RelayCommand.cs",
               "RelativeToolTip": "ViewModels\\Main_RelayCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -298,24 +493,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 29,
               "Title": "MainViewModel.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\MainViewModel.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\MainViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\MainViewModel.cs",
               "RelativeToolTip": "ViewModels\\MainViewModel.cs",
               "ViewState": "AgIAAIMAAAAAAAAAAAAhwKAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-13T15:36:06.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-13T15:36:06.214Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 30,
               "Title": "App.xaml",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\App.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\App.xaml",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-04-13T15:14:51.352Z",
@@ -323,24 +517,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 31,
               "Title": "uc_LoginView.xaml.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\Views\\uc_LoginView.xaml.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\uc_LoginView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\uc_LoginView.xaml.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\Views\\uc_LoginView.xaml.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\uc_LoginView.xaml.cs",
               "RelativeToolTip": "Views\\uc_LoginView.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-13T14:45:41.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-13T14:45:41.491Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 32,
               "Title": "uc_LoginView.xaml",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\Views\\uc_LoginView.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\uc_LoginView.xaml",
               "RelativeDocumentMoniker": "Views\\uc_LoginView.xaml",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\Views\\uc_LoginView.xaml",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\uc_LoginView.xaml",
               "RelativeToolTip": "Views\\uc_LoginView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-04-13T14:43:35.255Z",
@@ -348,11 +541,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 33,
               "Title": "Login_CurrentSession.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\Login_CurrentSession.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\Login_CurrentSession.cs",
               "RelativeDocumentMoniker": "ViewModels\\Login_CurrentSession.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\Login_CurrentSession.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\Login_CurrentSession.cs",
               "RelativeToolTip": "ViewModels\\Login_CurrentSession.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -360,11 +553,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 34,
               "Title": "Login_RelayCommand.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\Login_RelayCommand.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\Login_RelayCommand.cs",
               "RelativeDocumentMoniker": "ViewModels\\Login_RelayCommand.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\Login_RelayCommand.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\Login_RelayCommand.cs",
               "RelativeToolTip": "ViewModels\\Login_RelayCommand.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAuwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -372,11 +565,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 35,
               "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\LoginViewModel.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\LoginViewModel.cs",
               "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAIwFwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -384,47 +577,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 36,
               "Title": "TAIKHOAN.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\Models\\TAIKHOAN.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Models\\TAIKHOAN.cs",
               "RelativeDocumentMoniker": "Models\\TAIKHOAN.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\Models\\TAIKHOAN.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Models\\TAIKHOAN.cs",
               "RelativeToolTip": "Models\\TAIKHOAN.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-13T14:12:51.807Z",
+              "WhenOpened": "2026-04-13T14:12:51.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "QLKhachSan_Model.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Models\\QLKhachSan_Model.cs",
+              "RelativeDocumentMoniker": "Models\\QLKhachSan_Model.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Models\\QLKhachSan_Model.cs",
+              "RelativeToolTip": "Models\\QLKhachSan_Model.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T14:11:55.522Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "QLKhachSan_Model.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\Models\\QLKhachSan_Model.cs",
-              "RelativeDocumentMoniker": "Models\\QLKhachSan_Model.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\Models\\QLKhachSan_Model.cs",
-              "RelativeToolTip": "Models\\QLKhachSan_Model.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAgwG8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-13T14:11:55.522Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ql_ks",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\ql_ks.csproj",
-              "RelativeDocumentMoniker": "ql_ks.csproj",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\ql_ks.csproj",
-              "RelativeToolTip": "ql_ks.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-04-13T13:00:11.367Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\MainWindow.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\MainWindow.xaml*",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\MainWindow.xaml*",
               "RelativeToolTip": "MainWindow.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-04-13T12:39:06.008Z",
@@ -432,13 +614,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\KtraMauCN.net\\ql_ks\\MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "D:\\KtraMauCN.net\\ql_ks\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAA8wEEAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "MainWindow.xaml.cs*",
+              "ViewState": "AgIAADUAAAAAAAAAAAAvwEcAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-13T12:39:05.304Z",
               "EditorCaption": ""

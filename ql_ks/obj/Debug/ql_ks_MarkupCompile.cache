@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\KtraMauCN.net\ql_ks\obj\Debug\
+D:\CN.Net\ql_ks\obj\Debug\
 ql_ks
 none
 false
 DEBUG;TRACE
-D:\KtraMauCN.net\ql_ks\App.xaml
-5569831079
+D:\CN.Net\ql_ks\App.xaml
+7-288082633
 
-37-1209206896
-53-1638182297
-LoginWindow.xaml;MainWindow.xaml;Views\uc_DichVuAnUongView.xaml;Views\uc_LoginView.xaml;Views\UC_TrangChu.xaml;
+43667776688
+531726011434
+LoginWindow.xaml;MainWindow.xaml;Views\uc_DichVuAnUongView.xaml;Views\UC_DichVuDiChuyen.xaml;Views\UC_DichVuGiatUi.xaml;Views\uc_LoginView.xaml;Views\UC_TrangChu.xaml;
 
 False
 

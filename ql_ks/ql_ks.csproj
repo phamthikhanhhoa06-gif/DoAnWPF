@@ -176,7 +176,11 @@
     <Compile Include="ViewModels\AnUong_HelperViewModel.cs" />
     <Compile Include="ViewModels\AnUong_RelayCommand.cs" />
     <Compile Include="ViewModels\AnUong_RelayCommand_T.cs" />
+    <Compile Include="ViewModels\DiChuyen_RelayCommand.cs" />
     <Compile Include="ViewModels\DichVuAnUongViewModel.cs" />
+    <Compile Include="ViewModels\DichVuDiChuyenViewModel.cs" />
+    <Compile Include="ViewModels\DichVuGiatUiViewModel.cs" />
+    <Compile Include="ViewModels\GiatUi_RelayCommand.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\Login_CurrentSession.cs" />
     <Compile Include="ViewModels\Login_RelayCommand.cs" />
@@ -185,6 +189,12 @@
     <Compile Include="ViewModels\Main_RelayCommand.cs" />
     <Compile Include="Views\uc_DichVuAnUongView.xaml.cs">
       <DependentUpon>uc_DichVuAnUongView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_DichVuDiChuyen.xaml.cs">
+      <DependentUpon>UC_DichVuDiChuyen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_DichVuGiatUi.xaml.cs">
+      <DependentUpon>UC_DichVuGiatUi.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\uc_LoginView.xaml.cs">
       <DependentUpon>uc_LoginView.xaml</DependentUpon>
@@ -209,6 +219,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\uc_DichVuAnUongView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_DichVuDiChuyen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_DichVuGiatUi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

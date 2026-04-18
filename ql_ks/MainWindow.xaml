@@ -65,7 +65,7 @@
                         HorizontalAlignment="Stretch"
                         Padding="20,10"
                         HorizontalContentAlignment="Left"
-                        Cursor="Hand"/>
+                        Cursor="Hand"  Click="Button_Click"/>
 
                 <Button Content="DỊCH VỤ DI CHUYỂN"
                         Background="Transparent"
@@ -75,7 +75,7 @@
                         HorizontalAlignment="Stretch"
                         Padding="20,10"
                         HorizontalContentAlignment="Left"
-                        Cursor="Hand"/>
+                        Cursor="Hand" Click="Button_Click_1"/>
 
                 <Button Content="TRA CỨU QUẢN LÝ"
                         Background="Transparent"
@@ -108,12 +108,8 @@
                         Cursor="Hand"/>
 
                 <StackPanel Margin="20" VerticalAlignment="Bottom">
-                    <TextBlock Text="Võ Ngọc Phong"
-                               FontSize="12"
-                               Foreground="#95a5a6"/>
-                    <TextBlock Text="Quản lý"
-                               FontSize="12"
-                               Foreground="#7f8c8d"/>
+                 
+                 
 
                     <Button Content="Đăng xuất"
                             Click="BtnLogout_Click"

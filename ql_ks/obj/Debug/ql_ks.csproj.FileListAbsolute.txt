@@ -208,3 +208,5 @@ D:\CN.Net\ql_ks\obj\Debug\Views\UC_DichVuGiatUi.g.cs
 D:\CN.Net\ql_ks\obj\Debug\Views\UC_DichVuGiatUi.baml
 D:\CN.Net\ql_ks\obj\Debug\Views\UC_DichVuDiChuyen.g.cs
 D:\CN.Net\ql_ks\obj\Debug\Views\UC_DichVuDiChuyen.baml
+D:\CN.Net\ql_ks\obj\Debug\Views\UC_TraCuuNhanVien.g.cs
+D:\CN.Net\ql_ks\obj\Debug\Views\UC_TraCuuNhanVien.baml

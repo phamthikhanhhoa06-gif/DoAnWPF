@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "D:\\CN.Net\\ql_ks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_BaseViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\AnUong_BaseViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\views\\uc_tracuunhanvien.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_tracuunhanvien.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\views\\uc_tracuunhanvien.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_tracuunhanvien.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\views\\uc_quanlycontainer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_quanlycontainer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\viewmodels\\tracuunhanvienviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\tracuunhanvienviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\viewmodels\\tcnhanvien_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\tcnhanvien_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -19,51 +31,67 @@
       "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:LoginWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\views\\uc_dichvudichuyen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvudichuyen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\views\\uc_dichvugiatui.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvugiatui.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\viewmodels\\dichvudichuyenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\dichvudichuyenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\views\\uc_dichvudichuyen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvudichuyen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\Models\\QLKhachSan_Model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:Models\\QLKhachSan_Model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\viewmodels\\anuong_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\anuong_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_HelperViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\AnUong_HelperViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\viewmodels\\giatui_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\giatui_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\viewmodels\\dichvudichuyenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\dichvudichuyenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\viewmodels\\anuong_baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\anuong_baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\views\\uc_dichvudichuyen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvudichuyen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\views\\uc_dichvugiatui.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvugiatui.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\views\\uc_dichvudichuyen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvudichuyen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\DichVuAnUongViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\DichVuAnUongViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\models\\chitiet_hddc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\models\\chitiet_hddc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:models\\chitiet_hddc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\viewmodels\\dichuyen_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\viewmodels\\dichuyen_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\dichuyen_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\views\\uc_dichvugiatui.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\views\\uc_dichvugiatui.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvugiatui.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\viewmodels\\dichvugiatuiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\viewmodels\\dichvugiatuiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\dichvugiatuiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\viewmodels\\giatui_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\giatui_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\models\\chuyendi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\models\\chuyendi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:models\\chuyendi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -79,7 +107,7 @@
       "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:Views\\uc_DichVuAnUongView.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\models\\loaigiatui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\models\\loaigiatui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:models\\loaigiatui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -87,11 +115,11 @@
       "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:Models\\LUOTGIATUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\ql_ks\\views\\uc_trangchu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\views\\uc_trangchu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_trangchu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -101,14 +129,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_RelayCommand_T.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\AnUong_RelayCommand_T.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_RelayCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\AnUong_RelayCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_HelperViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:ViewModels\\AnUong_HelperViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\ql_ks\\ViewModels\\Main_BaseViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -158,11 +178,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 22,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "LUOTGIATUI.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Models\\LUOTGIATUI.cs",
               "RelativeDocumentMoniker": "Models\\LUOTGIATUI.cs",
@@ -171,7 +191,18 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-13T14:21:40.475Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UC_QuanLyContainer.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\UC_QuanLyContainer.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_QuanLyContainer.xaml",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\UC_QuanLyContainer.xaml",
+              "RelativeToolTip": "Views\\UC_QuanLyContainer.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-18T10:48:19.994Z",
               "EditorCaption": ""
             },
             {
@@ -180,7 +211,83 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UC_TraCuuNhanVien.xaml.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\UC_TraCuuNhanVien.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\UC_TraCuuNhanVien.xaml.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\UC_TraCuuNhanVien.xaml.cs",
+              "RelativeToolTip": "Views\\UC_TraCuuNhanVien.xaml.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAwwC4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T10:45:19.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UC_TraCuuNhanVien.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\UC_TraCuuNhanVien.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_TraCuuNhanVien.xaml",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\UC_TraCuuNhanVien.xaml",
+              "RelativeToolTip": "Views\\UC_TraCuuNhanVien.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-18T10:44:14.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "TCNhanVien_RelayCommand.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\TCNhanVien_RelayCommand.cs",
+              "RelativeDocumentMoniker": "ViewModels\\TCNhanVien_RelayCommand.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\TCNhanVien_RelayCommand.cs",
+              "RelativeToolTip": "ViewModels\\TCNhanVien_RelayCommand.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAswEcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T10:41:21.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TraCuuNhanVienViewModel.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\TraCuuNhanVienViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\TraCuuNhanVienViewModel.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\TraCuuNhanVienViewModel.cs",
+              "RelativeToolTip": "ViewModels\\TraCuuNhanVienViewModel.cs",
+              "ViewState": "AgIAABkBAAAAAAAAAAAkwDIBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T10:40:20.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AnUong_RelayCommand.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_RelayCommand.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AnUong_RelayCommand.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_RelayCommand.cs",
+              "RelativeToolTip": "ViewModels\\AnUong_RelayCommand.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T15:13:48.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AnUong_BaseViewModel.cs",
+              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_BaseViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AnUong_BaseViewModel.cs",
+              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_BaseViewModel.cs",
+              "RelativeToolTip": "ViewModels\\AnUong_BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T15:12:52.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "UC_DichVuDiChuyen.xaml.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\UC_DichVuDiChuyen.xaml.cs",
               "RelativeDocumentMoniker": "Views\\UC_DichVuDiChuyen.xaml.cs",
@@ -188,24 +295,22 @@
               "RelativeToolTip": "Views\\UC_DichVuDiChuyen.xaml.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAvwCUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T08:19:29.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T08:19:29.469Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "UC_DichVuDiChuyen.xaml",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\UC_DichVuDiChuyen.xaml",
               "RelativeDocumentMoniker": "Views\\UC_DichVuDiChuyen.xaml",
               "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\UC_DichVuDiChuyen.xaml",
               "RelativeToolTip": "Views\\UC_DichVuDiChuyen.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-18T08:19:01.668Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T08:19:01.668Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "CHITIET_HDDC.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Models\\CHITIET_HDDC.cs",
               "RelativeDocumentMoniker": "Models\\CHITIET_HDDC.cs",
@@ -213,12 +318,11 @@
               "RelativeToolTip": "Models\\CHITIET_HDDC.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T08:14:26.864Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T08:14:26.864Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "DiChuyen_RelayCommand.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\DiChuyen_RelayCommand.cs",
               "RelativeDocumentMoniker": "ViewModels\\DiChuyen_RelayCommand.cs",
@@ -226,12 +330,11 @@
               "RelativeToolTip": "ViewModels\\DiChuyen_RelayCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T08:11:43.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T08:11:43.534Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "DichVuDiChuyenViewModel.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\DichVuDiChuyenViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\DichVuDiChuyenViewModel.cs",
@@ -239,12 +342,11 @@
               "RelativeToolTip": "ViewModels\\DichVuDiChuyenViewModel.cs",
               "ViewState": "AgIAALsAAAAAAAAAAAAMwM4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T08:04:26.32Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T08:04:26.32Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "CHUYENDI.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Models\\CHUYENDI.cs",
               "RelativeDocumentMoniker": "Models\\CHUYENDI.cs",
@@ -252,12 +354,11 @@
               "RelativeToolTip": "Models\\CHUYENDI.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T07:58:51.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T07:58:51.457Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "UC_DichVuGiatUi.xaml.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\UC_DichVuGiatUi.xaml.cs",
               "RelativeDocumentMoniker": "Views\\UC_DichVuGiatUi.xaml.cs",
@@ -265,24 +366,22 @@
               "RelativeToolTip": "Views\\UC_DichVuGiatUi.xaml.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAiwCkAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T07:34:30.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T07:34:30.157Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "UC_DichVuGiatUi.xaml",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\UC_DichVuGiatUi.xaml",
               "RelativeDocumentMoniker": "Views\\UC_DichVuGiatUi.xaml",
               "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\UC_DichVuGiatUi.xaml",
               "RelativeToolTip": "Views\\UC_DichVuGiatUi.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-18T07:32:18.327Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T07:32:18.327Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 11,
               "Title": "GiatUi_RelayCommand.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\GiatUi_RelayCommand.cs",
               "RelativeDocumentMoniker": "ViewModels\\GiatUi_RelayCommand.cs",
@@ -290,12 +389,11 @@
               "RelativeToolTip": "ViewModels\\GiatUi_RelayCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T07:25:02.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T07:25:02.162Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "DichVuGiatUiViewModel.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\DichVuGiatUiViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\DichVuGiatUiViewModel.cs",
@@ -303,12 +401,11 @@
               "RelativeToolTip": "ViewModels\\DichVuGiatUiViewModel.cs",
               "ViewState": "AgIAAMoAAAAAAAAAAAAkwBAAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T07:22:03.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T07:22:03.849Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "LOAIGIATUI.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Models\\LOAIGIATUI.cs",
               "RelativeDocumentMoniker": "Models\\LOAIGIATUI.cs",
@@ -316,12 +413,11 @@
               "RelativeToolTip": "Models\\LOAIGIATUI.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-18T07:09:11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T07:09:11Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "App.config",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\App.config",
               "RelativeDocumentMoniker": "App.config",
@@ -329,24 +425,22 @@
               "RelativeToolTip": "App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-04-18T06:07:15.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-18T06:07:15.547Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "UC_TrangChu.xaml",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\UC_TrangChu.xaml",
               "RelativeDocumentMoniker": "Views\\UC_TrangChu.xaml",
               "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\UC_TrangChu.xaml",
               "RelativeToolTip": "Views\\UC_TrangChu.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-16T15:54:30.22Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T15:54:30.22Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "LoginWindow.xaml.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\LoginWindow.xaml.cs",
               "RelativeDocumentMoniker": "LoginWindow.xaml.cs",
@@ -359,19 +453,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "LoginWindow.xaml",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "LoginWindow.xaml",
               "ToolTip": "D:\\CN.Net\\ql_ks\\LoginWindow.xaml",
               "RelativeToolTip": "LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-16T16:04:29.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T16:04:29.729Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "UC_TrangChu.xaml.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\UC_TrangChu.xaml.cs",
               "RelativeDocumentMoniker": "Views\\UC_TrangChu.xaml.cs",
@@ -383,7 +476,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "uc_DichVuAnUongView.xaml.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\uc_DichVuAnUongView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\uc_DichVuAnUongView.xaml.cs",
@@ -391,24 +484,22 @@
               "RelativeToolTip": "Views\\uc_DichVuAnUongView.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T15:29:44.235Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T15:29:44.235Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "uc_DichVuAnUongView.xaml",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\uc_DichVuAnUongView.xaml",
               "RelativeDocumentMoniker": "Views\\uc_DichVuAnUongView.xaml",
               "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\uc_DichVuAnUongView.xaml",
               "RelativeToolTip": "Views\\uc_DichVuAnUongView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-16T15:22:19.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T15:22:19.473Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "AnUong_RelayCommand_T.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_RelayCommand_T.cs",
               "RelativeDocumentMoniker": "ViewModels\\AnUong_RelayCommand_T.cs",
@@ -420,32 +511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "AnUong_RelayCommand.cs",
-              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_RelayCommand.cs",
-              "RelativeDocumentMoniker": "ViewModels\\AnUong_RelayCommand.cs",
-              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_RelayCommand.cs",
-              "RelativeToolTip": "ViewModels\\AnUong_RelayCommand.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAUwCMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T15:13:48.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AnUong_BaseViewModel.cs",
-              "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_BaseViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\AnUong_BaseViewModel.cs",
-              "ToolTip": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_BaseViewModel.cs",
-              "RelativeToolTip": "ViewModels\\AnUong_BaseViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T15:12:52.523Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "DichVuAnUongViewModel.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\DichVuAnUongViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\DichVuAnUongViewModel.cs",
@@ -453,12 +519,11 @@
               "RelativeToolTip": "ViewModels\\DichVuAnUongViewModel.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAkwFMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T15:06:20.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T15:06:20.62Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 10,
               "Title": "AnUong_HelperViewModel.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\AnUong_HelperViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\AnUong_HelperViewModel.cs",
@@ -470,7 +535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 32,
               "Title": "Main_BaseViewModel.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\Main_BaseViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\Main_BaseViewModel.cs",
@@ -482,7 +547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 33,
               "Title": "Main_RelayCommand.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\Main_RelayCommand.cs",
               "RelativeDocumentMoniker": "ViewModels\\Main_RelayCommand.cs",
@@ -494,7 +559,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 34,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\MainViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
@@ -506,7 +571,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
@@ -518,7 +583,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 36,
               "Title": "uc_LoginView.xaml.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\uc_LoginView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\uc_LoginView.xaml.cs",
@@ -530,19 +595,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 37,
               "Title": "uc_LoginView.xaml",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Views\\uc_LoginView.xaml",
               "RelativeDocumentMoniker": "Views\\uc_LoginView.xaml",
               "ToolTip": "D:\\CN.Net\\ql_ks\\Views\\uc_LoginView.xaml",
               "RelativeToolTip": "Views\\uc_LoginView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-13T14:43:35.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-13T14:43:35.255Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "Login_CurrentSession.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\Login_CurrentSession.cs",
               "RelativeDocumentMoniker": "ViewModels\\Login_CurrentSession.cs",
@@ -554,7 +618,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 39,
               "Title": "Login_RelayCommand.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\Login_RelayCommand.cs",
               "RelativeDocumentMoniker": "ViewModels\\Login_RelayCommand.cs",
@@ -566,7 +630,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 40,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
@@ -578,7 +642,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "TAIKHOAN.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\Models\\TAIKHOAN.cs",
               "RelativeDocumentMoniker": "Models\\TAIKHOAN.cs",
@@ -596,14 +660,14 @@
               "RelativeDocumentMoniker": "Models\\QLKhachSan_Model.cs",
               "ToolTip": "D:\\CN.Net\\ql_ks\\Models\\QLKhachSan_Model.cs",
               "RelativeToolTip": "Models\\QLKhachSan_Model.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBsAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-13T14:11:55.522Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -615,13 +679,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\CN.Net\\ql_ks\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "D:\\CN.Net\\ql_ks\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAvwEcAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAD4v1AAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-13T12:39:05.304Z",
               "EditorCaption": ""

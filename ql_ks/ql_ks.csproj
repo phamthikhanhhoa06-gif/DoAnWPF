@@ -187,8 +187,18 @@
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\Main_BaseViewModel.cs" />
     <Compile Include="ViewModels\Main_RelayCommand.cs" />
+    <Compile Include="ViewModels\TCHoaDon_RelayCommand.cs" />
     <Compile Include="ViewModels\TCNhanVien_RelayCommand.cs" />
+    <Compile Include="ViewModels\TCPhong_RelayCommand.cs" />
+    <Compile Include="ViewModels\TraCuuBaoCaoDichVuViewModel.cs" />
+    <Compile Include="ViewModels\TraCuuChuyenDiViewModel.cs" />
+    <Compile Include="ViewModels\TraCuuHoaDonViewModel.cs" />
+    <Compile Include="ViewModels\TraCuuKhachHangViewModel.cs" />
+    <Compile Include="ViewModels\TraCuuLoaiGiatUiViewModel.cs" />
+    <Compile Include="ViewModels\TraCuuLoaiPhongViewModel.cs" />
+    <Compile Include="ViewModels\TraCuuMatHangViewModel.cs" />
     <Compile Include="ViewModels\TraCuuNhanVienViewModel.cs" />
+    <Compile Include="ViewModels\TraCuuPhongViewModel.cs" />
     <Compile Include="Views\uc_DichVuAnUongView.xaml.cs">
       <DependentUpon>uc_DichVuAnUongView.xaml</DependentUpon>
     </Compile>
@@ -204,8 +214,32 @@
     <Compile Include="Views\UC_QuanLyContainer.xaml.cs">
       <DependentUpon>UC_QuanLyContainer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UC_TraCuuBaoCaoDichVu.xaml.cs">
+      <DependentUpon>UC_TraCuuBaoCaoDichVu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_TraCuuChuyenDi.xaml.cs">
+      <DependentUpon>UC_TraCuuChuyenDi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_TraCuuHoaDon.xaml.cs">
+      <DependentUpon>UC_TraCuuHoaDon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_TraCuuKhachHang.xaml.cs">
+      <DependentUpon>UC_TraCuuKhachHang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_TraCuuLoaiGiatUi.xaml.cs">
+      <DependentUpon>UC_TraCuuLoaiGiatUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_TraCuuLoaiPhong.xaml.cs">
+      <DependentUpon>UC_TraCuuLoaiPhong.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_TraCuuMatHang.xaml.cs">
+      <DependentUpon>UC_TraCuuMatHang.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UC_TraCuuNhanVien.xaml.cs">
       <DependentUpon>UC_TraCuuNhanVien.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_TraCuuPhong.xaml.cs">
+      <DependentUpon>UC_TraCuuPhong.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UC_TrangChu.xaml.cs">
       <DependentUpon>UC_TrangChu.xaml</DependentUpon>
@@ -246,7 +280,39 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\UC_TraCuuBaoCaoDichVu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_TraCuuChuyenDi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_TraCuuHoaDon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_TraCuuKhachHang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_TraCuuLoaiGiatUi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_TraCuuLoaiPhong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_TraCuuMatHang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\UC_TraCuuNhanVien.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_TraCuuPhong.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

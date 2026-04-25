@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System;
+using System.Data.Entity; // Thêm dòng này cho .Include()
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -16,8 +14,15 @@ namespace ql_ks.ViewModels
     public class TraCuuNhanVienViewModel : INotifyPropertyChanged
     {
         private readonly QLKhachSan_Model _db = new QLKhachSan_Model();
-        public ObservableCollection<string> LocChucVuList { get; set; }
+        // Flag để biết đang thêm mới hay sửa
+        private bool _isAddingNew = false;
+        public bool IsAddingNew
+        {
+            get => _isAddingNew;
+            set { _isAddingNew = value; OnPropertyChanged(); }
+        }
 
+        public ObservableCollection<string> LocChucVuList { get; set; }
         // Danh sách gốc từ DB
         private List<NHANVIEN> _allNhanViens;
 
@@ -72,11 +77,15 @@ namespace ql_ks.ViewModels
         public ICommand SuaCommand { get; }
         public ICommand XoaCommand { get; }
         public ICommand LamMoiCommand { get; }
+        public ICommand LuuCommand { get; }
 
         public TraCuuNhanVienViewModel()
         {
             DanhSachHienThi = new ObservableCollection<NHANVIEN_Display>();
+            // ✅ Khởi tạo để không bị null binding
+            SelectedNhanVien = new NHANVIEN_Display();
 
+            LuuCommand = new TCNhanVien_RelayCommand((Action<object>)(_ => Luu()));
             // Khởi tạo danh sách chức vụ
             LocChucVuList = new ObservableCollection<string>
     {
@@ -105,7 +114,7 @@ namespace ql_ks.ViewModels
             {
                 // Load toàn bộ nhân viên từ DB
                 _allNhanViens = _db.NHANVIENs
-                    .Include("TAIKHOAN")
+                    .Include(nv => nv.TAIKHOAN)
                     .OrderByDescending(nv => nv.NgayVaoLam_NV)
                     .ToList();
 
@@ -189,19 +198,89 @@ namespace ql_ks.ViewModels
             TongTien = DanhSachHienThi.Count;
         }
 
+        private int _tongTien;
         private int TongTien
         {
-            get { return DanhSachHienThi.Count; }
-            set { OnPropertyChanged(); } // Cho binding nếu cần
+            get { return _tongTien; }
+            set { _tongTien = value; OnPropertyChanged(); }
         }
 
         #region CRUD Operations
 
         public void Them()
         {
-            MessageBox.Show("Mở cửa sổ thêm nhân viên mới! (Thực hiện tại đây)",
-                        "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
-            // Hoặc mở window ThemNhanVienWindow
+            IsAddingNew = true;
+            SelectedNhanVien = new NHANVIEN_Display
+            {
+                MA_NV = 0,
+                HoTen_NV = "",
+                SoDienThoai_NV = "",
+                GioiTinh_NV = "Nam",
+                NgaySinh_NV = null,
+                ChucVu_NV = "Lễ tân",
+                DiaChi_NV = "",
+                NgayVaoLam_NV = DateTime.Now,
+                Email = "",
+                IsChecked = false
+            };
+            ThongBao = "Nhập thông tin vào form bên trái, sau đó bấm LƯU";
+        }
+        public void Luu()
+        {
+            if (SelectedNhanVien == null || string.IsNullOrWhiteSpace(SelectedNhanVien.HoTen_NV))
+            {
+                MessageBox.Show("Vui lòng nhập họ tên!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            try
+            {
+                if (IsAddingNew || SelectedNhanVien.MA_NV == 0)
+                {
+                    // THÊM MỚI
+                    int newMa = _db.NHANVIENs.Any() ? _db.NHANVIENs.Max(x => x.MA_NV) + 1 : 1;
+
+                    var nv = new NHANVIEN
+                    {
+                        MA_NV = newMa,
+                        HoTen_NV = SelectedNhanVien.HoTen_NV,
+                        GioiTinh_NV = SelectedNhanVien.GioiTinh_NV == "Nam",
+                        SoDienThoai_NV = SelectedNhanVien.SoDienThoai_NV,
+                        NgaySinh_NV = SelectedNhanVien.NgaySinh_NV,
+                        ChucVu_NV = SelectedNhanVien.ChucVu_NV,
+                        DiaChi_NV = SelectedNhanVien.DiaChi_NV,
+                        NgayVaoLam_NV = DateTime.Now,
+                        Ma_TK = null
+                    };
+
+                    _db.NHANVIENs.Add(nv);
+                    _db.SaveChanges();
+
+                    MessageBox.Show("✅ Thêm nhân viên thành công!", "Thành công");
+                    IsAddingNew = false;
+                    TaiDuLieu();
+                }
+                else
+                {
+                    // CẬP NHẬT (nếu cần)
+                    var nv = _db.NHANVIENs.Find(SelectedNhanVien.MA_NV);
+                    if (nv != null)
+                    {
+                        nv.HoTen_NV = SelectedNhanVien.HoTen_NV;
+                        nv.SoDienThoai_NV = SelectedNhanVien.SoDienThoai_NV;
+                        nv.GioiTinh_NV = SelectedNhanVien.GioiTinh_NV == "Nam";
+                        nv.NgaySinh_NV = SelectedNhanVien.NgaySinh_NV;
+                        nv.ChucVu_NV = SelectedNhanVien.ChucVu_NV;
+                        nv.DiaChi_NV = SelectedNhanVien.DiaChi_NV;
+                        _db.SaveChanges();
+                        TaiDuLieu();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         public void Sua()
@@ -214,7 +293,6 @@ namespace ql_ks.ViewModels
 
             MessageBox.Show($"Sửa nhân viên: {_selectedNhanVien.HoTen_NV}",
                         "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
-            // Hoặc mở Window SuaNhanVienWindow truyền selectedNhanVien.MA_NV
         }
 
         public void Xoa()
@@ -238,20 +316,19 @@ namespace ql_ks.ViewModels
             {
                 try
                 {
-                    // Lấy object gốc từ DB để xóa
                     var nvToDelete = _db.NHANVIENs.Find(_selectedNhanVien.MA_NV);
                     if (nvToDelete != null)
                     {
                         _db.NHANVIENs.Remove(nvToDelete);
                         _db.SaveChanges();
 
-                        // Refresh lại danh sách
                         TaiDuLieu();
                         ThongBao = "Đã xóa thành công!";
                     }
                 }
                 catch (Exception ex)
                 {
+                    // SỬA LỖI: MessageBoxButtons -> MessageBoxButton
                     MessageBox.Show("Không thể xóa nhân viên: " + ex.Message, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
@@ -280,16 +357,46 @@ namespace ql_ks.ViewModels
     // Class Display (ẩn sensitive data)
     public class NHANVIEN_Display : INotifyPropertyChanged
     {
+        private string _hoTen_NV;
+        public string HoTen_NV
+        {
+            get => _hoTen_NV;
+            set { _hoTen_NV = value; OnPropertyChanged(); }
+        }
+
+        private string _soDienThoai_NV;
+        public string SoDienThoai_NV
+        {
+            get => _soDienThoai_NV;
+            set { _soDienThoai_NV = value; OnPropertyChanged(); }
+        }
+
+        private string _gioiTinh_NV;
+        public string GioiTinh_NV
+        {
+            get => _gioiTinh_NV;
+            set { _gioiTinh_NV = value; OnPropertyChanged(); }
+        }
+
+        private string _chucVu_NV;
+        public string ChucVu_NV
+        {
+            get => _chucVu_NV;
+            set { _chucVu_NV = value; OnPropertyChanged(); }
+        }
+
+        private string _diaChi_NV;
+        public string DiaChi_NV
+        {
+            get => _diaChi_NV;
+            set { _diaChi_NV = value; OnPropertyChanged(); }
+        }
+
         public int MA_NV { get; set; }
-        public string HoTen_NV { get; set; }
-        public string SoDienThoai_NV { get; set; }
-        public string GioiTinh_NV { get; set; }
-        public string MatKhau { get; set; }
         public DateTime? NgaySinh_NV { get; set; }
-        public string ChucVu_NV { get; set; }
-        public string DiaChi_NV { get; set; }
         public DateTime? NgayVaoLam_NV { get; set; }
         public string Email { get; set; }
+        public string MatKhau { get; set; }
 
         private bool _isChecked;
         public bool IsChecked

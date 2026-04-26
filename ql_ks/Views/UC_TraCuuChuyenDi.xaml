@@ -88,7 +88,7 @@
                             <Button Content="❌ Xóa" Command="{Binding XoaCommand}" 
                                     Background="#E74C3C" Foreground="White" Padding="8,5" BorderThickness="0"/>
                             <Separator/>
-                            <Button Content="📊 Xuất báo cáo" Background="#95A5A6" Foreground="White" Padding="8,5" BorderThickness="0"/>
+                            <Button Content="📊 Xuất báo cáo" Background="#95A5A6" Foreground="White" Padding="8,5" BorderThickness="0" Click="Button_Click"/>
                         </ToolBar>
                     </ToolBarTray>
 

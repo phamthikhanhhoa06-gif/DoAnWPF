@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\CN.Net\ql_ks\App.xaml
-17-449529397
+23-1982364969
 
-65-85923819
-531726011434
-LoginWindow.xaml;MainWindow.xaml;Views\uc_DichVuAnUongView.xaml;Views\UC_DichVuDiChuyen.xaml;Views\UC_DichVuGiatUi.xaml;Views\uc_LoginView.xaml;Views\UC_QuanLyContainer.xaml;Views\UC_TraCuuBaoCaoDichVu.xaml;Views\UC_TraCuuChuyenDi.xaml;Views\UC_TraCuuHoaDon.xaml;Views\UC_TraCuuKhachHang.xaml;Views\UC_TraCuuLoaiGiatUi.xaml;Views\UC_TraCuuLoaiPhong.xaml;Views\UC_TraCuuMatHang.xaml;Views\UC_TraCuuNhanVien.xaml;Views\UC_TraCuuPhong.xaml;Views\UC_TrangChu.xaml;
+74-1984453888
+57-1647232062
+LoginWindow.xaml;MainWindow.xaml;Views\UC_BaoCaoThongKeDichVu.xaml;Views\UC_BaoCaoThongKeThang.xaml;Views\uc_DichVuAnUongView.xaml;Views\UC_DichVuDiChuyen.xaml;Views\UC_DichVuGiatUi.xaml;Views\uc_LoginView.xaml;Views\UC_QuanLyContainer.xaml;Views\UC_QuanLyContainer2.xaml;Views\UC_TraCuuBaoCaoDichVu.xaml;Views\UC_TraCuuBaoCaoNam.xaml;Views\UC_TraCuuChuyenDi.xaml;Views\UC_TraCuuHoaDon.xaml;Views\UC_TraCuuKhachHang.xaml;Views\UC_TraCuuLoaiGiatUi.xaml;Views\UC_TraCuuLoaiPhong.xaml;Views\UC_TraCuuMatHang.xaml;Views\UC_TraCuuNhanVien.xaml;Views\UC_TraCuuPhong.xaml;Views\UC_TrangChu.xaml;Views\UC_XuatBaoCaoDichVu.xaml;Views\UC_XuatBaoCaoThang.xaml;
 
 False
 

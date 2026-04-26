@@ -26,5 +26,10 @@ namespace ql_ks.Views
             InitializeComponent();
             DataContext = new TraCuuChuyenDiViewModel();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

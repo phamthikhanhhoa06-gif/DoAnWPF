@@ -1,0 +1,105 @@
+﻿<UserControl x:Class="ql_ks.Views.UC_BaoCaoThongKeDichVu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1200"
+             Background="#F5F7FA">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <TextBlock Grid.Row="0" Text="PHẦN MỀM QUẢN LÍ KHÁCH SẠN" 
+                   FontSize="26" FontWeight="Bold" Foreground="#30324A" 
+                   HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+        <!-- FILTER: Chọn ngày -->
+        <Border Grid.Row="1" Background="White" CornerRadius="8" BorderBrush="#E5E7EB" 
+                BorderThickness="1" Padding="15" Margin="0,0,0,15">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock Text="Chọn ngày bắt đầu:" VerticalAlignment="Center" 
+                           Margin="0,0,8,0" Foreground="#555"/>
+                <DatePicker SelectedDate="{Binding NgayBatDau}" Width="140" Height="32" 
+                            BorderBrush="#CBD5E1" Margin="0,0,20,0"/>
+
+                <TextBlock Text="Chọn ngày kết thúc:" VerticalAlignment="Center" 
+                           Margin="0,0,8,0" Foreground="#555"/>
+                <DatePicker SelectedDate="{Binding NgayKetThuc}" Width="140" Height="32" 
+                            BorderBrush="#CBD5E1" Margin="0,0,20,0"/>
+
+                <Button Content="🔍 Tìm kiếm" Command="{Binding TimKiemCommand}" 
+                        Background="#3498DB" Foreground="White" Padding="15,6" 
+                        BorderThickness="0" FontWeight="Bold" Cursor="Hand"/>
+                <!-- ✅ THÊM NÚT NÀY -->
+                <Button x:Name="btnXuatBaoCao" Content="🖨️ Xuất / In báo cáo" 
+            Click="BtnXuatBaoCao_Click"
+            Background="#E74C3C" Foreground="White" Padding="15,6" 
+            BorderThickness="0" FontWeight="Bold" Cursor="Hand"
+            ToolTip="Xuất báo cáo dịch vụ ra file hoặc in"/>
+            </StackPanel>
+        </Border>
+
+        <!-- CONTENT: Bảng chi tiết + PieChart -->
+        <!-- ✅ SỬA: Bọc Grid trong Border -->
+        <Border Grid.Row="2" Background="White" CornerRadius="12" 
+                BorderBrush="#E5E7EB" BorderThickness="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- TRÁI: CHI TIẾT BÁO CÁO -->
+                <StackPanel Grid.Column="0" Margin="20">
+                    <TextBlock Text="CHI TIẾT BÁO CÁO" FontSize="16" FontWeight="Bold" 
+                               Foreground="#2C3E50" Margin="0,0,0,15"/>
+
+                    <DataGrid ItemsSource="{Binding ChiTietList}" 
+                              AutoGenerateColumns="False" 
+                              CanUserAddRows="False"
+                              IsReadOnly="True"
+                              HeadersVisibility="Column"
+                              GridLinesVisibility="Horizontal"
+                              BorderThickness="0"
+                              Background="White"
+                              RowHeight="40">
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Dịch vụ" 
+                                                Binding="{Binding TenDichVu}" Width="*" FontSize="14"/>
+                            <DataGridTextColumn Header="Tỷ lệ" 
+                                                Binding="{Binding TyLe, StringFormat={}{0:P2}}" 
+                                                Width="100" FontSize="14"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+
+                <!-- PHẢI: TỔNG DOANH THU + BIỂU ĐỒ -->
+                <StackPanel Grid.Column="1" Margin="20" HorizontalAlignment="Center">
+                    <TextBlock FontSize="18" Foreground="#555" 
+                               HorizontalAlignment="Center" Margin="0,0,0,5">
+                        <Run Text="Tổng doanh thu: "/>
+                        <Run Text="{Binding TongDoanhThu, StringFormat={}{0:N0}}" 
+                             FontWeight="Bold" Foreground="#2C3E50"/>
+                    </TextBlock>
+                    <TextBlock Text="(Đơn vị tính: VNĐ)" FontSize="12" Foreground="#999" 
+                               HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+                    <!-- ✅ PieChart từ LiveCharts -->
+                    <lvc:PieChart Series="{Binding PieSeriesCollection}" 
+                                  LegendLocation="Bottom" 
+                                  Width="400" Height="350"
+                                  InnerRadius="0">
+                    </lvc:PieChart>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

@@ -77,5 +77,10 @@ namespace ql_ks
             MainContent.Content = new UC_TraCuuNhanVien();
             MainContent.Content= new UC_QuanLyContainer();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new UC_QuanLyContainer2();
+        }
     }
 }

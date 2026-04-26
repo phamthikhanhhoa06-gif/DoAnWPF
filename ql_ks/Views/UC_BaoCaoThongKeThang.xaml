@@ -1,0 +1,159 @@
+﻿<UserControl x:Class="ql_ks.Views.UC_BaoCaoThongKeThang"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1200"
+             Background="#F5F7FA">
+
+    <UserControl.Resources>
+        <Style x:Key="CenterAlign" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <TextBlock Grid.Row="0" Text="PHẦN MỀM QUẢN LÍ KHÁCH SẠN" 
+                   FontSize="26" FontWeight="Bold" Foreground="#30324A" 
+                   HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+        <!-- FILTER + NÚT XUẤT -->
+        <Border Grid.Row="1" Background="White" CornerRadius="8" BorderBrush="#E5E7EB" 
+                BorderThickness="1" Padding="15" Margin="0,0,0,15">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock Text="Năm:" VerticalAlignment="Center" 
+                           Margin="0,0,8,0" Foreground="#555" FontWeight="Bold"/>
+                <ComboBox ItemsSource="{Binding NamList}" 
+                          SelectedItem="{Binding NamChon}"
+                          Width="100" Height="32" Margin="0,0,20,0"/>
+
+                <TextBlock Text="Tháng:" VerticalAlignment="Center" 
+                           Margin="0,0,8,0" Foreground="#555" FontWeight="Bold"/>
+                <ComboBox ItemsSource="{Binding ThangList}" 
+                          SelectedItem="{Binding ThangChon}"
+                          Width="80" Height="32" Margin="0,0,20,0"/>
+
+                <Button Content="🔍" Command="{Binding TimKiemCommand}" 
+                        Background="#3498DB" Foreground="White" 
+                        Width="36" Height="32" BorderThickness="0" 
+                        FontSize="16" Cursor="Hand" Margin="0,0,10,0"/>
+
+                <!-- ✅ THÊM NÚT XUẤT BÁO CÁO -->
+                <Button Content="🖨️ Xuất / In báo cáo" Click="BtnXuatBaoCao_Click"
+                        Background="#E74C3C" Foreground="White" Padding="15,6" 
+                        BorderThickness="0" FontWeight="Bold" Cursor="Hand"
+                        ToolTip="Xuất báo cáo thống kê tháng"/>
+            </StackPanel>
+        </Border>
+
+        <!-- CONTENT -->
+        <Border Grid.Row="2" Background="White" CornerRadius="12" 
+                BorderBrush="#E5E7EB" BorderThickness="1" Padding="15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- TRÁI: CHI TIẾT -->
+                <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto" 
+                              HorizontalScrollBarVisibility="Disabled" Margin="0,0,15,0">
+                    <StackPanel>
+                        <TextBlock Text="CHI TIẾT BÁO CÁO" FontSize="16" FontWeight="Bold" 
+                                   Foreground="#2C3E50" Margin="0,0,0,10"/>
+
+                        <DataGrid x:Name="dgNgay" ItemsSource="{Binding ChiTietNgayList}" 
+                                  AutoGenerateColumns="False" CanUserAddRows="False"
+                                  IsReadOnly="True" HeadersVisibility="Column"
+                                  GridLinesVisibility="Horizontal" BorderThickness="0"
+                                  Background="White" RowHeight="32"
+                                  AlternatingRowBackground="#F8F9FA"
+                                  LoadingRow="DgNgay_LoadingRow">
+                            <DataGrid.Columns>
+                                <!-- ✅ Dùng SoThuTu để sort đúng -->
+                                <DataGridTextColumn Header="Ngày" 
+                                                    Binding="{Binding Ngay}" 
+                                                    Width="*">
+                                    <DataGridTextColumn.SortMemberPath>SoThuTu</DataGridTextColumn.SortMemberPath>
+                                </DataGridTextColumn>
+                                <DataGridTextColumn Header="Đ. thu" 
+                                                    Binding="{Binding DoanhThu, StringFormat={}{0:N0}}" 
+                                                    Width="100"
+                                                    ElementStyle="{StaticResource CenterAlign}"/>
+                                <DataGridTextColumn Header="Tỷ lệ" 
+                                                    Binding="{Binding TyLe, StringFormat={}{0:P2}}" 
+                                                    Width="90"
+                                                    ElementStyle="{StaticResource CenterAlign}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </ScrollViewer>
+
+                <!-- PHẢI: TỔNG + BIỂU ĐỒ -->
+                <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto"
+                              HorizontalScrollBarVisibility="Disabled">
+                    <StackPanel>
+                        <TextBlock FontSize="18" Foreground="#555" 
+                                   HorizontalAlignment="Center" Margin="0,0,0,5">
+                            <Run Text="Tổng doanh thu: "/>
+                            <Run Text="{Binding TongDoanhThuThang, StringFormat={}{0:N0}}" 
+                                 FontWeight="Bold" Foreground="#2C3E50"/>
+                        </TextBlock>
+                        <TextBlock Text="(Đơn vị tính: VNĐ)" FontSize="12" Foreground="#999" 
+                                   HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+                        <!-- Biểu đồ cột ngang -->
+                        <ItemsControl ItemsSource="{Binding BieuDoNgayList}" Margin="10,0">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="0,2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="60"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Text="{Binding Ngay}" 
+                                                   FontSize="10" Foreground="#888" 
+                                                   VerticalAlignment="Center"/>
+                                        <Border Grid.Column="1" Background="{Binding Mau}" 
+                                                Height="{Binding ChieuCaoBar}" MinHeight="2"
+                                                CornerRadius="0,4,4,0" Margin="0,1"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+
+                        <!-- Legend -->
+                        <ItemsControl ItemsSource="{Binding BieuDoNgayList}" 
+                                      Margin="10,15,10,0" HorizontalAlignment="Center">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Orientation="Horizontal"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" Margin="5,2">
+                                        <Border Width="12" Height="12" 
+                                                Background="{Binding Mau}" 
+                                                CornerRadius="2" Margin="0,0,4,0"/>
+                                        <TextBlock Text="{Binding Ngay}" FontSize="10" 
+                                                   Foreground="#888"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

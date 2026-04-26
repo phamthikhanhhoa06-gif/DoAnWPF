@@ -108,7 +108,8 @@ namespace ql_ks.Views
         private void BtnBaoCaoNam_Click(object sender, RoutedEventArgs e)
         {
             SetActiveTab(sender as Button);
-            MessageBox.Show("Trang Báo cáo năm - Đang phát triển", "Thông báo");
+            //MessageBox.Show("Trang Báo cáo năm - Đang phát triển", "Thông báo");
+            ContentArea.Content = new UC_TraCuuBaoCaoNam();
         }
     }
 }

@@ -23,5 +23,10 @@ namespace ql_ks
         {
             InitializeComponent();
         }
+
+        private void uc_LoginView_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

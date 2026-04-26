@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ql_ks.Views"
              mc:Ignorable="d" 
-            d:DesignHeight="750" d:DesignWidth="1200"
+             d:DesignHeight="750" d:DesignWidth="1200"
              Background="#F5F7FA">
 
     <UserControl.Resources>
@@ -18,24 +18,16 @@
             <Setter Property="Padding" Value="15,10"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}" 
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-                </ControlTemplate>
-                <Style.Triggers>
-                    <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Foreground" Value="#3498DB"/>
-                        <Setter Property="BorderBrush" Value="#3498DB"/>
-                    </Trigger>
-                </Style.Triggers>
+          
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#3498DB"/>
+                    <Setter Property="BorderBrush" Value="#3498DB"/>
+                </Trigger>
+            </Style.Triggers>
         </Style>
 
-        <!-- Style cho nút Tab đang active (dùng Tag để đánh dấu) -->
+        <!-- Style cho nút Tab đang active -->
         <Style x:Key="ActiveTabStyle" TargetType="Button" BasedOn="{StaticResource TabButtonStyle}">
             <Setter Property="Foreground" Value="#2C3E50"/>
             <Setter Property="FontWeight" Value="Bold"/>
@@ -49,61 +41,21 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- THANH TAB NGANG -->
-        <Border Grid.Row="0" 
-                Background="White" 
-                BorderBrush="#E0E0E0" 
-                BorderThickness="0,0,0,1"
-                Padding="10,0">
+        <Border Grid.Row="0" Background="White" BorderBrush="#E0E0E0" BorderThickness="0,0,0,1" Padding="10,0">
             <StackPanel Orientation="Horizontal">
-                <Button x:Name="btnNhanVien" 
-                        Content="Nhân viên" 
-                        Style="{StaticResource ActiveTabStyle}"
-                        Click="BtnNhanVien_Click"/>
-
-                <Button x:Name="btnKhachHang" 
-                        Content="Khách hàng" 
-                        Style="{StaticResource TabButtonStyle}"
-                        Click="BtnKhachHang_Click"/>
-
-                <Button x:Name="btnPhong" 
-                        Content="Phòng" 
-                        Style="{StaticResource TabButtonStyle}"
-                        Click="BtnPhong_Click"/>
-
-                <Button x:Name="btnLoaiPhong" 
-                        Content="Loại phòng" 
-                        Style="{StaticResource TabButtonStyle}"
-                        Click="BtnLoaiPhong_Click"/>
-
-                <Button x:Name="btnHoaDon" 
-                        Content="Hóa đơn" 
-                        Style="{StaticResource TabButtonStyle}"
-                        Click="BtnHoaDon_Click"/>
-
-                <Button x:Name="btnLoaiGiat" 
-                        Content="Loại giặt ủi" 
-                        Style="{StaticResource TabButtonStyle}"
-                        Click="BtnLoaiGiat_Click"/>
-
-                <Button x:Name="btnChuyenDi" 
-                        Content="Chuyến đi" 
-                        Style="{StaticResource TabButtonStyle}"
-                        Click="BtnChuyenDi_Click"/>
-
-                <Button x:Name="btnBaoCaoDV" 
-                        Content="Báo cáo dịch vụ" 
-                        Style="{StaticResource TabButtonStyle}"
-                        Click="BtnBaoCaoDV_Click"/>
-
-                <Button x:Name="btnBaoCaoNam" 
-                        Content="Báo cáo năm" 
-                        Style="{StaticResource TabButtonStyle}"
-                        Click="BtnBaoCaoNam_Click"/>
+                <Button x:Name="btnNhanVien" Content="Nhân viên" Style="{StaticResource ActiveTabStyle}" Click="BtnNhanVien_Click"/>
+                <Button x:Name="btnKhachHang" Content="Khách hàng" Style="{StaticResource TabButtonStyle}" Click="BtnKhachHang_Click"/>
+                <Button x:Name="btnPhong" Content="Phòng" Style="{StaticResource TabButtonStyle}" Click="BtnPhong_Click"/>
+                <Button x:Name="btnLoaiPhong" Content="Loại phòng" Style="{StaticResource TabButtonStyle}" Click="BtnLoaiPhong_Click"/>
+                <Button x:Name="btnHoaDon" Content="Hóa đơn" Style="{StaticResource TabButtonStyle}" Click="BtnHoaDon_Click"/>
+                <Button x:Name="btnHangHoa" Content="Hàng hóa" Style="{StaticResource TabButtonStyle}" Click="BtnHangHoa_Click"/>
+                <Button x:Name="btnLoaiGiat" Content="Loại giặt ủi" Style="{StaticResource TabButtonStyle}" Click="BtnLoaiGiat_Click"/>
+                <Button x:Name="btnChuyenDi" Content="Chuyến đi" Style="{StaticResource TabButtonStyle}" Click="BtnChuyenDi_Click"/>
+                <Button x:Name="btnBaoCaoDV" Content="Báo cáo dịch vụ" Style="{StaticResource TabButtonStyle}" Click="BtnBaoCaoDV_Click"/>
+                <Button x:Name="btnBaoCaoNam" Content="Báo cáo năm" Style="{StaticResource TabButtonStyle}" Click="BtnBaoCaoNam_Click"/>
             </StackPanel>
         </Border>
 
-        <!-- VÙNG HIỂN THỊ NỘI DUNG -->
         <ContentControl x:Name="ContentArea" Grid.Row="1" Margin="0"/>
     </Grid>
 </UserControl>

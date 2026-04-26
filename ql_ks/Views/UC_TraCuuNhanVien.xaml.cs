@@ -26,34 +26,7 @@ namespace ql_ks.Views
         public UC_TraCuuNhanVien()
         {
             InitializeComponent();
-
-        
-
-                    // Khởi tạo ViewModel
-                    DataContext = new TraCuuNhanVienViewModel();
-
-            // Nếu muốn hỗ trợ lọc chức vụ (ComboBox List)
-            if (DataContext is TraCuuNhanVienViewModel vm)
-            {
-                vm.LocChucVuList = new ObservableCollection<string>
-            {
-                "Tất cả",
-                "Quản lý",
-                "Lễ tán",
-                "Kế toán",
-                "Bảo vệ",
-                "Phục vụ",
-                "Thông tin"
-            };
-
-                vm.LocChucVu = "Tất cả";
-            }
-        }
-
-        private void btnXuatExcel_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Xuất báo cáo ra Excel/PDF...", "Thông báo");
-            // TODO: Gọi thư viện xuất Excel
+            DataContext = new TraCuuNhanVienViewModel();
         }
     }
 }

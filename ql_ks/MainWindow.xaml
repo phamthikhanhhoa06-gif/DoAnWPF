@@ -95,7 +95,7 @@
                         HorizontalAlignment="Stretch"
                         Padding="20,10"
                         HorizontalContentAlignment="Left"
-                        Cursor="Hand"/>
+                        Cursor="Hand" Click="Button_Click_3"/>
 
                 <Button Content="THÔNG TIN"
                         Background="Transparent"

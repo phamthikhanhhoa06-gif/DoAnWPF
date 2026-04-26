@@ -65,7 +65,7 @@
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center">
 
-            <StackPanel Margin="40">
+            <StackPanel Margin="40,40,40,17">
 
                 <!-- Tiêu đề chính -->
                 <TextBlock Text="🏨 HỆ THỐNG QUẢN LÝ KHÁCH SẠN" 
@@ -107,22 +107,21 @@
                         Style="{StaticResource PrimaryButton}"
                         Background="#3498DB" 
                         Foreground="White"
-                        Command="{Binding DangNhapCommand}"/>
-
-                <!-- Nút ĐĂNG KÝ (Xanh lá cây) - Mới thêm -->
-                <Button Content="📝 TẠO TÀI KHOẢN ĐĂNG KÝ" 
-                        Style="{StaticResource PrimaryButton}"
-                        Background="#27AE60" 
-                        Foreground="White"
-                        Click="Register_Click"/>
-
-                <!-- NútThoát -->
+                        Command="{Binding DangNhapCommand}" Width="421"/>
                 <Button Content="Đóng Ứng Dụng" 
                         Style="{StaticResource PrimaryButton}"
                         Background="#95A5A6" 
                         Foreground="White"
-                        Click="CloseApp_Click"
-                        Margin="20,15,0,0"/>
+                        Click="CloseApp_Click" Width="422" Height="42"/>
+
+                <!-- Nút ĐĂNG KÝ (Xanh lá cây) - Mới thêm -->
+                <!--<Button Content="📝 TẠO TÀI KHOẢN ĐĂNG KÝ" 
+                        Style="{StaticResource PrimaryButton}"
+                        Background="#27AE60" 
+                        Foreground="White"
+                        Click="Register_Click"/>-->
+
+                <!-- NútThoát -->
 
             </StackPanel>
         </Border>

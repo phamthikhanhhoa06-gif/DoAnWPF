@@ -12,5 +12,5 @@
         ResizeMode="NoResize">
 
     <!-- Nơi chứa UserControl đăng nhập -->
-    <views:uc_LoginView/>
+    <views:uc_LoginView Loaded="uc_LoginView_Loaded"/>
 </Window>

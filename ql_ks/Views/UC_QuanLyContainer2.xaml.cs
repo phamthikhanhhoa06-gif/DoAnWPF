@@ -62,7 +62,7 @@ namespace ql_ks.Views
         private void BtnBaoCaoNam_Click(object sender, RoutedEventArgs e)
         {
             SetActiveTab(sender as Button);
-            ContentArea.Content = new UC_TraCuuBaoCaoNam();
+            ContentArea.Content = new UC_BaoCaoThongKeNam();
         }
 
         // Tab 4: Báo cáo khách hàng (chưa có UC → placeholder)
@@ -70,14 +70,7 @@ namespace ql_ks.Views
         {
             SetActiveTab(sender as Button);
             // TODO: Khi có UC_TraCuuBaoCaoKhachHang thì thay vào đây
-            ContentArea.Content = new TextBlock
-            {
-                Text = "Báo cáo khách hàng - Đang phát triển",
-                HorizontalAlignment = HorizontalAlignment.Center,
-                VerticalAlignment = VerticalAlignment.Center,
-                FontSize = 16,
-                Foreground = System.Windows.Media.Brushes.Gray
-            };
+            ContentArea.Content = new UC_BaoCaoThongKeKhachHang();
         }
     }
 }

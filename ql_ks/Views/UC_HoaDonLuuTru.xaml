@@ -1,0 +1,221 @@
+﻿<UserControl x:Class="ql_ks.Views.UC_HoaDonLuuTru"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ql_ks.Views"
+             mc:Ignorable="d" 
+              d:DesignHeight="650" d:DesignWidth="750"
+             Background="#F5F7FA">
+
+    <UserControl.Resources>
+        <Style x:Key="LabelStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="#7F8C8D"/>
+            <Setter Property="Margin" Value="0,0,0,3"/>
+        </Style>
+
+        <Style x:Key="ValueStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#2C3E50"/>
+            <Setter Property="Margin" Value="0,0,0,12"/>
+        </Style>
+
+        <Style x:Key="InputStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="8,5"/>
+            <Setter Property="Margin" Value="0,0,0,12"/>
+            <Setter Property="BorderBrush" Value="#DDD"/>
+            <Setter Property="BorderThickness" Value="0,0,0,2"/>
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
+
+        <Style x:Key="DatePickerStyle" TargetType="DatePicker">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="0,0,0,12"/>
+            <Setter Property="BorderBrush" Value="#DDD"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- ====== TIÊU ĐỀ ====== -->
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,20">
+            <TextBlock Text="HÓA ĐƠN LƯU TRÚ" FontSize="22" FontWeight="Bold" 
+                       Foreground="#2C3E50" HorizontalAlignment="Center"/>
+            <Rectangle Height="3" Width="200" Fill="#3498DB" 
+                       HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            <TextBlock Text="{Binding ThongBao}" FontSize="12" Foreground="#999" 
+                       HorizontalAlignment="Center" Margin="0,5,0,0"/>
+        </StackPanel>
+
+        <!-- ====== NỘI DUNG ====== -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- ====== CỘT TRÁI: THÔNG TIN HÓA ĐƠN ====== -->
+                <StackPanel Grid.Column="0">
+
+                    <TextBlock Text="THÔNG TIN HÓA ĐƠN" FontSize="14" FontWeight="Bold" 
+                               Foreground="#2C3E50" Margin="0,0,0,15"/>
+                    <Separator Background="#E0E0E0" Margin="0,0,0,15"/>
+
+                    <!-- Mã hóa đơn -->
+                    <TextBlock Text="Mã hóa đơn" Style="{StaticResource LabelStyle}"/>
+                    <TextBlock Text="{Binding MaHD}" Style="{StaticResource ValueStyle}"/>
+
+                    <!-- Ngày lập -->
+                    <TextBlock Text="Ngày lập hóa đơn" Style="{StaticResource LabelStyle}"/>
+                    <DatePicker SelectedDate="{Binding NgayLapHD}" 
+                                Style="{StaticResource DatePickerStyle}"/>
+
+                    <!-- Giờ lập -->
+                    <TextBlock Text="Giờ lập hóa đơn" Style="{StaticResource LabelStyle}"/>
+                    <Grid Margin="0,0,0,12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding GioLapHD}" 
+                                   FontSize="14" FontWeight="SemiBold" 
+                                   Foreground="#2C3E50" VerticalAlignment="Center"/>
+                        <Button Grid.Column="1" Content="🕐" Background="Transparent" 
+                                BorderThickness="0" FontSize="18" Cursor="Hand"
+                                ToolTip="Cập nhật giờ hiện tại"
+                                Click="BtnCapNhatGio_Click"/>
+                    </Grid>
+
+                    <!-- Nhân viên lập -->
+                    <TextBlock Text="Nhân viên lập hóa đơn" Style="{StaticResource LabelStyle}"/>
+                    <TextBlock Text="{Binding TenNhanVien}" Style="{StaticResource ValueStyle}"/>
+
+                    <Separator Background="#E0E0E0" Margin="0,5,0,15"/>
+
+                    <!-- THÔNG TIN KHÁCH HÀNG -->
+                    <TextBlock Text="THÔNG TIN KHÁCH HÀNG" FontSize="14" FontWeight="Bold" 
+                               Foreground="#2C3E50" Margin="0,0,0,15"/>
+
+                    <!-- CMND -->
+                    <TextBlock Text="Số CMND / CCCD" Style="{StaticResource LabelStyle}"/>
+                    <TextBox Text="{Binding CMND, UpdateSourceTrigger=PropertyChanged}" 
+                             Style="{StaticResource InputStyle}"
+                             LostFocus="TxtCMND_LostFocus"/>
+
+                    <!-- Tên khách hàng -->
+                    <TextBlock Text="Họ và tên" Style="{StaticResource LabelStyle}"/>
+                    <TextBox Text="{Binding TenKhachHang, UpdateSourceTrigger=PropertyChanged}" 
+                             Style="{StaticResource InputStyle}"/>
+
+                    <!-- SĐT -->
+                    <TextBlock Text="Số điện thoại" Style="{StaticResource LabelStyle}"/>
+                    <TextBox Text="{Binding SoDienThoaiKH, UpdateSourceTrigger=PropertyChanged}" 
+                             Style="{StaticResource InputStyle}"/>
+                </StackPanel>
+
+                <!-- ====== CỘT PHẢI: THÔNG TIN THANH TOÁN ====== -->
+                <StackPanel Grid.Column="2">
+
+                    <TextBlock Text="THÔNG TIN THANH TOÁN" FontSize="14" FontWeight="Bold" 
+                               Foreground="#2C3E50" Margin="0,0,0,15"/>
+                    <Separator Background="#E0E0E0" Margin="0,0,0,15"/>
+
+                    <!-- Mã phòng -->
+                    <TextBlock Text="Mã phòng" Style="{StaticResource LabelStyle}"/>
+                    <TextBlock Text="{Binding MaPhong}" Style="{StaticResource ValueStyle}" 
+                               FontSize="20"/>
+
+                    <!-- Loại phòng -->
+                    <TextBlock Text="Loại phòng" Style="{StaticResource LabelStyle}"/>
+                    <TextBlock Text="{Binding LoaiPhong}" Style="{StaticResource ValueStyle}"/>
+
+                    <!-- Đơn giá -->
+                    <TextBlock Text="Đơn giá (VNĐ/ngày)" Style="{StaticResource LabelStyle}"/>
+                    <TextBlock Style="{StaticResource ValueStyle}">
+                        <Run Text="{Binding DonGiaPhong, StringFormat={}{0:N0}}"/>
+                        <Run Text=" VNĐ" Foreground="#999"/>
+                    </TextBlock>
+
+                    <Separator Background="#E0E0E0" Margin="0,5,0,15"/>
+
+                    <!-- Ngày nhận phòng -->
+                    <TextBlock Text="Ngày nhận phòng" Style="{StaticResource LabelStyle}"/>
+                    <DatePicker SelectedDate="{Binding NgayNhan}" 
+                                Style="{StaticResource DatePickerStyle}"/>
+
+                    <!-- Ngày trả phòng -->
+                    <TextBlock Text="Ngày trả phòng" Style="{StaticResource LabelStyle}"/>
+                    <DatePicker SelectedDate="{Binding NgayTra}" 
+                                Style="{StaticResource DatePickerStyle}"/>
+
+                    <!-- Số ngày -->
+                    <TextBlock Text="Số ngày lưu trú" Style="{StaticResource LabelStyle}"/>
+                    <TextBlock Style="{StaticResource ValueStyle}">
+                        <Run Text="{Binding SoNgay}"/>
+                        <Run Text=" ngày" Foreground="#999"/>
+                    </TextBlock>
+
+                    <Separator Background="#E0E0E0" Margin="0,5,0,15"/>
+
+                    <!-- TỔNG TIỀN -->
+                    <TextBlock Text="TỔNG TIỀN" FontSize="14" FontWeight="Bold" 
+                               Foreground="#E74C3C" Margin="0,0,0,5"/>
+
+                    <Border Background="#FDEDEC" CornerRadius="8" Padding="15,10" 
+                            Margin="0,0,0,10">
+                        <TextBlock FontSize="24" FontWeight="Bold" 
+                                   Foreground="#E74C3C" HorizontalAlignment="Center">
+                            <Run Text="{Binding TongTien}"/>
+                            <Run Text=" VNĐ" FontSize="14"/>
+                        </TextBlock>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+
+        <!-- ====== THANH NÚT DƯỚI ====== -->
+        <Border Grid.Row="2" Margin="0,15,0,0" Padding="0,10,0,0"
+                BorderBrush="#E0E0E0" BorderThickness="0,1,0,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Nút Hủy -->
+                <Button Grid.Column="0" Content="Hủy" 
+                        Command="{Binding HuyCommand}"
+                        HorizontalAlignment="Left"
+                        Background="#95A5A6" Foreground="White" 
+                        Padding="25,10" FontSize="14" FontWeight="Bold"
+                        BorderThickness="0" Cursor="Hand"/>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <!-- Nút Lưu -->
+                    <Button Content="Lưu" 
+                            Command="{Binding LuuCommand}"
+                            Background="#3498DB" Foreground="White" 
+                            Padding="25,10" FontSize="14" FontWeight="Bold"
+                            BorderThickness="0" Cursor="Hand" Margin="0,0,10,0"/>
+
+                    <!-- Nút Thanh toán -->
+                    <Button Content="💳 Thanh toán" 
+                            Command="{Binding ThanhToanCommand}"
+                            Background="#27AE60" Foreground="White" 
+                            Padding="25,10" FontSize="14" FontWeight="Bold"
+                            BorderThickness="0" Cursor="Hand"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

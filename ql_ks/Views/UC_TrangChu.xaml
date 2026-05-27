@@ -5,92 +5,265 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ql_ks.Views"
              mc:Ignorable="d" 
-        d:DesignHeight="800" d:DesignWidth="1400">
+     d:DesignHeight="800" d:DesignWidth="1100"
+             Background="#F0F2F5">
 
-    <Grid Background="#F0F2F5">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+    <UserControl.Resources>
+        <Style x:Key="FilterBtn" TargetType="Button">
+            <Setter Property="Padding" Value="14,7"/>
+            <Setter Property="Margin" Value="0,0,5,0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="0.85"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
 
+        <Style x:Key="ActionBtn" TargetType="Button">
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="Margin" Value="0,0,8,0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="0.85"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
 
+        <Style x:Key="StatCard" TargetType="Border">
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="15,10"/>
+            <Setter Property="Margin" Value="5,0"/>
+        </Style>
+    </UserControl.Resources>
 
-        <!-- NỘI DUNG PHẢI (giữ nguyên như cũ) -->
-        <Grid Grid.Column="1" Margin="30">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-            <!-- 1. Thanh Thống Kê -->
-            <Border Background="White" CornerRadius="10" Padding="20" Margin="-228,10,0,20">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
+        <!-- ROW 0: TIÊU ĐỀ -->
+        <TextBlock Grid.Row="0" Text="PHẦN MỀM QUẢN LÍ KHÁCH SẠN" 
+                   FontSize="24" FontWeight="Bold" Foreground="#2C3E50" 
+                   HorizontalAlignment="Center" Margin="0,15,0,15"/>
 
-                    <StackPanel Grid.Column="0" HorizontalAlignment="Center">
-                        <TextBlock Text="{Binding TotalRooms}" FontSize="24" FontWeight="Bold"/>
-                        <TextBlock Text="Tổng số" FontSize="12"/>
+        <!-- ROW 1: THANH THỐNG KÊ -->
+        <Border Grid.Row="1" Background="White" CornerRadius="10" 
+                Margin="20,0,20,10" Padding="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" Style="{StaticResource StatCard}" Background="#ECF0F1">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="Tất cả" FontSize="12" Foreground="#7F8C8D" 
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Text="{Binding TotalRooms}" FontSize="28" FontWeight="Bold" 
+                                   Foreground="#2C3E50" HorizontalAlignment="Center"/>
                     </StackPanel>
-                    <StackPanel Grid.Column="1" HorizontalAlignment="Center">
-                        <TextBlock Text="{Binding EmptyRooms}" FontSize="24" FontWeight="Bold" Foreground="Green"/>
-                        <TextBlock Text="Còn trống" FontSize="12"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="2" HorizontalAlignment="Center">
-                        <TextBlock Text="{Binding RentedRooms}" FontSize="24" FontWeight="Bold" Foreground="Orange"/>
-                        <TextBlock Text="Đang thuê" FontSize="12"/>
-                    </StackPanel>
-                    <StackPanel Grid.Column="3" HorizontalAlignment="Center">
-                        <TextBlock Text="{Binding RepairRooms}" FontSize="24" FontWeight="Bold" Foreground="Red"/>
-                        <TextBlock Text="Đang sửa" FontSize="12"/>
-                    </StackPanel>
-                </Grid>
-            </Border>
+                </Border>
 
-            <!-- 2. Nút Bộ Lọc -->
-            <Border Background="White" CornerRadius="10" Padding="10" Margin="-228,103,0,20" Grid.RowSpan="2">
-                <StackPanel Orientation="Horizontal">
-                    <Button Content="🏠 Tất cả" Command="{Binding FilterAllCommand}" Background="#2C3E50" Foreground="White" Padding="10,5"/>
-                    <Button Content="⚪ Trống" Command="{Binding FilterEmptyCommand}" Background="#F1C40F" Foreground="White" Padding="10,5"/>
-                    <Button Content="🔵 Thuê" Command="{Binding FilterRentedCommand}" Background="#3498DB" Foreground="White" Padding="10,5"/>
-                    <Button Content="🛠 Sửa chữa" Background="#E74C3C" Foreground="White" Padding="10,5"/>
+                <Border Grid.Column="1" Style="{StaticResource StatCard}" Background="#E8F8F5">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="Còn trống" FontSize="12" Foreground="#27AE60" 
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Text="{Binding EmptyRooms}" FontSize="28" FontWeight="Bold" 
+                                   Foreground="#27AE60" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="2" Style="{StaticResource StatCard}" Background="#EBF5FB">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="Đang thuê" FontSize="12" Foreground="#3498DB" 
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Text="{Binding RentedRooms}" FontSize="28" FontWeight="Bold" 
+                                   Foreground="#3498DB" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="3" Style="{StaticResource StatCard}" Background="#FDEDEC">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="Đang sửa" FontSize="12" Foreground="#E74C3C" 
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Text="{Binding RepairRooms}" FontSize="28" FontWeight="Bold" 
+                                   Foreground="#E74C3C" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="4" Style="{StaticResource StatCard}" Background="#F4ECF7">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="Đã chọn" FontSize="12" Foreground="#8E44AD" 
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Text="{Binding SelectedCount}" FontSize="28" FontWeight="Bold" 
+                                   Foreground="#8E44AD" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Border>
+
+        <!-- ROW 2: NÚT LỌC + HÀNH ĐỘNG -->
+        <Border Grid.Row="2" Background="White" CornerRadius="10" 
+                Margin="20,0,20,10" Padding="10,8">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <Button Content="🏠 Tất cả" Command="{Binding FilterAllCommand}" 
+                            Background="#2C3E50" Style="{StaticResource FilterBtn}"/>
+                    <Button Content="⚪ Trống" Command="{Binding FilterEmptyCommand}" 
+                            Background="#F1C40F" Style="{StaticResource FilterBtn}"/>
+                    <Button Content="🔵 Thuê" Command="{Binding FilterRentedCommand}" 
+                            Background="#3498DB" Style="{StaticResource FilterBtn}"/>
+                    <Button Content="🔧 Sửa chữa" Command="{Binding FilterRepairCommand}" 
+                            Background="#E74C3C" Style="{StaticResource FilterBtn}"/>
+
+                    <TextBlock VerticalAlignment="Center" Margin="15,0,0,0" 
+                               FontSize="12" Foreground="#999">
+                        <Run Text="Đang xem: "/>
+                        <Run Text="{Binding CurrentFilter}" FontWeight="Bold" Foreground="#2C3E50"/>
+                    </TextBlock>
                 </StackPanel>
-            </Border>
 
-            <!-- 3. Danh Sách Phòng -->
-            <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto" Margin="-228,0,0,0">
-                <WrapPanel Margin="0,0,0,0">
-                    <ItemsControl ItemsSource="{Binding RoomList}">
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal"/>
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <Button Content="📋 Thuê phòng" Command="{Binding ThuePhongCommand}" 
+                            Background="#27AE60" Style="{StaticResource ActionBtn}"/>
+                    <Button Content="🧾 Hóa đơn" Command="{Binding XemHoaDonCommand}" 
+                            Background="#8E44AD" Style="{StaticResource ActionBtn}"/>
+                    <Button Content="🔄" Command="{Binding RefreshCommand}" 
+                            Background="#95A5A6" Style="{StaticResource ActionBtn}"
+                            ToolTip="Làm mới"/>
+                </StackPanel>
+            </Grid>
+        </Border>
 
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Border Width="150" Height="120" 
-                                        Background="{Binding ColorBackground}" 
-                                        CornerRadius="8" Margin="10" 
-                                        Cursor="Hand" BorderBrush="#DDD" 
-                                        BorderThickness="1">
-                                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                                        <TextBlock Text="{Binding Ma_Phong}" FontSize="24" FontWeight="Bold" Foreground="{Binding ColorText}"/>
-                                        <TextBlock Text="{Binding Ten_TP}" FontSize="14" TextAlignment="Center" Foreground="{Binding ColorText}"/>
-                                        <TextBlock Text="{Binding TinhTrang}" FontSize="12" Foreground="{Binding ColorText}" HorizontalAlignment="Center"/>
+        <!-- ROW 3: CHÚ THÍCH MÀU -->
+        <Border Grid.Row="3" Margin="20,0,20,8" Padding="5,3">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Margin="0,0,20,0">
+                    <Border Width="16" Height="16" CornerRadius="3" 
+                            Background="#6C757D" Margin="0,0,5,0"/>
+                    <TextBlock Text="Trống" VerticalAlignment="Center" FontSize="12" Foreground="#555"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,20,0">
+                    <Border Width="16" Height="16" CornerRadius="3" 
+                            Background="#3498DB" Margin="0,0,5,0"/>
+                    <TextBlock Text="Có khách" VerticalAlignment="Center" FontSize="12" Foreground="#555"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,20,0">
+                    <Border Width="16" Height="16" CornerRadius="3" 
+                            Background="#2C3E50" Margin="0,0,5,0"/>
+                    <TextBlock Text="Đang dọn dẹp" VerticalAlignment="Center" FontSize="12" Foreground="#555"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Border Width="16" Height="16" CornerRadius="3" 
+                            Background="#9B59B6" Margin="0,0,5,0"/>
+                    <TextBlock Text="Đã chọn" VerticalAlignment="Center" FontSize="12" Foreground="#555"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- ROW 4: GRID PHÒNG -->
+        <Border Grid.Row="4" Background="White" CornerRadius="10" 
+                Margin="20,0,20,20" Padding="10">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" 
+                          HorizontalScrollBarVisibility="Disabled">
+                <ItemsControl ItemsSource="{Binding RoomList}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Width="120" Height="80" 
+                                    Background="{Binding ColorBackground}" 
+                                    CornerRadius="8" Margin="6" Cursor="Hand"
+                                    BorderThickness="2" BorderBrush="Transparent">
+
+                                <Border.Style>
+                                    <Style TargetType="Border">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="BorderBrush" Value="#FFD700"/>
+                                                <Setter Property="Effect">
+                                                    <Setter.Value>
+                                                        <DropShadowEffect BlurRadius="10" 
+                                                            ShadowDepth="2" Opacity="0.4"/>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+
+                                <Border.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" 
+                                        Command="{Binding DataContext.RoomClickCommand, 
+                                            RelativeSource={RelativeSource AncestorType=ItemsControl}}" 
+                                        CommandParameter="{Binding}"/>
+                                </Border.InputBindings>
+
+                                <StackPanel HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding Ma_Phong}" 
+                                               FontSize="20" FontWeight="Bold" 
+                                               Foreground="{Binding ColorText}" 
+                                               HorizontalAlignment="Center"/>
+                                    <TextBlock Text="{Binding Ten_TP}" 
+                                               FontSize="11" 
+                                               Foreground="{Binding ColorText}" 
+                                               HorizontalAlignment="Center"
+                                               TextTrimming="CharacterEllipsis"
+                                               MaxWidth="110" Opacity="0.9"/>
+                                </StackPanel>
+
+                                <Border.ToolTip>
+                                    <StackPanel Margin="5">
+                                        <TextBlock FontWeight="Bold" FontSize="14">
+                                            <Run Text="Phòng "/>
+                                            <Run Text="{Binding Ma_Phong}"/>
+                                        </TextBlock>
+                                        <TextBlock>
+                                            <Run Text="Loại: "/>
+                                            <Run Text="{Binding Ten_TP}" FontWeight="SemiBold"/>
+                                        </TextBlock>
+                                        <TextBlock>
+                                            <Run Text="Trạng thái: "/>
+                                            <Run Text="{Binding TinhTrang}" FontWeight="SemiBold"/>
+                                        </TextBlock>
+                                        <TextBlock Text="Click để chọn/bỏ chọn" 
+                                                   FontStyle="Italic" Foreground="#999" 
+                                                   Margin="0,5,0,0"/>
                                     </StackPanel>
-                                </Border>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </WrapPanel>
+                                </Border.ToolTip>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </ScrollViewer>
-        </Grid>
+        </Border>
     </Grid>
 </UserControl>

@@ -1,0 +1,42 @@
+<UserControl x:Class="ql_ks.Views.UC_TraCuuQuanLy"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ql_ks.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1100"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="13"
+             TextOptions.TextFormattingMode="Ideal"
+             TextOptions.TextRenderingMode="Auto"
+             Background="{DynamicResource MaterialDesignPaper}"
+             FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <TabControl Style="{StaticResource MaterialDesignFilledTabControl}"
+                    materialDesign:ColorZoneAssist.Mode="PrimaryLight"
+                    Background="Transparent">
+            <!-- Quản Lý Phòng -->
+            <TabItem Header="QUẢN LÝ PHÒNG" Height="50" Padding="20,0" FontSize="14">
+                <local:UC_QuanLyPhong/>
+            </TabItem>
+            
+            <!-- Quản Lý Khách Hàng -->
+            <TabItem Header="QUẢN LÝ KHÁCH HÀNG" Height="50" Padding="20,0" FontSize="14">
+                <local:UC_QuanLyKhachHang/>
+            </TabItem>
+            
+            <!-- Quản Lý Nhân Viên -->
+            <TabItem Header="QUẢN LÝ NHÂN VIÊN" Height="50" Padding="20,0" FontSize="14">
+                <local:UC_QuanLyNhanVien/>
+            </TabItem>
+            
+            <!-- Tra Cứu Hoá Đơn -->
+            <TabItem Header="QUẢN LÝ HÓA ĐƠN &amp; LƯU TRÚ" Height="50" Padding="20,0" FontSize="14">
+                <local:UC_QuanLyHoaDon/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

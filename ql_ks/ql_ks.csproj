@@ -189,7 +189,16 @@
     <Compile Include="ViewModels\AnUong_RelayCommand.cs" />
     <Compile Include="ViewModels\AnUong_RelayCommand_T.cs" />
     <Compile Include="ViewModels\BaoCaoThongKeDichVuViewModel.cs" />
+    <Compile Include="ViewModels\BaoCaoThongKeKhachHangViewModel.cs" />
+    <Compile Include="ViewModels\BaoCaoThongKeNamViewModel.cs" />
     <Compile Include="ViewModels\BaoCaoThongKeThangViewModel.cs" />
+    <Compile Include="ViewModels\Common_RelayCommand.cs" />
+    <Compile Include="ViewModels\HoaDonAnUongViewModel.cs" />
+    <Compile Include="ViewModels\HoaDonDiChuyenViewModel.cs" />
+    <Compile Include="ViewModels\HoaDonGiatUiViewModel.cs" />
+    <Compile Include="ViewModels\HoaDonLuuTruViewModel.cs" />
+    <Compile Include="ViewModels\HoaDonTongViewModel.cs" />
+    <Compile Include="Views\BieuDoToPieSliceConverter.cs" />
     <Compile Include="ViewModels\DiChuyen_RelayCommand.cs" />
     <Compile Include="ViewModels\DichVuAnUongViewModel.cs" />
     <Compile Include="ViewModels\DichVuDiChuyenViewModel.cs" />
@@ -201,6 +210,10 @@
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\Main_BaseViewModel.cs" />
     <Compile Include="ViewModels\Main_RelayCommand.cs" />
+    <Compile Include="Views\HoaDonWindow.xaml.cs">
+      <DependentUpon>HoaDonWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PieChartControl.cs" />
     <Compile Include="ViewModels\TCHoaDon_RelayCommand.cs" />
     <Compile Include="ViewModels\TCNhanVien_RelayCommand.cs" />
     <Compile Include="ViewModels\TCPhong_RelayCommand.cs" />
@@ -217,6 +230,12 @@
     <Compile Include="Views\UC_BaoCaoThongKeDichVu.xaml.cs">
       <DependentUpon>UC_BaoCaoThongKeDichVu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UC_BaoCaoThongKeKhachHang.xaml.cs">
+      <DependentUpon>UC_BaoCaoThongKeKhachHang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_BaoCaoThongKeNam.xaml.cs">
+      <DependentUpon>UC_BaoCaoThongKeNam.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UC_BaoCaoThongKeThang.xaml.cs">
       <DependentUpon>UC_BaoCaoThongKeThang.xaml</DependentUpon>
     </Compile>
@@ -228,6 +247,21 @@
     </Compile>
     <Compile Include="Views\UC_DichVuGiatUi.xaml.cs">
       <DependentUpon>UC_DichVuGiatUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_HoaDonAnUong.xaml.cs">
+      <DependentUpon>UC_HoaDonAnUong.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_HoaDonDiChuyen.xaml.cs">
+      <DependentUpon>UC_HoaDonDiChuyen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_HoaDonGiatUi.xaml.cs">
+      <DependentUpon>UC_HoaDonGiatUi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_HoaDonLuuTru.xaml.cs">
+      <DependentUpon>UC_HoaDonLuuTru.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_HoaDonTong.xaml.cs">
+      <DependentUpon>UC_HoaDonTong.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\uc_LoginView.xaml.cs">
       <DependentUpon>uc_LoginView.xaml</DependentUpon>
@@ -274,6 +308,12 @@
     <Compile Include="Views\UC_XuatBaoCaoDichVu.xaml.cs">
       <DependentUpon>UC_XuatBaoCaoDichVu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UC_XuatBaoCaoKhachHang.xaml.cs">
+      <DependentUpon>UC_XuatBaoCaoKhachHang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_XuatBaoCaoNam.xaml.cs">
+      <DependentUpon>UC_XuatBaoCaoNam.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UC_XuatBaoCaoThang.xaml.cs">
       <DependentUpon>UC_XuatBaoCaoThang.xaml</DependentUpon>
     </Compile>
@@ -293,7 +333,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\HoaDonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\UC_BaoCaoThongKeDichVu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_BaoCaoThongKeKhachHang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_BaoCaoThongKeNam.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -310,6 +362,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UC_DichVuGiatUi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_HoaDonAnUong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_HoaDonDiChuyen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_HoaDonGiatUi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_HoaDonLuuTru.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_HoaDonTong.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -370,6 +442,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UC_XuatBaoCaoDichVu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_XuatBaoCaoKhachHang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_XuatBaoCaoNam.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

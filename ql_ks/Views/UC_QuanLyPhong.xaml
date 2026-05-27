@@ -1,0 +1,97 @@
+<UserControl x:Class="ql_ks.Views.UC_QuanLyPhong"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ql_ks.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1100"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="13"
+             TextOptions.TextFormattingMode="Ideal"
+             TextOptions.TextRenderingMode="Auto"
+             Background="{DynamicResource MaterialDesignPaper}"
+             FontFamily="{DynamicResource MaterialDesignFont}">
+             
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- HEADER -->
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                   Text="QUẢN LÝ PHÒNG" FontSize="24" FontWeight="Bold" Foreground="#3F51B5" Margin="0,0,0,20"/>
+                   
+        <!-- FORM PANEL -->
+        <materialDesign:Card Grid.Row="1" Grid.Column="0" Margin="0,0,20,0" Padding="15" VerticalAlignment="Top">
+            <StackPanel>
+                <TextBlock Text="Thông tin phòng" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,20"/>
+                
+                <TextBox Text="{Binding MaPhong, UpdateSourceTrigger=PropertyChanged}" 
+                         materialDesign:HintAssist.Hint="Mã Phòng (Số)" 
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                         Margin="0,0,0,15"/>
+                         
+                <ComboBox ItemsSource="{Binding ListLoaiPhong}" 
+                          SelectedItem="{Binding SelectedLoaiPhong}"
+                          DisplayMemberPath="Ten_TP"
+                          materialDesign:HintAssist.Hint="Loại Phòng" 
+                          Style="{StaticResource MaterialDesignFloatingHintComboBox}" 
+                          Margin="0,0,0,15"/>
+                          
+                <ComboBox SelectedValue="{Binding TinhTrangPhong, UpdateSourceTrigger=PropertyChanged}"
+                          SelectedValuePath="Content"
+                          materialDesign:HintAssist.Hint="Tình trạng" 
+                          Style="{StaticResource MaterialDesignFloatingHintComboBox}" 
+                          Margin="0,0,0,30">
+                    <ComboBoxItem Content="Trống"/>
+                    <ComboBoxItem Content="Đang ở"/>
+                    <ComboBoxItem Content="Đang sửa chữa"/>
+                    <ComboBoxItem Content="Đang dọn dẹp"/>
+                </ComboBox>
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Button Grid.Row="0" Grid.Column="0" Command="{Binding AddCommand}" Content="Thêm" Margin="5"/>
+                    <Button Grid.Row="0" Grid.Column="1" Command="{Binding EditCommand}" Content="Sửa" Margin="5" Style="{StaticResource MaterialDesignOutlinedButton}"/>
+                    <Button Grid.Row="1" Grid.Column="0" Command="{Binding DeleteCommand}" Content="Xóa" Margin="5" Background="#E74C3C" BorderBrush="#E74C3C" Foreground="White" Style="{StaticResource MaterialDesignFlatDarkBgButton}"/>
+                    <Button Grid.Row="1" Grid.Column="1" Command="{Binding ClearCommand}" Content="Làm mới" Margin="5" Style="{StaticResource MaterialDesignFlatButton}"/>
+                </Grid>
+            </StackPanel>
+        </materialDesign:Card>
+        
+        <!-- DATAGRID -->
+        <materialDesign:Card Grid.Row="1" Grid.Column="1" Padding="10">
+            <DataGrid ItemsSource="{Binding ListPhong}" 
+                      SelectedItem="{Binding SelectedPhong}"
+                      AutoGenerateColumns="False" 
+                      CanUserAddRows="False" 
+                      IsReadOnly="True"
+                      materialDesign:DataGridAssist.CellPadding="13 8 8 8"
+                      materialDesign:DataGridAssist.ColumnHeaderPadding="8">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Mã Phòng" Binding="{Binding Ma_Phong}"/>
+                    <DataGridTextColumn Header="Loại Phòng" Binding="{Binding LOAIPHONG.Ten_TP}"/>
+                    <DataGridTextColumn Header="Đơn Giá" Binding="{Binding LOAIPHONG.DonGia_LP, StringFormat={}{0:N0} đ}"/>
+                    <DataGridTextColumn Header="Tình trạng" Binding="{Binding TinhTrang_Phong}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </materialDesign:Card>
+    </Grid>
+</UserControl>

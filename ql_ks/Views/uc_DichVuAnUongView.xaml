@@ -29,24 +29,12 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-
-                <!-- Phòng -->
-                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBlock Text="Mã phòng:"
-                               FontWeight="Bold"
-                               VerticalAlignment="Center"
-                               Foreground="#333"
-                               Margin="0,0,8,0"/>
-
-                    <TextBox Text="{Binding MaPhong, UpdateSourceTrigger=PropertyChanged}"
-                             Width="80"
-                             Height="32"
-                             Padding="8,3,8,3"
-                             VerticalContentAlignment="Center"
-                             Background="#F9FAFB"
-                             BorderBrush="#CBD5E1"
-                             BorderThickness="1"/>
+                <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,10,0,16">
+                    <TextBlock Text="PHẦN MỀM QUẢN LÍ KHÁCH SẠN" FontSize="26" FontWeight="Bold" Foreground="#30324A"/>
+                    <TextBlock Text="DỊCH VỤ ĂN UỐNG" FontSize="16" Foreground="#6B7280" HorizontalAlignment="Center" Margin="0,4,0,0"/>
                 </StackPanel>
+
+               
 
                 <!-- Tổng tiền -->
                 <StackPanel Grid.Column="2"
@@ -83,49 +71,135 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- TRÁI: THỰC ĐƠN -->
             <Border Grid.Column="0"
-                    Background="White"
-                    BorderBrush="#E5E7EB"
-                    BorderThickness="1"
-                    CornerRadius="8"
-                    Padding="12">
+        Background="White"
+        BorderBrush="#E5E7EB"
+        BorderThickness="1"
+        CornerRadius="8"
+        Padding="12">
 
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
+                    <!-- Mã phòng -->
+                    <!-- Mã phòng + thông báo lỗi -->
                     <StackPanel Grid.Row="0" Margin="0,0,0,10">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="Mã phòng:"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"
+                   Foreground="#333"
+                   Margin="0,0,8,0"/>
+
+                            <TextBox Text="{Binding MaPhong, UpdateSourceTrigger=PropertyChanged}"
+                 Width="100"
+                 Height="32"
+                 MaxLength="3"
+                 Padding="8,3,8,3"
+                 VerticalContentAlignment="Center"
+                 Background="#F9FAFB"
+                 BorderThickness="1">
+                                <TextBox.Style>
+                                    <Style TargetType="TextBox">
+                                        <Setter Property="BorderBrush" Value="#CBD5E1"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding CoLoiMaPhong}" Value="True">
+                                                <Setter Property="BorderBrush" Value="Red"/>
+                                                <Setter Property="BorderThickness" Value="2"/>
+                                                <Setter Property="Background" Value="#FFF5F5"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBox.Style>
+                            </TextBox>
+                        </StackPanel>
+
+                        <!-- Thông báo lỗi mã phòng -->
+                        <TextBlock Text="{Binding LoiMaPhong}"
+               Foreground="Red"
+               FontSize="12"
+               FontStyle="Italic"
+               Margin="0,4,0,0"
+               TextWrapping="Wrap">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CoLoiMaPhong}" Value="True">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </StackPanel>
+                    <!-- Tiêu đề + tìm kiếm -->
+                    <!-- Tiêu đề + tìm kiếm -->
+                    <StackPanel Grid.Row="1" Margin="0,0,0,10">
                         <TextBlock Text="THỰC ĐƠN"
-                                   FontSize="18"
-                                   FontWeight="Bold"
-                                   Foreground="#222"
-                                   Margin="0,0,0,10"/>
+               FontSize="18"
+               FontWeight="Bold"
+               Foreground="#222"
+               Margin="0,0,0,10"/>
 
                         <TextBox Text="{Binding TuKhoaTimKiem, UpdateSourceTrigger=PropertyChanged}"
-                                 Height="34"
-                                 Padding="10,4"
-                                 Background="#F9FAFB"
-                                 BorderBrush="#CBD5E1"
-                                 BorderThickness="1"
-                                 ToolTip="Tìm kiếm theo tên món"/>
+             Height="34"
+             Padding="10,4"
+             Background="#F9FAFB"
+             BorderThickness="1"
+             ToolTip="Tìm kiếm theo tên món">
+                            <TextBox.Style>
+                                <Style TargetType="TextBox">
+                                    <Setter Property="BorderBrush" Value="#CBD5E1"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CoLoiTimKiem}" Value="True">
+                                            <Setter Property="BorderBrush" Value="Red"/>
+                                            <Setter Property="BorderThickness" Value="2"/>
+                                            <Setter Property="Background" Value="#FFF5F5"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBox.Style>
+                        </TextBox>
+
+                        <!-- Thông báo lỗi tìm kiếm -->
+                        <TextBlock Text="{Binding LoiTimKiem}"
+               Foreground="Red"
+               FontSize="12"
+               FontStyle="Italic"
+               Margin="0,4,0,0"
+               TextWrapping="Wrap">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CoLoiTimKiem}" Value="True">
+                                            <Setter Property="Visibility" Value="Visible"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
                     </StackPanel>
 
-                    <ScrollViewer Grid.Row="1"
-                                  VerticalScrollBarVisibility="Auto"
-                                  HorizontalScrollBarVisibility="Disabled">
+                    <!-- Danh sách thực đơn có thanh kéo -->
+                    <ScrollViewer Grid.Row="2"
+                      VerticalScrollBarVisibility="Visible"
+                      HorizontalScrollBarVisibility="Disabled">
 
                         <ItemsControl ItemsSource="{Binding DanhSachMonAn}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <Border Background="White"
-                                            BorderBrush="#E5E7EB"
-                                            BorderThickness="1"
-                                            CornerRadius="6"
-                                            Margin="0,0,0,8"
-                                            Padding="10">
+                                BorderBrush="#E5E7EB"
+                                BorderThickness="1"
+                                CornerRadius="6"
+                                Margin="0,0,0,8"
+                                Padding="10">
 
                                         <Grid>
                                             <Grid.ColumnDefinitions>
@@ -135,32 +209,32 @@
 
                                             <StackPanel Grid.Column="0">
                                                 <TextBlock Text="{Binding Ten_MH}"
-                                                           FontWeight="Bold"
-                                                           Foreground="#333"
-                                                           FontSize="14"
-                                                           TextWrapping="Wrap"/>
+                                               FontWeight="Bold"
+                                               Foreground="#333"
+                                               FontSize="14"
+                                               TextWrapping="Wrap"/>
 
                                                 <TextBlock Foreground="Gray"
-                                                           FontSize="13"
-                                                           Margin="0,4,0,0">
-                                                    <Run Text="{Binding GiaTien, StringFormat={}{0:N0}}"/>
-                                                    <Run Text=" ₫"/>
+                                               FontSize="13"
+                                               Margin="0,4,0,0">
+                                        <Run Text="{Binding GiaTien, StringFormat={}{0:N0}}"/>
+                                        <Run Text=" ₫"/>
                                                 </TextBlock>
                                             </StackPanel>
 
                                             <Button Grid.Column="1"
-                                                    Content="+"
-                                                    Width="32"
-                                                    Height="32"
-                                                    Command="{Binding DataContext.AddCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
-                                                    CommandParameter="{Binding}"
-                                                    Background="#3498DB"
-                                                    Foreground="White"
-                                                    BorderThickness="0"
-                                                    FontWeight="Bold"
-                                                    Cursor="Hand"
-                                                    HorizontalAlignment="Right"
-                                                    VerticalAlignment="Center"/>
+                                        Content="+"
+                                        Width="32"
+                                        Height="32"
+                                        Command="{Binding DataContext.AddCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                        CommandParameter="{Binding}"
+                                        Background="#3498DB"
+                                        Foreground="White"
+                                        BorderThickness="0"
+                                        FontWeight="Bold"
+                                        Cursor="Hand"
+                                        HorizontalAlignment="Right"
+                                        VerticalAlignment="Center"/>
                                         </Grid>
                                     </Border>
                                 </DataTemplate>
@@ -171,7 +245,7 @@
             </Border>
 
             <!-- PHẢI: ĐÃ GỌI -->
-            <Border Grid.Column="2"
+            <Border Grid.Column="3"
                     Background="White"
                     BorderBrush="#E5E7EB"
                     BorderThickness="1"

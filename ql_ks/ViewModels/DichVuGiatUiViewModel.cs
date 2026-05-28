@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using ql_ks.Models;
@@ -16,17 +13,15 @@ namespace ql_ks.ViewModels
     {
         private readonly QLKhachSan_Model _db = new QLKhachSan_Model();
 
-        private int _maPhong = 0; // Phòng cần giặt ủi
-        private decimal _soCanNang = 0; // Số kg
-        private DateTime? _ngayBatDau = DateTime.Now; // Ngày nhận
-        private DateTime? _ngayKetThuc = DateTime.Now.AddDays(1); // Ngày trả dự kiến
-
-        private decimal _tongTien = 0; // Tổng tiền tính ra
+        private int _maPhong = 0;
+        private decimal _soCanNang = 0;
+        private DateTime? _ngayBatDau = DateTime.Now;
+        private DateTime? _ngayKetThuc = DateTime.Now.AddDays(1);
+        private decimal _tamTinh = 0;
+        private decimal _tongTien = 0;
         private string _thongBao = "";
+        private LOAIGIATUI _selectedLoaiGiGui;
 
-        private LOAIGIATUI _selectedLoaiGiGui; // Loại đang chọn
-
-        // Danh sách hiển thị lên UI
         public ObservableCollection<LOAIGIATUI> DanhSachLoaiGiGui { get; set; }
         public ObservableCollection<LuotGiatDaChonVM> DanhSachDaChon { get; set; }
         public ObservableCollection<PhongChonVM> DanhSachPhong { get; set; }
@@ -40,7 +35,12 @@ namespace ql_ks.ViewModels
         public decimal SoCanNang
         {
             get => _soCanNang;
-            set { _soCanNang = value < 0 ? 0 : value; OnPropertyChanged(); CapNhatTongTien(); }
+            set
+            {
+                _soCanNang = value < 0 ? 0 : value;
+                OnPropertyChanged();
+                CapNhatTamTinh();
+            }
         }
 
         public DateTime? NgayBatDau
@@ -53,6 +53,12 @@ namespace ql_ks.ViewModels
         {
             get => _ngayKetThuc;
             set { _ngayKetThuc = value; OnPropertyChanged(); }
+        }
+
+        public decimal TamTinh
+        {
+            get => _tamTinh;
+            set { _tamTinh = value; OnPropertyChanged(); }
         }
 
         public decimal TongTien
@@ -70,7 +76,12 @@ namespace ql_ks.ViewModels
         public LOAIGIATUI SelectedLoaiGiGui
         {
             get => _selectedLoaiGiGui;
-            set { _selectedLoaiGiGui = value; OnPropertyChanged(); CapNhatTongTien(); }
+            set
+            {
+                _selectedLoaiGiGui = value;
+                OnPropertyChanged();
+                CapNhatTamTinh();
+            }
         }
 
         public ICommand ThemVaoGioCommand { get; }
@@ -85,22 +96,23 @@ namespace ql_ks.ViewModels
             DanhSachPhong = new ObservableCollection<PhongChonVM>();
 
             ThemVaoGioCommand = new GiatUi_RelayCommand(_ => ThemVaoGio());
-            XoaKhoiGioCommand = new GiatUi_RelayCommand(_ => XoaKhoiGio());
+            XoaKhoiGioCommand = new GiatUi_RelayCommand(param => XoaKhoiGio(param));
             LapHoaDonCommand = new GiatUi_RelayCommand(_ => LapHoaDon());
             LamMoiCommand = new GiatUi_RelayCommand(_ => LamMoi());
 
             TaiDuLieu();
         }
 
+        // =============================================
+        // TẢI DỮ LIỆU
+        // =============================================
         private void TaiDuLieu()
         {
             try
             {
-                // Load danh sách loại giặt ủi từ DB
                 var loaiList = _db.LOAIGIATUIs.OrderBy(x => x.Ma_LoaiGU).ToList();
                 DanhSachLoaiGiGui = new ObservableCollection<LOAIGIATUI>(loaiList);
 
-                // Load danh sách phòng có thể chọn (có thể lọc trống hoặc không)
                 var phongList = from p in _db.PHONGs
                                 join lp in _db.LOAIPHONGs on p.Ma_LP equals lp.Ma_LP
                                 orderby p.Ma_Phong
@@ -114,6 +126,8 @@ namespace ql_ks.ViewModels
 
                 if (DanhSachLoaiGiGui.Count > 0)
                     SelectedLoaiGiGui = DanhSachLoaiGiGui.First();
+
+                CapNhatTongTien();
             }
             catch (Exception ex)
             {
@@ -121,11 +135,30 @@ namespace ql_ks.ViewModels
             }
         }
 
+        // =============================================
+        // TÍNH TIỀN
+        // =============================================
+        private void CapNhatTamTinh()
+        {
+            if (_selectedLoaiGiGui != null && _soCanNang > 0)
+                TamTinh = (_selectedLoaiGiGui.DonGia_LoaiGU ?? 0) * _soCanNang;
+            else
+                TamTinh = 0;
+        }
+
+        private void CapNhatTongTien()
+        {
+            TongTien = DanhSachDaChon.Sum(x => x.ThanhTien);
+        }
+
+        // =============================================
+        // THÊM VÀO GIỎ
+        // =============================================
         private void ThemVaoGio()
         {
             if (_maPhong == 0)
             {
-                ThongBao = "Vui lòng nhập số phòng!";
+                ThongBao = "Vui lòng chọn số phòng!";
                 return;
             }
 
@@ -141,11 +174,8 @@ namespace ql_ks.ViewModels
                 return;
             }
 
-            // Tính tiền: Đơn giá * Số kg (nếu là Giặt sấy/kg) hoặc Đơn giá cố định (nếu là Hấp/Bộ/...)
-            decimal giaTri = SelectedLoaiGiGui.DonGia_LoaiGU ?? 0;
-
-            // Kiểm tra xem đã có loại này chưa -> tăng số lượng
-            var exist = DanhSachDaChon.FirstOrDefault(x => x.Ma_LoaiGU == SelectedLoaiGiGui.Ma_LoaiGU);
+            decimal giaTri = _selectedLoaiGiGui.DonGia_LoaiGU ?? 0;
+            var exist = DanhSachDaChon.FirstOrDefault(x => x.Ma_LoaiGU == _selectedLoaiGiGui.Ma_LoaiGU);
 
             if (exist != null)
             {
@@ -155,8 +185,8 @@ namespace ql_ks.ViewModels
             {
                 DanhSachDaChon.Add(new LuotGiatDaChonVM
                 {
-                    Ma_LoaiGU = SelectedLoaiGiGui.Ma_LoaiGU,
-                    Ten_LoaiGU = SelectedLoaiGiGui.Ten_LoaiGU,
+                    Ma_LoaiGU = _selectedLoaiGiGui.Ma_LoaiGU,
+                    Ten_LoaiGU = _selectedLoaiGiGui.Ten_LoaiGU,
                     DonGia_LoaiGU = giaTri,
                     SoCanNang = _soCanNang,
                     NgayBatDau = _ngayBatDau,
@@ -165,15 +195,14 @@ namespace ql_ks.ViewModels
             }
 
             CapNhatTongTien();
-            ThongBao = $"Đã thêm: {SelectedLoaiGiGui.Ten_LoaiGU} ({_soCanNang} kg)";
+            SoCanNang = 0;
+            CapNhatTamTinh();
+            ThongBao = $"Đã thêm: {_selectedLoaiGiGui.Ten_LoaiGU}";
         }
 
-        private void XoaKhoiGio()
-        {
-            // Cần phải lưu reference đến item được chọn trong DataGrid
-            ThongBao = "Chọn 1 dòng trong danh sách để xóa!";
-        }
-
+        // =============================================
+        // XÓA KHỎI GIỎ
+        // =============================================
         public void XoaKhoiGio(object item)
         {
             if (item is LuotGiatDaChonVM vm)
@@ -182,53 +211,108 @@ namespace ql_ks.ViewModels
                 CapNhatTongTien();
                 ThongBao = "Đã xóa thành công.";
             }
+            else
+            {
+                ThongBao = "Chọn 1 dòng trong danh sách để xóa!";
+            }
         }
 
-        private void LamMoi()
-        {
-            MaPhong = 0;
-            SoCanNang = 0;
-            NgayBatDau = DateTime.Now;
-            NgayKetThuc = DateTime.Now.AddDays(1);
-            ThongBao = "Đã làm mới dữ liệu.";
-            DanhSachDaChon.Clear();
-            TongTien = 0;
-        }
-
+        // =============================================
+        // LẬP HÓA ĐƠN - CHỈ CÓ 1 HÀM DUY NHẤT
+        // =============================================
         private void LapHoaDon()
         {
             if (MaPhong == 0)
             {
-                MessageBox.Show("Vui lòng chọn phòng!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Vui lòng chọn phòng!", "Thông báo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
             if (DanhSachDaChon.Count == 0)
             {
-                MessageBox.Show("Chưa có món nào!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Chưa có dịch vụ nào trong giỏ!", "Thông báo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
             try
             {
-                // 1. Tạo LUOTGIATUI mới
-                LUOTGIATUI luotGu = new LUOTGIATUI
+                // BƯỚC 1: Tìm hóa đơn lưu trú đang mở của phòng
+                var hoaDon = (from hd in _db.HOADONs
+                              join ct in _db.CHITIET_HDLT
+                                  on hd.MA_HD equals ct.MA_HD
+                              where ct.Ma_Phong == MaPhong
+                                    && hd.TinhTrang_HD == "Chưa thanh toán"
+                              select hd).FirstOrDefault();
+
+                if (hoaDon == null)
                 {
-                    SoKilogram_LuotGU = Convert.ToInt32(DanhSachDaChon.Sum(x => x.SoCanNang)),
-                    NgayBatDau_LuotGU = NgayBatDau,
-                    NgayKetThuc_LuotGU = NgayKetThuc,
-                    Ma_LoaiGU = SelectedLoaiGiGui != null ? SelectedLoaiGiGui.Ma_LoaiGU : 0
-                };
+                    MessageBox.Show(
+                        "Phòng " + MaPhong + " chưa có hóa đơn lưu trú đang mở!\n\n" +
+                        "Vui lòng thuê phòng trước khi thêm dịch vụ.",
+                        "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                }
 
-                _db.LUOTGIATUIs.Add(luotGu);
-                _db.SaveChanges();
+                int maHD = hoaDon.MA_HD;
+                long tongTienDichVu = 0;
 
-                // 2. Chi tiết hóa đơn giặt ủi (CHITIET_HDGU) - có thể mở rộng sau
+                // BƯỚC 2: Lưu từng dòng trong giỏ hàng
+                foreach (var item in DanhSachDaChon)
+                {
+                    // Tính Ma_LuotGU mới - tính lại mỗi vòng để tránh trùng
+                    int maLuotMoi = _db.LUOTGIATUIs.Any()
+                        ? _db.LUOTGIATUIs.Max(l => l.Ma_LuotGU) + 1
+                        : 1;
+
+                    var luotGU = new LUOTGIATUI
+                    {
+                        Ma_LuotGU = maLuotMoi,
+                        SoKilogram_LuotGU = Convert.ToInt32(item.SoCanNang),
+                        NgayBatDau_LuotGU = item.NgayBatDau ?? DateTime.Now,
+                        NgayKetThuc_LuotGU = item.NgayKetThuc ?? DateTime.Now.AddDays(1),
+                        Ma_LoaiGU = item.Ma_LoaiGU
+                    };
+                    _db.LUOTGIATUIs.Add(luotGU);
+                    _db.SaveChanges(); // Lưu trước để đảm bảo Ma_LuotGU tồn tại
+
+                    // Tính Ma_CTHDGU mới
+                    int maCTMoi = _db.CHITIET_HDGU.Any()
+                        ? _db.CHITIET_HDGU.Max(c => c.Ma_CTHDGU) + 1
+                        : 1;
+
+                    long thanhTien = (long)item.ThanhTien;
+
+                    var chiTiet = new CHITIET_HDGU
+                    {
+                        Ma_CTHDGU = maCTMoi,
+                        ThoiGianLap_CTHDGU = DateTime.Now,
+                        TriGia_CTHDGU = thanhTien,
+                        MA_HD = maHD,
+                        Ma_LuotGU = maLuotMoi
+                    };
+                    _db.CHITIET_HDGU.Add(chiTiet);
+                    _db.SaveChanges();
+
+                    tongTienDichVu += thanhTien;
+                }
+
+                // BƯỚC 3: Cập nhật tổng tiền hóa đơn
+                var hdCapNhat = _db.HOADONs.Find(maHD);
+                if (hdCapNhat != null)
+                {
+                    hdCapNhat.TriGia_HD = (hdCapNhat.TriGia_HD ?? 0) + tongTienDichVu;
+                    _db.SaveChanges();
+                }
+
+                // BƯỚC 4: Thông báo thành công
                 MessageBox.Show(
-                    $"Đã tạo lệnh giặt ủi thành công!\n\n" +
-                    $"Phòng: {MaPhong}\n" +
-                    $"Số lượng đơn: {DanhSachDaChon.Count}\n" +
-                    $"Tổng tiền: {TongTien:N0} đ",
+                    "✅ Lưu dịch vụ giặt ủi thành công!\n\n" +
+                    "Mã hóa đơn : " + maHD + "\n" +
+                    "Phòng      : " + MaPhong + "\n" +
+                    "Số dịch vụ : " + DanhSachDaChon.Count + " loại\n" +
+                    "Tổng tiền  : " + tongTienDichVu.ToString("N0") + " đ",
                     "Thành công",
                     MessageBoxButton.OK,
                     MessageBoxImage.Information);
@@ -237,33 +321,46 @@ namespace ql_ks.ViewModels
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi lưu hóa đơn: " + ex.Message);
+                string chiTietLoi = ex.Message;
+                if (ex.InnerException != null)
+                {
+                    chiTietLoi += "\n\nChi tiết: " + ex.InnerException.Message;
+                    if (ex.InnerException.InnerException != null)
+                        chiTietLoi += "\n" + ex.InnerException.InnerException.Message;
+                }
+                MessageBox.Show("❌ Lỗi lưu hóa đơn:\n\n" + chiTietLoi,
+                    "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        private void CapNhatTongTien()
+        // =============================================
+        // LÀM MỚI
+        // =============================================
+        private void LamMoi()
         {
-            if (_selectedLoaiGiGui != null && _soCanNang > 0)
-            {
-                // Hiển thị giá trị preview cho người dùng thấy trước khi thêm
-                decimal gia = SelectedLoaiGiGui.DonGia_LoaiGU ?? 0;
-                TongTien = gia * _soCanNang + DanhSachDaChon.Sum(x => x.ThanhTien);
-            }
-            else
-            {
-                TongTien = DanhSachDaChon.Sum(x => x.ThanhTien);
-            }
+            MaPhong = 0;
+            SoCanNang = 0;
+            NgayBatDau = DateTime.Now;
+            NgayKetThuc = DateTime.Now.AddDays(1);
+            DanhSachDaChon.Clear();
+            TamTinh = 0;
+            TongTien = 0;
+            ThongBao = "Đã làm mới dữ liệu.";
         }
 
+        // =============================================
+        // INOTIFYPROPERTYCHANGED
+        // =============================================
         public event PropertyChangedEventHandler PropertyChanged;
-
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 
-    // Class hiển thị danh sách đã chọn (giống giỏ hàng)
+    // =============================================
+    // HELPER CLASSES
+    // =============================================
     public class LuotGiatDaChonVM : INotifyPropertyChanged
     {
         private decimal _soCanNang = 1;
@@ -288,14 +385,12 @@ namespace ql_ks.ViewModels
         public decimal ThanhTien => DonGia_LoaiGU * SoCanNang;
 
         public event PropertyChangedEventHandler PropertyChanged;
-
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 
-    // Helper class cho phòng
     public class PhongChonVM
     {
         public int MaPhong { get; set; }

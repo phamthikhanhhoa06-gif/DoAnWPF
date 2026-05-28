@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
-using ql_ks.Models; // Import namespace chứa MATHANG và QLKhachSan_Model
-using ql_ks.ViewModels; // Namespace chứa RelayCommand và BaseViewModel
-
+using ql_ks.Models;
 
 namespace ql_ks.ViewModels
 {
@@ -32,22 +28,36 @@ namespace ql_ks.ViewModels
             set => SetProperty(ref _danhSachDaChon, value);
         }
 
-        private int _maPhong = 0;
-        public int MaPhong
+        // ==== MÃ PHÒNG (đổi sang string để validate) ====
+        private string _maPhong = "";
+        public string MaPhong
         {
             get => _maPhong;
             set
             {
                 if (SetProperty(ref _maPhong, value))
                 {
-                    if (value != 0 && DanhSachDaChon != null)
-                        DanhSachDaChon.Clear();
-
-                    CapNhatTongTien();
+                    ValidateMaPhong();
                 }
             }
         }
 
+        // ==== LỖI MÃ PHÒNG ====
+        private string _loiMaPhong;
+        public string LoiMaPhong
+        {
+            get => _loiMaPhong;
+            set => SetProperty(ref _loiMaPhong, value);
+        }
+
+        private bool _coLoiMaPhong;
+        public bool CoLoiMaPhong
+        {
+            get => _coLoiMaPhong;
+            set => SetProperty(ref _coLoiMaPhong, value);
+        }
+
+        // ==== TÌM KIẾM ====
         private string _tuKhoa = "";
         public string TuKhoaTimKiem
         {
@@ -61,11 +71,33 @@ namespace ql_ks.ViewModels
             }
         }
 
+        // ==== LỖI TÌM KIẾM ====
+        private string _loiTimKiem;
+        public string LoiTimKiem
+        {
+            get => _loiTimKiem;
+            set => SetProperty(ref _loiTimKiem, value);
+        }
+
+        private bool _coLoiTimKiem;
+        public bool CoLoiTimKiem
+        {
+            get => _coLoiTimKiem;
+            set => SetProperty(ref _coLoiTimKiem, value);
+        }
+
         private decimal _tongTien = 0;
         public decimal TongTien
         {
             get => _tongTien;
             set => SetProperty(ref _tongTien, value);
+        }
+
+        private string _thongBao;
+        public string ThongBao
+        {
+            get => _thongBao;
+            set => SetProperty(ref _thongBao, value);
         }
 
         public ICommand AddCommand { get; }
@@ -82,6 +114,7 @@ namespace ql_ks.ViewModels
             SaveCommand = new AnUong_RelayCommand(_ => LuuHoaDon());
 
             LoadData();
+            ValidateMaPhong(); // Validate ban đầu
         }
 
         private void LoadData()
@@ -106,6 +139,66 @@ namespace ql_ks.ViewModels
             }
         }
 
+        // ==== VALIDATE MÃ PHÒNG ====
+        private void ValidateMaPhong()
+        {
+            // Trống
+            if (string.IsNullOrWhiteSpace(MaPhong))
+            {
+                LoiMaPhong = "⚠ Bắt buộc nhập mã phòng!";
+                CoLoiMaPhong = true;
+                DanhSachDaChon?.Clear();
+                CapNhatTongTien();
+                return;
+            }
+
+            // Quá 3 ký tự
+            if (MaPhong.Length > 3)
+            {
+                LoiMaPhong = "⚠ Mã phòng không quá 3 ký tự!";
+                CoLoiMaPhong = true;
+                DanhSachDaChon?.Clear();
+                CapNhatTongTien();
+                return;
+            }
+
+            // Không phải số
+            int maPhongInt;
+            if (!int.TryParse(MaPhong, out maPhongInt))
+            {
+                LoiMaPhong = "⚠ Mã phòng phải là số!";
+                CoLoiMaPhong = true;
+                DanhSachDaChon?.Clear();
+                CapNhatTongTien();
+                return;
+            }
+
+            // Không tồn tại trong DB
+            try
+            {
+                bool tonTai = _db.PHONGs.Any(p => p.Ma_Phong == maPhongInt);
+                if (!tonTai)
+                {
+                    LoiMaPhong = "⚠ Mã phòng không tồn tại trong hệ thống!";
+                    CoLoiMaPhong = true;
+                    DanhSachDaChon?.Clear();
+                    CapNhatTongTien();
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                LoiMaPhong = "⚠ Lỗi kiểm tra phòng: " + ex.Message;
+                CoLoiMaPhong = true;
+                return;
+            }
+
+            // OK
+            LoiMaPhong = "";
+            CoLoiMaPhong = false;
+        }
+
+        // ==== LỌC + VALIDATE TÌM KIẾM ====
         private void LocDanhSach(string key)
         {
             if (_allProducts == null) return;
@@ -113,6 +206,8 @@ namespace ql_ks.ViewModels
             if (string.IsNullOrWhiteSpace(key))
             {
                 DanhSachMonAn = new ObservableCollection<AnUong_HelperViewModel>(_allProducts);
+                LoiTimKiem = "";
+                CoLoiTimKiem = false;
             }
             else
             {
@@ -122,14 +217,27 @@ namespace ql_ks.ViewModels
                     .ToList();
 
                 DanhSachMonAn = new ObservableCollection<AnUong_HelperViewModel>(res);
+
+                if (res.Count == 0)
+                {
+                    LoiTimKiem = "⚠ Không tìm thấy mặt hàng \"" + key + "\"!";
+                    CoLoiTimKiem = true;
+                }
+                else
+                {
+                    LoiTimKiem = "";
+                    CoLoiTimKiem = false;
+                }
             }
         }
 
         private void ThemVaoGioHang(object parameter)
         {
-            if (MaPhong == 0)
+            // Validate lại trước khi thêm
+            ValidateMaPhong();
+            if (CoLoiMaPhong)
             {
-                MessageBox.Show("Vui lòng chọn số phòng muốn gọi dịch vụ!");
+                MessageBox.Show(LoiMaPhong, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
@@ -167,11 +275,18 @@ namespace ql_ks.ViewModels
 
         private void CapNhatTongTien()
         {
-            TongTien = DanhSachDaChon.Sum(x => x.ThanhTien);
+            TongTien = DanhSachDaChon?.Sum(x => x.ThanhTien) ?? 0;
         }
 
         private void LuuHoaDon()
         {
+            ValidateMaPhong();
+            if (CoLoiMaPhong)
+            {
+                MessageBox.Show(LoiMaPhong, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
             if (DanhSachDaChon.Count == 0)
             {
                 MessageBox.Show("Giỏ hàng đang trống!");

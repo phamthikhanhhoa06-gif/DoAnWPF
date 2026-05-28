@@ -93,24 +93,35 @@
             <!-- PHẢI: DANH SÁCH ĐÃ CHỌN -->
             <Border Grid.Column="2" Background="White" CornerRadius="12" BorderBrush="#E5E7EB" BorderThickness="1" Padding="16">
                 <DockPanel>
-                    <TextBlock DockPanel.Dock="Top" Text="TRANG TINH DON GIẶT ỦI" FontSize="16" FontWeight="Bold" Foreground="#111827" Margin="0,0,0,14"/>
+                    <TextBlock DockPanel.Dock="Top" Text="TRANG TÍNH ĐƠN GIẶT ỦI" FontSize="16" FontWeight="Bold" Foreground="#111827" Margin="0,0,0,14"/>
 
-                    <DataGrid ItemsSource="{Binding DanhSachDaChon}" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" GridLinesVisibility="Horizontal" RowHeight="32">
-
+                    <DataGrid ItemsSource="{Binding DanhSachDaChon}" 
+          AutoGenerateColumns="False" 
+          CanUserAddRows="False" 
+          IsReadOnly="True" 
+          GridLinesVisibility="Horizontal" 
+          RowHeight="32">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Tên loại giặt ủi" Binding="{Binding Ten_LoaiGU}" Width="*"/>
                             <DataGridTextColumn Header="Số lượng (kg)" Binding="{Binding SoCanNang}" Width="100"/>
-                            <DataGridTextColumn Header="Đơn giá (₫)" Binding="{Binding DonGia_LoaiGUI, StringFormat={}{0:N0}}" Width="110"/>
+                            <DataGridTextColumn Header="Đơn giá (₫)"
+                    Binding="{Binding DonGia_LoaiGU, StringFormat={}{0:N0}}"
+                    Width="110"/>
                             <DataGridTextColumn Header="Thành tiền (₫)" Binding="{Binding ThanhTien, StringFormat={}{0:N0}}" Width="120" FontWeight="Bold"/>
 
                             <DataGridTemplateColumn Header="Xóa" Width="60">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Content="-" 
-                                                Command="{Binding DataContext.XoaKhoiGioCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
-                                                CommandParameter="{Binding}"
-                                                Background="#E74C3C" Foreground="White" Height="28" Width="28" 
-                                                BorderThickness="0" FontWeight="Bold" Cursor="Hand"/>
+                                        <!-- Dùng Click thay vì Command để truyền đúng item -->
+                                        <Button Content="-"
+                    Click="BtnXoa_Click"
+                    Background="#E74C3C"
+                    Foreground="White"
+                    Height="28"
+                    Width="28"
+                    BorderThickness="0"
+                    FontWeight="Bold"
+                    Cursor="Hand"/>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>

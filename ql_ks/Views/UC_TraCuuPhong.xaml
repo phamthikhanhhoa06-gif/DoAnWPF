@@ -56,15 +56,26 @@
 
                                 <TextBlock Text="Loại phòng" FontSize="11" Foreground="#64748B" Margin="0,8,0,4"/>
                                 <ComboBox ItemsSource="{Binding DanhSachLoaiPhong}"
-                                          SelectedValue="{Binding SelectedPhong.Ma_LP}"
-                                          DisplayMemberPath="Ten_LP"
-                                          SelectedValuePath="Ma_LP"
-                                          Height="32" BorderBrush="#94A3B8"/>
+          SelectedValue="{Binding SelectedPhong.Ma_LP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+          DisplayMemberPath="Ten_TP"
+          SelectedValuePath="Ma_LP"
+          Height="32"
+          BorderBrush="#94A3B8"/>
+
+                                <TextBlock Text="Đơn giá" FontSize="11" Foreground="#64748B" Margin="0,8,0,4"/>
+                                <TextBox Text="{Binding SelectedPhong.DonGia, Mode=OneWay, StringFormat={}{0:N0} VNĐ}"
+         Height="32"
+         Padding="8,0"
+         VerticalContentAlignment="Center"
+         IsReadOnly="True"
+         Background="#E5E7EB"
+         BorderBrush="#94A3B8"/>
 
                                 <TextBlock Text="Tình trạng phòng" FontSize="11" Foreground="#64748B" Margin="0,8,0,4"/>
                                 <ComboBox ItemsSource="{Binding TinhTrangList}"
-                                          SelectedItem="{Binding SelectedPhong.TinhTrang_Phong}"
-                                          Height="32" BorderBrush="#94A3B8"/>
+          SelectedItem="{Binding SelectedPhong.TinhTrang_Phong}"
+          Height="32"
+          BorderBrush="#94A3B8"/>
                             </StackPanel>
                         </Border>
 

@@ -1,12 +1,758 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\CN.Net\\DoAnWPF\\ql_ks\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_xuatbaocaothang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_xuatbaocaothang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_xuatbaocaonam.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_xuatbaocaonam.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_xuatbaocaokhachhang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_xuatbaocaokhachhang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_xuatbaocaodichvu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_xuatbaocaodichvu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_trangchu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_trangchu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\views\\uc_tracuuphong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_tracuuphong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_tracuunhanvien.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_tracuunhanvien.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_tracuumathang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_tracuumathang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\views\\uc_tracuuloaiphong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_tracuuloaiphong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_tracuuloaigiatui.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_tracuuloaigiatui.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_tracuukhachhang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_tracuukhachhang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_tracuuhoadon.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_tracuuhoadon.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_tracuuchuyendi.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_tracuuchuyendi.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_tracuubaocaonam.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_tracuubaocaonam.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_tracuubaocaodichvu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_tracuubaocaodichvu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_quanlycontainer2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_quanlycontainer2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_quanlycontainer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_quanlycontainer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_hoadontong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_hoadontong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\views\\uc_hoadonluutru.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_hoadonluutru.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\views\\uc_hoadongiatui.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_hoadongiatui.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_hoadondichuyen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_hoadondichuyen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_hoadonanuong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_hoadonanuong.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\views\\uc_dichvugiatui.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvugiatui.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_dichvudichuyen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvudichuyen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\views\\uc_dichvuanuongview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvuanuongview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_baocaothongkethang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_baocaothongkethang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_baocaothongkenam.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_baocaothongkenam.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_baocaothongkekhachhang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_baocaothongkekhachhang.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\views\\uc_baocaothongkedichvu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_baocaothongkedichvu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\views\\hoadonwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\hoadonwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\viewmodels\\tracuuphongviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\tracuuphongviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\viewmodels\\hoadongiatuiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\hoadongiatuiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\viewmodels\\hoadonanuongviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\hoadonanuongviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\viewmodels\\dichvugiatuiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\dichvugiatuiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\viewmodels\\dichvuanuongviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\dichvuanuongviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\viewmodels\\anuong_relaycommand_t.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\anuong_relaycommand_t.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\viewmodels\\anuong_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\anuong_relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\viewmodels\\anuong_baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\anuong_baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\models\\baocaonam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:models\\baocaonam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\cn.net\\doanwpf\\ql_ks\\models\\baocaodichvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:models\\baocaodichvu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\views\\uc_dichvugiatui.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvugiatui.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|D:\\CN.Net\\DoAnWPF\\ql_ks\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 100,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:51:58.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UC_XuatBaoCaoThang.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_XuatBaoCaoThang.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_XuatBaoCaoThang.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_XuatBaoCaoThang.xaml",
+              "RelativeToolTip": "Views\\UC_XuatBaoCaoThang.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:51:29.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UC_XuatBaoCaoNam.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_XuatBaoCaoNam.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_XuatBaoCaoNam.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_XuatBaoCaoNam.xaml",
+              "RelativeToolTip": "Views\\UC_XuatBaoCaoNam.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:51:21.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UC_XuatBaoCaoKhachHang.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_XuatBaoCaoKhachHang.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_XuatBaoCaoKhachHang.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_XuatBaoCaoKhachHang.xaml",
+              "RelativeToolTip": "Views\\UC_XuatBaoCaoKhachHang.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:51:14.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UC_XuatBaoCaoDichVu.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_XuatBaoCaoDichVu.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_XuatBaoCaoDichVu.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_XuatBaoCaoDichVu.xaml",
+              "RelativeToolTip": "Views\\UC_XuatBaoCaoDichVu.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:51:07.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UC_TrangChu.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TrangChu.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_TrangChu.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TrangChu.xaml",
+              "RelativeToolTip": "Views\\UC_TrangChu.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:51:01.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UC_TraCuuNhanVien.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuNhanVien.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_TraCuuNhanVien.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuNhanVien.xaml",
+              "RelativeToolTip": "Views\\UC_TraCuuNhanVien.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:50:41.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UC_TraCuuMatHang.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuMatHang.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_TraCuuMatHang.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuMatHang.xaml",
+              "RelativeToolTip": "Views\\UC_TraCuuMatHang.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:50:34.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UC_TraCuuLoaiGiatUi.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuLoaiGiatUi.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_TraCuuLoaiGiatUi.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuLoaiGiatUi.xaml",
+              "RelativeToolTip": "Views\\UC_TraCuuLoaiGiatUi.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:50:18.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UC_TraCuuKhachHang.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuKhachHang.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_TraCuuKhachHang.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuKhachHang.xaml",
+              "RelativeToolTip": "Views\\UC_TraCuuKhachHang.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:50:11.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UC_TraCuuHoaDon.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuHoaDon.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_TraCuuHoaDon.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuHoaDon.xaml",
+              "RelativeToolTip": "Views\\UC_TraCuuHoaDon.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:50:04.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UC_TraCuuChuyenDi.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuChuyenDi.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_TraCuuChuyenDi.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuChuyenDi.xaml",
+              "RelativeToolTip": "Views\\UC_TraCuuChuyenDi.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:49:55.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UC_TraCuuBaoCaoNam.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuBaoCaoNam.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_TraCuuBaoCaoNam.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuBaoCaoNam.xaml",
+              "RelativeToolTip": "Views\\UC_TraCuuBaoCaoNam.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:49:44.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UC_TraCuuBaoCaoDichVu.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuBaoCaoDichVu.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_TraCuuBaoCaoDichVu.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuBaoCaoDichVu.xaml",
+              "RelativeToolTip": "Views\\UC_TraCuuBaoCaoDichVu.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:49:35.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UC_QuanLyContainer2.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_QuanLyContainer2.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_QuanLyContainer2.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_QuanLyContainer2.xaml",
+              "RelativeToolTip": "Views\\UC_QuanLyContainer2.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:49:27.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UC_QuanLyContainer.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_QuanLyContainer.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_QuanLyContainer.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_QuanLyContainer.xaml",
+              "RelativeToolTip": "Views\\UC_QuanLyContainer.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:49:20.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "uc_LoginView.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\uc_LoginView.xaml",
+              "RelativeDocumentMoniker": "Views\\uc_LoginView.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\uc_LoginView.xaml",
+              "RelativeToolTip": "Views\\uc_LoginView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:49:12.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UC_HoaDonTong.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_HoaDonTong.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_HoaDonTong.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_HoaDonTong.xaml",
+              "RelativeToolTip": "Views\\UC_HoaDonTong.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:49:04.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UC_HoaDonDiChuyen.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_HoaDonDiChuyen.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_HoaDonDiChuyen.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_HoaDonDiChuyen.xaml",
+              "RelativeToolTip": "Views\\UC_HoaDonDiChuyen.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:48:06.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UC_HoaDonAnUong.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_HoaDonAnUong.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_HoaDonAnUong.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_HoaDonAnUong.xaml",
+              "RelativeToolTip": "Views\\UC_HoaDonAnUong.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:47:58.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UC_DichVuDiChuyen.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_DichVuDiChuyen.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_DichVuDiChuyen.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_DichVuDiChuyen.xaml",
+              "RelativeToolTip": "Views\\UC_DichVuDiChuyen.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:47:42.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "UC_BaoCaoThongKeThang.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_BaoCaoThongKeThang.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_BaoCaoThongKeThang.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_BaoCaoThongKeThang.xaml",
+              "RelativeToolTip": "Views\\UC_BaoCaoThongKeThang.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:47:26.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UC_BaoCaoThongKeNam.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_BaoCaoThongKeNam.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_BaoCaoThongKeNam.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_BaoCaoThongKeNam.xaml",
+              "RelativeToolTip": "Views\\UC_BaoCaoThongKeNam.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:47:19.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "UC_BaoCaoThongKeKhachHang.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_BaoCaoThongKeKhachHang.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_BaoCaoThongKeKhachHang.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_BaoCaoThongKeKhachHang.xaml",
+              "RelativeToolTip": "Views\\UC_BaoCaoThongKeKhachHang.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:47:06.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UC_BaoCaoThongKeDichVu.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_BaoCaoThongKeDichVu.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_BaoCaoThongKeDichVu.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_BaoCaoThongKeDichVu.xaml",
+              "RelativeToolTip": "Views\\UC_BaoCaoThongKeDichVu.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:46:59.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "BAOCAONAM.cs",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Models\\BAOCAONAM.cs",
+              "RelativeDocumentMoniker": "Models\\BAOCAONAM.cs",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Models\\BAOCAONAM.cs",
+              "RelativeToolTip": "Models\\BAOCAONAM.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAuwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T17:33:49.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "BAOCAODICHVU.cs",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Models\\BAOCAODICHVU.cs",
+              "RelativeDocumentMoniker": "Models\\BAOCAODICHVU.cs",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Models\\BAOCAODICHVU.cs",
+              "RelativeToolTip": "Models\\BAOCAODICHVU.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T17:33:37.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UC_HoaDonGiatUi.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_HoaDonGiatUi.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_HoaDonGiatUi.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_HoaDonGiatUi.xaml",
+              "RelativeToolTip": "Views\\UC_HoaDonGiatUi.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:04:08.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "HoaDonWindow.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\HoaDonWindow.xaml",
+              "RelativeDocumentMoniker": "Views\\HoaDonWindow.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\HoaDonWindow.xaml",
+              "RelativeToolTip": "Views\\HoaDonWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T17:03:45.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "UC_DichVuGiatUi.xaml.cs",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_DichVuGiatUi.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\UC_DichVuGiatUi.xaml.cs",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_DichVuGiatUi.xaml.cs",
+              "RelativeToolTip": "Views\\UC_DichVuGiatUi.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:46:15.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "DichVuGiatUiViewModel.cs",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\ViewModels\\DichVuGiatUiViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\DichVuGiatUiViewModel.cs",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\ViewModels\\DichVuGiatUiViewModel.cs",
+              "RelativeToolTip": "ViewModels\\DichVuGiatUiViewModel.cs",
+              "ViewState": "AgIAAG8BAAAAAAAAAAAqwI4BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:30:06.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "HoaDonGiatUiViewModel.cs",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\ViewModels\\HoaDonGiatUiViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\HoaDonGiatUiViewModel.cs",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\ViewModels\\HoaDonGiatUiViewModel.cs",
+              "RelativeToolTip": "ViewModels\\HoaDonGiatUiViewModel.cs",
+              "ViewState": "AgIAALoBAAAAAAAAAAAswOEBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:29:46.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UC_DichVuGiatUi.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_DichVuGiatUi.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_DichVuGiatUi.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_DichVuGiatUi.xaml",
+              "RelativeToolTip": "Views\\UC_DichVuGiatUi.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T16:29:07.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "TraCuuPhongViewModel.cs",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\ViewModels\\TraCuuPhongViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\TraCuuPhongViewModel.cs",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\ViewModels\\TraCuuPhongViewModel.cs",
+              "RelativeToolTip": "ViewModels\\TraCuuPhongViewModel.cs",
+              "ViewState": "AgIAAFYBAAAAAAAAAAAowHwBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T16:12:58.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UC_TraCuuPhong.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuPhong.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_TraCuuPhong.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuPhong.xaml",
+              "RelativeToolTip": "Views\\UC_TraCuuPhong.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T16:09:59.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "HoaDonAnUongViewModel.cs",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\ViewModels\\HoaDonAnUongViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\HoaDonAnUongViewModel.cs",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\ViewModels\\HoaDonAnUongViewModel.cs",
+              "RelativeToolTip": "ViewModels\\HoaDonAnUongViewModel.cs",
+              "ViewState": "AgIAABoCAAAAAAAAAAA/wEICAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T15:49:32.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "DichVuAnUongViewModel.cs",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\ViewModels\\DichVuAnUongViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\DichVuAnUongViewModel.cs",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\ViewModels\\DichVuAnUongViewModel.cs",
+              "RelativeToolTip": "ViewModels\\DichVuAnUongViewModel.cs",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAowC8BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T15:49:18.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "AnUong_RelayCommand_T.cs",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\ViewModels\\AnUong_RelayCommand_T.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AnUong_RelayCommand_T.cs",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\ViewModels\\AnUong_RelayCommand_T.cs",
+              "RelativeToolTip": "ViewModels\\AnUong_RelayCommand_T.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAkwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T15:49:08.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "AnUong_RelayCommand.cs",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\ViewModels\\AnUong_RelayCommand.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AnUong_RelayCommand.cs",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\ViewModels\\AnUong_RelayCommand.cs",
+              "RelativeToolTip": "ViewModels\\AnUong_RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T15:49:00.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "AnUong_BaseViewModel.cs",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\ViewModels\\AnUong_BaseViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AnUong_BaseViewModel.cs",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\ViewModels\\AnUong_BaseViewModel.cs",
+              "RelativeToolTip": "ViewModels\\AnUong_BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T15:48:38.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UC_TraCuuLoaiPhong.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuLoaiPhong.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_TraCuuLoaiPhong.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_TraCuuLoaiPhong.xaml",
+              "RelativeToolTip": "Views\\UC_TraCuuLoaiPhong.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T15:11:52.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UC_HoaDonLuuTru.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_HoaDonLuuTru.xaml",
+              "RelativeDocumentMoniker": "Views\\UC_HoaDonLuuTru.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\UC_HoaDonLuuTru.xaml",
+              "RelativeToolTip": "Views\\UC_HoaDonLuuTru.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T15:11:46.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "uc_DichVuAnUongView.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\uc_DichVuAnUongView.xaml",
+              "RelativeDocumentMoniker": "Views\\uc_DichVuAnUongView.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\Views\\uc_DichVuAnUongView.xaml",
+              "RelativeToolTip": "Views\\uc_DichVuAnUongView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T15:11:38.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "LoginWindow.xaml",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\LoginWindow.xaml",
+              "RelativeToolTip": "LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-27T15:11:33.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\CN.Net\\DoAnWPF\\ql_ks\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "D:\\CN.Net\\DoAnWPF\\ql_ks\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-05-27T14:54:02.757Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

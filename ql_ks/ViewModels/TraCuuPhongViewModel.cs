@@ -14,6 +14,33 @@ namespace ql_ks.ViewModels
     public class TraCuuPhongViewModel : INotifyPropertyChanged
     {
         private readonly QLKhachSan_Model _db = new QLKhachSan_Model();
+        private void SelectedPhong_PropertyChanged(object sender, PropertyChangedEventArgs e)
+{
+    if (e.PropertyName == nameof(PHONG_Display.Ma_LP))
+    {
+        CapNhatDonGiaTheoLoaiPhong();
+    }
+}
+
+private void CapNhatDonGiaTheoLoaiPhong()
+{
+    if (SelectedPhong == null || DanhSachLoaiPhong == null)
+        return;
+
+    var loaiPhong = DanhSachLoaiPhong
+        .FirstOrDefault(lp => lp.Ma_LP == SelectedPhong.Ma_LP);
+
+    if (loaiPhong != null)
+    {
+        SelectedPhong.TenLoaiPhong = loaiPhong.Ten_TP ?? "";
+        SelectedPhong.DonGia = loaiPhong.DonGia_LP ?? 0;
+    }
+    else
+    {
+        SelectedPhong.TenLoaiPhong = "";
+        SelectedPhong.DonGia = 0;
+    }
+}
 
         private bool _isAddingNew = false;
         public bool IsAddingNew
@@ -45,9 +72,24 @@ namespace ql_ks.ViewModels
         public PHONG_Display SelectedPhong
         {
             get => _selectedPhong;
-            set { _selectedPhong = value; OnPropertyChanged(); }
-        }
+            set
+            {
+                if (_selectedPhong != null)
+                {
+                    _selectedPhong.PropertyChanged -= SelectedPhong_PropertyChanged;
+                }
 
+                _selectedPhong = value;
+
+                if (_selectedPhong != null)
+                {
+                    _selectedPhong.PropertyChanged += SelectedPhong_PropertyChanged;
+                    CapNhatDonGiaTheoLoaiPhong();
+                }
+
+                OnPropertyChanged();
+            }
+        }
         public ICommand ThemCommand { get; }
         public ICommand LuuCommand { get; }
         public ICommand SuaCommand { get; }
@@ -278,28 +320,59 @@ namespace ql_ks.ViewModels
         public int Ma_Phong
         {
             get => _maPhong;
-            set { _maPhong = value; OnPropertyChanged(); }
+            set
+            {
+                _maPhong = value;
+                OnPropertyChanged();
+            }
         }
 
         private int? _maLP;
         public int? Ma_LP
         {
             get => _maLP;
-            set { _maLP = value; OnPropertyChanged(); }
+            set
+            {
+                _maLP = value;
+                OnPropertyChanged();
+            }
         }
 
-        public string TenLoaiPhong { get; set; }
+        private string _tenLoaiPhong;
+        public string TenLoaiPhong
+        {
+            get => _tenLoaiPhong;
+            set
+            {
+                _tenLoaiPhong = value;
+                OnPropertyChanged();
+            }
+        }
 
         private string _tinhTrang;
         public string TinhTrang_Phong
         {
             get => _tinhTrang;
-            set { _tinhTrang = value; OnPropertyChanged(); }
+            set
+            {
+                _tinhTrang = value;
+                OnPropertyChanged();
+            }
         }
 
-        public decimal? DonGia { get; set; }
+        private long? _donGia;
+        public long? DonGia
+        {
+            get => _donGia;
+            set
+            {
+                _donGia = value;
+                OnPropertyChanged();
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

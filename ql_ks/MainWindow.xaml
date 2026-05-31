@@ -6,122 +6,171 @@
         xmlns:local="clr-namespace:ql_ks"
         xmlns:views="clr-namespace:ql_ks.Views"
         mc:Ignorable="d"
-         Title="Phần mềm Quản Lý Khách Sạn"
+        Title="Phần mềm Quản Lý Khách Sạn"
         Height="800"
         Width="1400"
         Background="#F0F2F5">
 
+    <!-- ============ RESOURCES: Style cho menu ============ -->
+    <Window.Resources>
+
+        <!-- Style cho RadioButton menu (có hover + active) -->
+        <Style x:Key="MenuItemStyle" TargetType="RadioButton">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#BDC3C7"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="20,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="4,0,0,0"
+                                BorderBrush="Transparent">
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Left"
+                                              Margin="{TemplateBinding Padding}"
+                                              RecognizesAccessKey="True"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+
+                            <!-- HOVER: khi rê chuột -->
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#34495E"/>
+                                <Setter TargetName="border" Property="BorderBrush" Value="#3498DB"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+
+                            <!-- ACTIVE: khi đang được chọn -->
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#1ABC9C"/>
+                                <Setter TargetName="border" Property="BorderBrush" Value="#16A085"/>
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                            </Trigger>
+
+                            <!-- PRESSED: khi click giữ chuột -->
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#16A085"/>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style cho nút Đăng xuất -->
+        <Style x:Key="LogoutButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#E74C3C"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Height" Value="43"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#C0392B"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#A93226"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <!-- ============ LAYOUT CHÍNH ============ -->
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- SIDEBAR -->
+        <!-- ============ SIDEBAR ============ -->
         <Border Grid.Column="0" Background="#2C3E50">
-            <StackPanel>
-                <Image Source="/Resources/HotelLogo.png"
-                       Width="100"
-                       HorizontalAlignment="Center"
-                       Margin="0,30,0,10"/>
+            <DockPanel LastChildFill="True">
 
-                <TextBlock Text="HOTEL SYSTEM"
-                           Foreground="White"
-                           FontSize="18"
-                           FontWeight="Bold"
-                           HorizontalAlignment="Center"
-                           Margin="0,0,0,30"/>
+                <!-- HEADER: Logo + Tiêu đề -->
+                <StackPanel DockPanel.Dock="Top">
+                    <Image Source="/Resources/HotelLogo.png"
+                        Width="100"
+                        HorizontalAlignment="Center"
+                        Margin="0,30,0,10"/>
 
-                <!-- Nút Trang chủ -->
-                <Button Content="TRANG CHỦ"
-                        Click="BtnTrangChu_Click"
-                        Background="Transparent"
-                        Foreground="#ECF0F1"
-                        BorderThickness="0"
-                        FontSize="16"
-                        FontWeight="Bold"
-                        HorizontalAlignment="Stretch"
-                        Padding="20,10"
-                        HorizontalContentAlignment="Left"
-                        Cursor="Hand"/>
+                    <TextBlock Text="HOTEL SYSTEM"
+                               Foreground="White"
+                               FontSize="18"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,30"/>
+                </StackPanel>
 
-                <!-- Nút Dịch vụ ăn uống -->
-                <Button Content="DỊCH VỤ ĂN UỐNG"
-                        Click="BtnDichVuAnUong_Click"
-                        Background="Transparent"
-                        Foreground="#BDC3C7"
-                        BorderThickness="0"
-                        FontSize="15"
-                        HorizontalAlignment="Stretch"
-                        Padding="20,10"
-                        HorizontalContentAlignment="Left"
-                        Cursor="Hand"/>
-
-                <Button Content="DỊCH VỤ GIẶT ỦI"
-                        Background="Transparent"
-                        Foreground="#BDC3C7"
-                        BorderThickness="0"
-                        FontSize="15"
-                        HorizontalAlignment="Stretch"
-                        Padding="20,10"
-                        HorizontalContentAlignment="Left"
-                        Cursor="Hand"  Click="Button_Click"/>
-
-                <Button Content="DỊCH VỤ DI CHUYỂN"
-                        Background="Transparent"
-                        Foreground="#BDC3C7"
-                        BorderThickness="0"
-                        FontSize="15"
-                        HorizontalAlignment="Stretch"
-                        Padding="20,10"
-                        HorizontalContentAlignment="Left"
-                        Cursor="Hand" Click="Button_Click_1"/>
-
-                <Button Content="TRA CỨU QUẢN LÝ"
-                        Background="Transparent"
-                        Foreground="#BDC3C7"
-                        BorderThickness="0"
-                        FontSize="15"
-                        HorizontalAlignment="Stretch"
-                        Padding="20,10"
-                        HorizontalContentAlignment="Left"
-                        Cursor="Hand" Click="Button_Click_2"/>
-
-                <Button Content="BÁO CÁO, THỐNG KÊ"
-                        Background="Transparent"
-                        Foreground="#BDC3C7"
-                        BorderThickness="0"
-                        FontSize="15"
-                        HorizontalAlignment="Stretch"
-                        Padding="20,10"
-                        HorizontalContentAlignment="Left"
-                        Cursor="Hand" Click="Button_Click_3"/>
-
-                <Button Content="THÔNG TIN"
-                        Background="Transparent"
-                        Foreground="#BDC3C7"
-                        BorderThickness="0"
-                        FontSize="15"
-                        HorizontalAlignment="Stretch"
-                        Padding="20,10"
-                        HorizontalContentAlignment="Left"
-                        Cursor="Hand"/>
-
-                <StackPanel Margin="20" VerticalAlignment="Bottom">
-                 
-                 
-
+                <!-- FOOTER: Nút Đăng xuất -->
+                <StackPanel DockPanel.Dock="Bottom" Margin="20">
                     <Button Content="Đăng xuất"
                             Click="BtnLogout_Click"
-                            Background="#E74C3C"
-                            Foreground="White"
-                            BorderThickness="0"
-                            Margin="0,20,0,0" Height="43"/>
+                            Style="{StaticResource LogoutButtonStyle}"/>
                 </StackPanel>
-            </StackPanel>
+
+                <!-- MENU: dùng RadioButton để tự highlight trang active -->
+                <StackPanel>
+                    <RadioButton Content="TRANG CHỦ"
+                                 GroupName="SidebarMenu"
+                                 IsChecked="True"
+                                 Style="{StaticResource MenuItemStyle}"
+                                 Click="BtnTrangChu_Click"/>
+
+                    <RadioButton Content="DỊCH VỤ ĂN UỐNG"
+                                 GroupName="SidebarMenu"
+                                 Style="{StaticResource MenuItemStyle}"
+                                 Click="BtnDichVuAnUong_Click"/>
+
+                    <RadioButton Content="DỊCH VỤ GIẶT ỦI"
+                                 GroupName="SidebarMenu"
+                                 Style="{StaticResource MenuItemStyle}"
+                                 Click="Button_Click"/>
+
+                    <RadioButton Content="DỊCH VỤ DI CHUYỂN"
+                                 GroupName="SidebarMenu"
+                                 Style="{StaticResource MenuItemStyle}"
+                                 Click="Button_Click_1"/>
+
+                    <RadioButton Content="TRA CỨU QUẢN LÝ"
+                                 GroupName="SidebarMenu"
+                                 Style="{StaticResource MenuItemStyle}"
+                                 Click="Button_Click_2"/>
+
+                    <RadioButton Content="BÁO CÁO, THỐNG KÊ"
+                                 GroupName="SidebarMenu"
+                                 Style="{StaticResource MenuItemStyle}"
+                                 Click="Button_Click_3"/>
+
+                    <RadioButton Content="THÔNG TIN"
+                                 GroupName="SidebarMenu"
+                                 Style="{StaticResource MenuItemStyle}"/>
+                </StackPanel>
+
+            </DockPanel>
         </Border>
 
-        <!-- NỘI DUNG CHÍNH -->
+        <!-- ============ NỘI DUNG CHÍNH ============ -->
         <ContentControl x:Name="MainContent" Grid.Column="1" Margin="30"/>
     </Grid>
 </Window>

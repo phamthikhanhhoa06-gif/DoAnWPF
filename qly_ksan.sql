@@ -180,8 +180,7 @@ INSERT INTO LOAIPHONG (Ma_LP, Ten_TP, DonGia_LP) VALUES
 (1, N'Phòng Đơn Tiêu Chuẩn', 500000),
 (2, N'Phòng Đôi Tiêu Chuẩn', 800000),
 (3, N'Phòng Đơn Cao Cấp', 1200000),
-(4, N'Phòng Đôi Cao Cấp', 1800000),
-(5, N'Phòng Tổng Thống', 5000000);
+(4, N'Phòng Đôi Cao Cấp', 1800000)
 
 -- 2. Dữ liệu bảng PHONG (Liên kết với LOAIPHONG)
 INSERT INTO PHONG (Ma_Phong, TinhTrang_Phong, Ma_LP) VALUES 

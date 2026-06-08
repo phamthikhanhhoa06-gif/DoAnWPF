@@ -56,6 +56,12 @@
     <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.1.4.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignColors.2.1.4\lib\net462\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.9.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignThemes.4.9.0\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.10.0.3\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -109,6 +115,9 @@
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=8.16.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.IdentityModel.Tokens.8.16.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -181,6 +190,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Helpers\PasswordHelper.cs" />
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -192,12 +202,18 @@
     <Compile Include="ViewModels\BaoCaoThongKeKhachHangViewModel.cs" />
     <Compile Include="ViewModels\BaoCaoThongKeNamViewModel.cs" />
     <Compile Include="ViewModels\BaoCaoThongKeThangViewModel.cs" />
+    <Compile Include="ViewModels\BaoCaoThongKeViewModel.cs" />
+    <Compile Include="ViewModels\Common_BaseViewModel.cs" />
     <Compile Include="ViewModels\Common_RelayCommand.cs" />
     <Compile Include="ViewModels\HoaDonAnUongViewModel.cs" />
     <Compile Include="ViewModels\HoaDonDiChuyenViewModel.cs" />
     <Compile Include="ViewModels\HoaDonGiatUiViewModel.cs" />
     <Compile Include="ViewModels\HoaDonLuuTruViewModel.cs" />
     <Compile Include="ViewModels\HoaDonTongViewModel.cs" />
+    <Compile Include="ViewModels\QuanLyHoaDonViewModel.cs" />
+    <Compile Include="ViewModels\QuanLyKhachHangViewModel.cs" />
+    <Compile Include="ViewModels\QuanLyNhanVienViewModel.cs" />
+    <Compile Include="ViewModels\QuanLyPhongViewModel.cs" />
     <Compile Include="Views\BieuDoToPieSliceConverter.cs" />
     <Compile Include="ViewModels\DiChuyen_RelayCommand.cs" />
     <Compile Include="ViewModels\DichVuAnUongViewModel.cs" />
@@ -227,6 +243,12 @@
     <Compile Include="ViewModels\TraCuuMatHangViewModel.cs" />
     <Compile Include="ViewModels\TraCuuNhanVienViewModel.cs" />
     <Compile Include="ViewModels\TraCuuPhongViewModel.cs" />
+    <Compile Include="Views\ThuePhongWindow.xaml.cs">
+      <DependentUpon>ThuePhongWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_BaoCaoThongKe.xaml.cs">
+      <DependentUpon>UC_BaoCaoThongKe.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UC_BaoCaoThongKeDichVu.xaml.cs">
       <DependentUpon>UC_BaoCaoThongKeDichVu.xaml</DependentUpon>
     </Compile>
@@ -272,6 +294,18 @@
     <Compile Include="Views\UC_QuanLyContainer2.xaml.cs">
       <DependentUpon>UC_QuanLyContainer2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UC_QuanLyHoaDon.xaml.cs">
+      <DependentUpon>UC_QuanLyHoaDon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_QuanLyKhachHang.xaml.cs">
+      <DependentUpon>UC_QuanLyKhachHang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_QuanLyNhanVien.xaml.cs">
+      <DependentUpon>UC_QuanLyNhanVien.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_QuanLyPhong.xaml.cs">
+      <DependentUpon>UC_QuanLyPhong.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UC_TraCuuBaoCaoDichVu.xaml.cs">
       <DependentUpon>UC_TraCuuBaoCaoDichVu.xaml</DependentUpon>
     </Compile>
@@ -301,6 +335,9 @@
     </Compile>
     <Compile Include="Views\UC_TraCuuPhong.xaml.cs">
       <DependentUpon>UC_TraCuuPhong.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_TraCuuQuanLy.xaml.cs">
+      <DependentUpon>UC_TraCuuQuanLy.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\UC_TrangChu.xaml.cs">
       <DependentUpon>UC_TrangChu.xaml</DependentUpon>
@@ -336,6 +373,14 @@
     <Page Include="Views\HoaDonWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ThuePhongWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_BaoCaoThongKe.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\UC_BaoCaoThongKeDichVu.xaml">
       <SubType>Designer</SubType>
@@ -397,6 +442,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\UC_QuanLyHoaDon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UC_QuanLyKhachHang.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UC_QuanLyNhanVien.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UC_QuanLyPhong.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\UC_TraCuuBaoCaoDichVu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -436,6 +497,10 @@
     <Page Include="Views\UC_TraCuuPhong.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UC_TraCuuQuanLy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\UC_TrangChu.xaml">
       <SubType>Designer</SubType>
@@ -512,8 +577,10 @@
     <Error Condition="!Exists('packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
     <Error Condition="!Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets'))" />
     <Error Condition="!Exists('packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets'))" />
+    <Error Condition="!Exists('packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets'))" />
   </Target>
   <Import Project="packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Import Project="packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets" Condition="Exists('packages\System.ValueTuple.4.6.2\build\net471\System.ValueTuple.targets')" />
+  <Import Project="packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
 </Project>

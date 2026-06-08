@@ -13,11 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ql_ks.ViewModels;
+
 namespace ql_ks.Views
 {
-    /// <summary>
-    /// Interaction logic for UC_DichVuDiChuyen.xaml
-    /// </summary>
     public partial class UC_DichVuDiChuyen : UserControl
     {
         private DichVuDiChuyenViewModel Vm => DataContext as DichVuDiChuyenViewModel;
@@ -28,12 +26,21 @@ namespace ql_ks.Views
             DataContext = new DichVuDiChuyenViewModel();
         }
 
+        // Xóa đơn khỏi danh sách tạm
         private void BtnXoa_Click(object sender, RoutedEventArgs e)
         {
             if (sender is Button btn && btn.Tag is DonDiChuyenVM item)
             {
-                Vm?.DanhSachDon.Remove(item);
-                Vm?.CapNhatTongTien();
+                Vm?.XoaDon(item);
+            }
+        }
+
+        // ✅ Xác nhận 1 đơn cụ thể → đẩy về hóa đơn phòng
+        private void BtnXacNhan_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button btn && btn.Tag is DonDiChuyenVM item)
+            {
+                Vm?.XacNhanDon(item);
             }
         }
     }

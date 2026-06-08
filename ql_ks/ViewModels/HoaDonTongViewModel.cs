@@ -559,7 +559,6 @@ namespace ql_ks.ViewModels
                     return;
 
                 var hd = _db.HOADONs.Find(MaHD);
-
                 if (hd == null)
                 {
                     MessageBox.Show("Không tìm thấy hóa đơn.",
@@ -570,10 +569,11 @@ namespace ql_ks.ViewModels
                 hd.TinhTrang_HD = "Đã thanh toán";
                 hd.TriGia_HD = TongCongSo;
 
+                // ✅ Sau thanh toán → phòng chuyển sang "Đang dọn dẹp"
                 var phong = _db.PHONGs.Find(_maPhongDaChon);
                 if (phong != null)
                 {
-                    phong.TinhTrang_Phong = "Trống";
+                    phong.TinhTrang_Phong = "Đang dọn dẹp";
                 }
 
                 _db.SaveChanges();
@@ -581,12 +581,21 @@ namespace ql_ks.ViewModels
                 MessageBox.Show(
                     "Thanh toán thành công!\n\n" +
                     "Mã hóa đơn: " + MaHD + "\n" +
-                    "Tổng tiền: " + TongCongSo.ToString("N0") + " VNĐ",
+                    "Tổng tiền: " + TongCongSo.ToString("N0") + " VNĐ\n\n" +
+                    "Phòng " + _maPhongDaChon + " đang chờ dọn dẹp.",
                     "Thành công",
                     MessageBoxButton.OK,
                     MessageBoxImage.Information);
 
-                LoadData();
+                // Đóng cửa sổ hóa đơn
+                foreach (Window w in Application.Current.Windows)
+                {
+                    if (w.Title != null && w.Title.Contains("Hóa đơn"))
+                    {
+                        w.Close();
+                        return;
+                    }
+                }
             }
             catch (Exception ex)
             {

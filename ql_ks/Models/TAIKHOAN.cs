@@ -1,4 +1,4 @@
-namespace ql_ks.Models
+﻿namespace ql_ks.Models
 {
     using System;
     using System.Collections.Generic;
@@ -25,8 +25,16 @@ namespace ql_ks.Models
         public string TenDangNhap_TK { get; set; }
 
         [Required]
-        [StringLength(100)]
+        [StringLength(256)]              // ✅ Đổi 100 -> 256
         public string MatKhau_TK { get; set; }
+
+        // ✅ THÊM MỚI
+        [Required]
+        [StringLength(50)]
+        public string VaiTro_TK { get; set; }
+
+        // ✅ THÊM MỚI
+        public bool TrangThai_TK { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KHACHHANG> KHACHHANGs { get; set; }

@@ -7,9 +7,9 @@ namespace ql_ks.Models
 {
     public partial class QLKhachSan_Model : DbContext
     {
-        public QLKhachSan_Model()
-            : base("name=QLKhachSan_Model2")
+        public QLKhachSan_Model(): base("name=QLKhachSan_Model2")
         {
+            Database.SetInitializer<QLKhachSan_Model>(null);
         }
 
         public virtual DbSet<BAOCAODICHVU> BAOCAODICHVUs { get; set; }

@@ -9,16 +9,30 @@ namespace ql_ks.ViewModels
 {
     public static class Login_CurrentSession
     {
-        // Thuộc tính lưu đối tượng Tài Khoản đăng nhập
+        // ===== TÀI KHOẢN ĐANG ĐĂNG NHẬP =====
+        // Tên gốc (được nhiều file khác sử dụng)
         public static TAIKHOAN TaiKhoanDangNhap { get; set; }
 
-        // Hàm kiểm tra xem đã đăng nhập chưa
+        // Tên mới (alias) - trỏ về cùng dữ liệu với TaiKhoanDangNhap
+        public static TAIKHOAN TaiKhoanHienTai
+        {
+            get => TaiKhoanDangNhap;
+            set => TaiKhoanDangNhap = value;
+        }
+
+        // ===== TRẠNG THÁI ĐĂNG NHẬP =====
         public static bool IsLogin => TaiKhoanDangNhap != null;
 
-        // Hàm đăng xuất (xóa thông tin cũ)
-        public static void Logout()
-        {
-            TaiKhoanDangNhap = null;
-        }
+        // ===== VAI TRÒ =====
+        public static string VaiTro => TaiKhoanDangNhap?.VaiTro_TK ?? "";
+
+        // Hàm tiện ích kiểm tra quyền
+        public static bool LaAdmin => VaiTro == "Admin";
+        public static bool LaQuanLy => VaiTro == "QuanLy" || LaAdmin;
+        public static bool LaLeTan => VaiTro == "LeTan";
+        public static bool LaKeToan => VaiTro == "KeToan";
+
+        // ===== ĐĂNG XUẤT =====
+        public static void DangXuat() => TaiKhoanDangNhap = null;
     }
 }

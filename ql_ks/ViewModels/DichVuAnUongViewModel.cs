@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
-using ql_ks.Models; // Import namespace chứa MATHANG và QLKhachSan_Model
-using ql_ks.ViewModels; // Namespace chứa RelayCommand và BaseViewModel
-
+using System.Windows.Media;
+using ql_ks.Models;
+using ql_ks.ViewModels;
 
 namespace ql_ks.ViewModels
 {
@@ -32,6 +32,27 @@ namespace ql_ks.ViewModels
             set => SetProperty(ref _danhSachDaChon, value);
         }
 
+        private ObservableCollection<PhongViewModel> _danhSachPhong;
+        public ObservableCollection<PhongViewModel> DanhSachPhong
+        {
+            get => _danhSachPhong;
+            set => SetProperty(ref _danhSachPhong, value);
+        }
+
+        private PhongViewModel _phongDangChon;
+        public PhongViewModel PhongDangChon
+        {
+            get => _phongDangChon;
+            set => SetProperty(ref _phongDangChon, value);
+        }
+
+        private string _thongTinPhong = "(Chưa chọn phòng)";
+        public string ThongTinPhong
+        {
+            get => _thongTinPhong;
+            set => SetProperty(ref _thongTinPhong, value);
+        }
+
         private int _maPhong = 0;
         public int MaPhong
         {
@@ -40,9 +61,8 @@ namespace ql_ks.ViewModels
             {
                 if (SetProperty(ref _maPhong, value))
                 {
-                    if (value != 0 && DanhSachDaChon != null)
+                    if (DanhSachDaChon != null)
                         DanhSachDaChon.Clear();
-
                     CapNhatTongTien();
                 }
             }
@@ -68,20 +88,102 @@ namespace ql_ks.ViewModels
             set => SetProperty(ref _tongTien, value);
         }
 
+        private string _thongBao = "";
+        public string ThongBao
+        {
+            get => _thongBao;
+            set => SetProperty(ref _thongBao, value);
+        }
+
         public ICommand AddCommand { get; }
         public ICommand RemoveCommand { get; }
         public ICommand SaveCommand { get; }
+        public ICommand ChonPhongCommand { get; }
 
         public DichVuAnUongViewModel()
         {
             DanhSachMonAn = new ObservableCollection<AnUong_HelperViewModel>();
             DanhSachDaChon = new ObservableCollection<DanhSachDaGo>();
+            DanhSachPhong = new ObservableCollection<PhongViewModel>();
 
             AddCommand = new AnUong_RelayCommand_T<object>(ThemVaoGioHang);
             RemoveCommand = new AnUong_RelayCommand_T<object>(XoaMonTrenGio);
             SaveCommand = new AnUong_RelayCommand(_ => LuuHoaDon());
+            ChonPhongCommand = new AnUong_RelayCommand_T<object>(ChonPhong);
 
             LoadData();
+            LoadDanhSachPhong();
+        }
+
+        private void LoadDanhSachPhong()
+        {
+            try
+            {
+                var rooms = (from p in _db.PHONGs
+                             join lp in _db.LOAIPHONGs on p.Ma_LP equals lp.Ma_LP
+                             select new
+                             {
+                                 p.Ma_Phong,
+                                 lp.Ten_TP,
+                                 p.TinhTrang_Phong,
+                                 lp.DonGia_LP
+                             }).ToList();
+
+                DanhSachPhong.Clear();
+
+                foreach (var r in rooms)
+                {
+                    string tinhTrang = (r.TinhTrang_Phong ?? "").Trim();
+                    if (tinhTrang != "Có khách") continue;
+
+                    var item = new PhongViewModel
+                    {
+                        Ma_Phong = r.Ma_Phong,
+                        Ten_TP = (r.Ten_TP ?? "Chưa phân loại").Trim(),
+                        TinhTrang = tinhTrang,
+                        DonGia = r.DonGia_LP,
+                        IsSelected = false
+                    };
+
+                    SetMauPhong(item);
+                    DanhSachPhong.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tải danh sách phòng: " + ex.Message);
+            }
+        }
+
+        private void SetMauPhong(PhongViewModel item)
+        {
+            if (item.IsSelected)
+            {
+                item.ColorBackground = new SolidColorBrush(Color.FromRgb(155, 89, 182));
+                item.ColorText = Brushes.White;
+            }
+            else
+            {
+                item.ColorBackground = new SolidColorBrush(Color.FromRgb(52, 152, 219));
+                item.ColorText = Brushes.White;
+            }
+        }
+
+        private void ChonPhong(object parameter)
+        {
+            var phong = parameter as PhongViewModel;
+            if (phong == null) return;
+
+            foreach (var p in DanhSachPhong)
+            {
+                p.IsSelected = (p == phong);
+                SetMauPhong(p);
+                p.NotifyAllChanged();
+            }
+
+            PhongDangChon = phong;
+            MaPhong = phong.Ma_Phong;
+            ThongTinPhong = $"→ Phòng {phong.Ma_Phong}";
         }
 
         private void LoadData()
@@ -120,7 +222,6 @@ namespace ql_ks.ViewModels
                 var res = _allProducts
                     .Where(x => (x.Ten_MH ?? "").ToLower().Contains(lowerKey))
                     .ToList();
-
                 DanhSachMonAn = new ObservableCollection<AnUong_HelperViewModel>(res);
             }
         }
@@ -129,7 +230,7 @@ namespace ql_ks.ViewModels
         {
             if (MaPhong == 0)
             {
-                MessageBox.Show("Vui lòng chọn số phòng muốn gọi dịch vụ!");
+                MessageBox.Show("Vui lòng chọn phòng (bấm vào card phòng phía trên) trước khi gọi món!");
                 return;
             }
 
@@ -170,20 +271,95 @@ namespace ql_ks.ViewModels
             TongTien = DanhSachDaChon.Sum(x => x.ThanhTien);
         }
 
+        // ✅ LƯU HÓA ĐƠN ĂN UỐNG VÀO DATABASE → ĐẨY VÀO HÓA ĐƠN TỔNG
         private void LuuHoaDon()
         {
-            if (DanhSachDaChon.Count == 0)
+            if (MaPhong == 0)
             {
-                MessageBox.Show("Giỏ hàng đang trống!");
+                MessageBox.Show("Vui lòng chọn phòng phục vụ!", "Thông báo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            MessageBox.Show(
-                $"Đã lưu đơn cho phòng {MaPhong}. Tổng tiền: {TongTien:N0}",
-                "Thành công");
+            if (DanhSachDaChon.Count == 0)
+            {
+                MessageBox.Show("Giỏ hàng đang trống!", "Thông báo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
 
-            DanhSachDaChon.Clear();
-            CapNhatTongTien();
+            try
+            {
+                // 1. Tìm hóa đơn chưa thanh toán của phòng
+                var hoaDon = (from hd in _db.HOADONs
+                              join ct in _db.CHITIET_HDLT on hd.MA_HD equals ct.MA_HD
+                              where ct.Ma_Phong == MaPhong
+                                    && hd.TinhTrang_HD == "Chưa thanh toán"
+                              select hd).FirstOrDefault();
+
+                if (hoaDon == null)
+                {
+                    MessageBox.Show(
+                        "Phòng " + MaPhong + " chưa có hóa đơn lưu trú (chưa thanh toán).\n" +
+                        "Vui lòng thuê phòng trước từ Trang chủ.",
+                        "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                }
+
+                int maHD = hoaDon.MA_HD;
+
+                // 2. Lưu từng món trong giỏ hàng vào CHITIET_HDAU
+                int maCTMoi = _db.CHITIET_HDAU.Any()
+     ? _db.CHITIET_HDAU.Max(c => c.Ma_CTHDAU) + 1
+     : 1;
+
+                foreach (var item in DanhSachDaChon)
+                {
+                    long thanhTien = (long)(item.GiaTien * item.SoLuong);
+
+                    var chiTiet = new CHITIET_HDAU
+                    {
+                        Ma_CTHDAU = maCTMoi,
+                        SoLuong_MH = item.SoLuong,
+                        ThoiGianLap_CTHDAU = DateTime.Now,
+                        TriGia_CTHDAU = thanhTien,
+                        MA_HD = maHD,
+                        Ma_MH = item.Ma_CTHDAU
+                    };
+
+                    _db.CHITIET_HDAU.Add(chiTiet);
+                    maCTMoi++;
+                }
+
+                // 3. Cập nhật tổng tiền hóa đơn
+                long tongAnUong = DanhSachDaChon.Sum(x => (long)(x.GiaTien * x.SoLuong));
+                long tongHienTai = hoaDon.TriGia_HD ?? 0;
+                hoaDon.TriGia_HD = tongHienTai + tongAnUong;
+
+                _db.SaveChanges();
+
+                MessageBox.Show(
+                    $"Đã lưu dịch vụ ăn uống vào hóa đơn!\n\n" +
+                    $"Mã hóa đơn: {maHD}\n" +
+                    $"Phòng: {MaPhong}\n" +
+                    $"Số món: {DanhSachDaChon.Count}\n" +
+                    $"Tổng tiền ăn uống: {tongAnUong:N0} ₫\n\n" +
+                    $"Vui lòng mở Hóa đơn từ Trang chủ để xem chi tiết.",
+                    "Thành công",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Information);
+
+                ThongBao = "Đã lưu thành công - HD: " + maHD;
+
+                // Reset giỏ hàng
+                DanhSachDaChon.Clear();
+                CapNhatTongTien();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi lưu hóa đơn ăn uống: " + ex.Message, "Lỗi",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

@@ -16,10 +16,8 @@ namespace ql_ks.ViewModels
     {
         private readonly QLKhachSan_Model _db = new QLKhachSan_Model();
 
-        // Danh sách gốc (không thay đổi khi lọc)
         private List<PhongViewModel> _allRooms;
 
-        // Danh sách hiển thị (thay đổi khi lọc)
         public ObservableCollection<PhongViewModel> RoomList { get; set; }
 
         // === THỐNG KÊ ===
@@ -71,7 +69,6 @@ namespace ql_ks.ViewModels
         public ICommand FilterRentedCommand { get; }
         public ICommand FilterRepairCommand { get; }
         public ICommand RoomClickCommand { get; }
-        public ICommand ThuePhongCommand { get; }
         public ICommand XemHoaDonCommand { get; }
         public ICommand RefreshCommand { get; }
         public ICommand LogoutCommand { get; }
@@ -82,13 +79,11 @@ namespace ql_ks.ViewModels
             RoomList = new ObservableCollection<PhongViewModel>();
             _allRooms = new List<PhongViewModel>();
 
-            // Commands
             FilterAllCommand = new Main_RelayCommand(_ => FilterRooms("Tất cả"));
             FilterEmptyCommand = new Main_RelayCommand(_ => FilterRooms("Trống"));
             FilterRentedCommand = new Main_RelayCommand(_ => FilterRooms("Có khách"));
             FilterRepairCommand = new Main_RelayCommand(_ => FilterRooms("Đang dọn dẹp"));
             RoomClickCommand = new Main_RelayCommand(param => OnRoomClick(param));
-            ThuePhongCommand = new Main_RelayCommand(_ => ThuePhong());
             XemHoaDonCommand = new Main_RelayCommand(_ => XemHoaDon());
             RefreshCommand = new Main_RelayCommand(_ => LoadInitialData());
             LogoutCommand = new Main_RelayCommand(_ => Logout());
@@ -131,10 +126,7 @@ namespace ql_ks.ViewModels
                     _allRooms.Add(item);
                 }
 
-                // Cập nhật thống kê
                 UpdateStatistics();
-
-                // Hiển thị tất cả
                 FilterRooms("Tất cả");
             }
             catch (Exception ex)
@@ -144,7 +136,6 @@ namespace ql_ks.ViewModels
             }
         }
 
-        // === CẬP NHẬT THỐNG KÊ ===
         private void UpdateStatistics()
         {
             TotalRooms = _allRooms.Count;
@@ -154,18 +145,15 @@ namespace ql_ks.ViewModels
             SelectedCount = _allRooms.Count(r => r.IsSelected);
         }
 
-        // === GÁN MÀU PHÒNG ===
         private void SetRoomColor(PhongViewModel item)
         {
             if (item.IsSelected)
             {
-                // Phòng đang được chọn → màu tím
                 item.ColorBackground = new SolidColorBrush(Color.FromRgb(155, 89, 182));
                 item.ColorText = Brushes.White;
                 return;
             }
 
-            // Màu theo trạng thái
             if (item.TinhTrang == "Có khách")
             {
                 item.ColorBackground = new SolidColorBrush(Color.FromRgb(52, 152, 219));
@@ -173,7 +161,7 @@ namespace ql_ks.ViewModels
             }
             else if (item.TinhTrang == "Đang dọn dẹp")
             {
-                item.ColorBackground = new SolidColorBrush(Color.FromRgb(44, 62, 80));
+                item.ColorBackground = new SolidColorBrush(Color.FromRgb(231, 76, 60)); // Đỏ
                 item.ColorText = Brushes.White;
             }
             else // Trống
@@ -183,7 +171,6 @@ namespace ql_ks.ViewModels
             }
         }
 
-        // === LỌC PHÒNG (dùng if-else thay switch expression) ===
         private void FilterRooms(string filter)
         {
             CurrentFilter = filter;
@@ -192,95 +179,77 @@ namespace ql_ks.ViewModels
             IEnumerable<PhongViewModel> filtered;
 
             if (filter == "Trống")
-            {
                 filtered = _allRooms.Where(r => r.TinhTrang == "Trống");
-            }
             else if (filter == "Có khách")
-            {
                 filtered = _allRooms.Where(r => r.TinhTrang == "Có khách");
-            }
             else if (filter == "Đang dọn dẹp")
-            {
                 filtered = _allRooms.Where(r => r.TinhTrang == "Đang dọn dẹp");
-            }
             else
-            {
                 filtered = _allRooms;
-            }
 
             foreach (var room in filtered)
-            {
                 RoomList.Add(room);
-            }
         }
 
-        // === CLICK CHỌN PHÒNG ===
+        // === CLICK VÀO PHÒNG ===
         private void OnRoomClick(object param)
         {
             var clickedRoom = param as PhongViewModel;
             if (clickedRoom == null) return;
 
-            // Toggle selection
-            clickedRoom.IsSelected = !clickedRoom.IsSelected;
-            SetRoomColor(clickedRoom);
+            // === PHÒNG TRỐNG → Mở giao diện thuê phòng ===
+            if (clickedRoom.TinhTrang == "Trống")
+            {
+                MoGiaoDienThuePhong(clickedRoom);
+                return;
+            }
 
-            // Cập nhật đếm
-            SelectedCount = _allRooms.Count(r => r.IsSelected);
+            // === PHÒNG ĐANG DỌN DẸP → Xác nhận hoàn thành dọn dẹp ===
+            if (clickedRoom.TinhTrang == "Đang dọn dẹp")
+            {
+                XacNhanDonDep(clickedRoom);
+                return;
+            }
 
-            // Force UI update
-            clickedRoom.NotifyAllChanged();
+            // === PHÒNG CÓ KHÁCH → Toggle chọn để xem hóa đơn ===
+            if (clickedRoom.TinhTrang == "Có khách")
+            {
+                clickedRoom.IsSelected = !clickedRoom.IsSelected;
+                SetRoomColor(clickedRoom);
+                SelectedCount = _allRooms.Count(r => r.IsSelected);
+                clickedRoom.NotifyAllChanged();
+                return;
+            }
         }
 
-        // === THUÊ PHÒNG ===
-        private void ThuePhong()
+        // === MỞ GIAO DIỆN THUÊ PHÒNG (Window mới giống hóa đơn lưu trú) ===
+        private void MoGiaoDienThuePhong(PhongViewModel room)
         {
-            var selectedRooms = _allRooms.Where(r => r.IsSelected).ToList();
+            var thuePhongWindow = new ql_ks.Views.ThuePhongWindow(room.Ma_Phong);
+            thuePhongWindow.Closed += (s, e) => LoadInitialData();
+            thuePhongWindow.ShowDialog();
+        }
 
-            if (selectedRooms.Count == 0)
-            {
-                MessageBox.Show("Vui lòng chọn phòng cần thuê!",
-                    "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-
-            var notEmpty = selectedRooms
-                .Where(r => r.TinhTrang != "Trống").ToList();
-            if (notEmpty.Count > 0)
-            {
-                string rooms = string.Join(", ", notEmpty.Select(r => r.Ma_Phong));
-                MessageBox.Show("Phòng " + rooms + " không trống!",
-                    "Cảnh báo", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-
-            string selectedNames = string.Join(", ",
-                selectedRooms.Select(r => r.Ma_Phong));
-
+        // === XÁC NHẬN DỌN DẸP HOÀN THÀNH ===
+        private void XacNhanDonDep(PhongViewModel room)
+        {
             var result = MessageBox.Show(
-                "Xác nhận thuê phòng: " + selectedNames + "?",
-                "Xác nhận", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                "Xác nhận dọn dẹp hoàn thành cho phòng " + room.Ma_Phong + "?",
+                "Xác nhận dọn dẹp hoàn thành",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question);
 
             if (result == MessageBoxResult.Yes)
             {
                 try
                 {
-                    foreach (var room in selectedRooms)
+                    var phong = _db.PHONGs.Find(room.Ma_Phong);
+                    if (phong != null)
                     {
-                        var phong = _db.PHONGs.Find(room.Ma_Phong);
-                        if (phong != null)
-                            phong.TinhTrang_Phong = "Có khách";
+                        phong.TinhTrang_Phong = "Trống";
+                        _db.SaveChanges();
+                        LoadInitialData();
                     }
-                    _db.SaveChanges();
-
-                    // Mở HoaDonWindow cho phòng vừa thuê
-                    foreach (var room in selectedRooms)
-                    {
-                        var hoaDonWindow = new ql_ks.Views.HoaDonWindow(room.Ma_Phong);
-                        hoaDonWindow.Closed += (s, e) => LoadInitialData();
-                        hoaDonWindow.Show();
-                    }
-
-                    LoadInitialData();
                 }
                 catch (Exception ex)
                 {
@@ -289,6 +258,7 @@ namespace ql_ks.ViewModels
                 }
             }
         }
+
         // === XEM HÓA ĐƠN ===
         private void XemHoaDon()
         {
@@ -318,7 +288,7 @@ namespace ql_ks.ViewModels
                 hoaDonWindow.Show();
             }
         }
-        // === ĐĂNG XUẤT ===
+
         private void Logout()
         {
             try
@@ -340,7 +310,7 @@ namespace ql_ks.ViewModels
         }
     }
 
-    // === PHONG VIEW MODEL (có INotifyPropertyChanged) ===
+    // === PHONG VIEW MODEL ===
     public class PhongViewModel : INotifyPropertyChanged
     {
         private int _maPhong;
@@ -392,7 +362,6 @@ namespace ql_ks.ViewModels
             set { _colorText = value; OnPropertyChanged(nameof(ColorText)); }
         }
 
-        // Force cập nhật tất cả property
         public void NotifyAllChanged()
         {
             OnPropertyChanged(nameof(ColorBackground));

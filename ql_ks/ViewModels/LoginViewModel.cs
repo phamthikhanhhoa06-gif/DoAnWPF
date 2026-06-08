@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using ql_ks.Helpers;   // ✅ THÊM: để dùng PasswordHelper
 
 namespace ql_ks.ViewModels
 {
@@ -70,20 +71,33 @@ namespace ql_ks.ViewModels
                 return;
             }
 
-            var tk = _db.TAIKHOANs.FirstOrDefault(x =>
-                x.TenDangNhap_TK == TenDangNhap &&
-                x.MatKhau_TK == MatKhau);
+            // ✅ Bước 1: Tìm tài khoản theo tên đăng nhập (KHÔNG so mật khẩu trong SQL)
+            var tk = _db.TAIKHOANs.FirstOrDefault(x => x.TenDangNhap_TK == TenDangNhap);
 
-            if (tk != null)
-            {
-                Login_CurrentSession.TaiKhoanDangNhap = tk;
-                ThongBao = "Đăng nhập thành công.";
-                DangNhapThanhCong?.Invoke(tk);
-            }
-            else
+            if (tk == null)
             {
                 ThongBao = "Sai tên đăng nhập hoặc mật khẩu.";
+                return;
             }
+
+            // ✅ Bước 2: Kiểm tra tài khoản có bị khóa không
+            if (tk.TrangThai_TK == false)
+            {
+                ThongBao = "Tài khoản đã bị khóa. Vui lòng liên hệ quản trị viên.";
+                return;
+            }
+
+            // ✅ Bước 3: Xác thực mật khẩu (hỗ trợ cả plaintext cũ lẫn hash mới)
+            if (!PasswordHelper.Verify(MatKhau, tk.MatKhau_TK))
+            {
+                ThongBao = "Sai tên đăng nhập hoặc mật khẩu.";
+                return;
+            }
+
+            // ✅ Đăng nhập thành công → lưu session
+            Login_CurrentSession.TaiKhoanDangNhap = tk;
+            ThongBao = "Đăng nhập thành công.";
+            DangNhapThanhCong?.Invoke(tk);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

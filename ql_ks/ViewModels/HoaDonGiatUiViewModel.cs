@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data.Entity;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows;
@@ -16,70 +18,34 @@ namespace ql_ks.ViewModels
 
         // === THÔNG TIN HÓA ĐƠN ===
         private int _maHD;
-        public int MaHD
-        {
-            get => _maHD;
-            set { _maHD = value; OnPropertyChanged(); }
-        }
+        public int MaHD { get => _maHD; set { _maHD = value; OnPropertyChanged(); } }
 
         private DateTime _ngayLapHD;
-        public DateTime NgayLapHD
-        {
-            get => _ngayLapHD;
-            set { _ngayLapHD = value; OnPropertyChanged(); }
-        }
+        public DateTime NgayLapHD { get => _ngayLapHD; set { _ngayLapHD = value; OnPropertyChanged(); } }
 
         private string _gioLapHD;
-        public string GioLapHD
-        {
-            get => _gioLapHD;
-            set { _gioLapHD = value; OnPropertyChanged(); }
-        }
+        public string GioLapHD { get => _gioLapHD; set { _gioLapHD = value; OnPropertyChanged(); } }
 
         private string _tenNhanVien;
-        public string TenNhanVien
-        {
-            get => _tenNhanVien;
-            set { _tenNhanVien = value; OnPropertyChanged(); }
-        }
+        public string TenNhanVien { get => _tenNhanVien; set { _tenNhanVien = value; OnPropertyChanged(); } }
 
         private int? _maNV;
 
         // === THÔNG TIN THANH TOÁN ===
         private int _maPhong;
-        public int MaPhong
-        {
-            get => _maPhong;
-            set { _maPhong = value; OnPropertyChanged(); }
-        }
+        public int MaPhong { get => _maPhong; set { _maPhong = value; OnPropertyChanged(); } }
 
         private string _theoKilogram;
-        public string TheoKilogram
-        {
-            get => _theoKilogram;
-            set { _theoKilogram = value; OnPropertyChanged(); }
-        }
+        public string TheoKilogram { get => _theoKilogram; set { _theoKilogram = value; OnPropertyChanged(); } }
 
         private string _donGiaText;
-        public string DonGiaText
-        {
-            get => _donGiaText;
-            set { _donGiaText = value; OnPropertyChanged(); }
-        }
+        public string DonGiaText { get => _donGiaText; set { _donGiaText = value; OnPropertyChanged(); } }
 
         private decimal _donGia;
-        public decimal DonGia
-        {
-            get => _donGia;
-            set { _donGia = value; OnPropertyChanged(); TinhTongTien(); }
-        }
+        public decimal DonGia { get => _donGia; set { _donGia = value; OnPropertyChanged(); TinhTongTien(); } }
 
-        private int _soKg;
-        public int SoKg
-        {
-            get => _soKg;
-            set { _soKg = value; OnPropertyChanged(); TinhTongTien(); }
-        }
+        private decimal _soKg;
+        public decimal SoKg { get => _soKg; set { _soKg = value; OnPropertyChanged(); TinhTongTien(); } }
 
         private string _soKgText;
         public string SoKgText
@@ -89,67 +55,40 @@ namespace ql_ks.ViewModels
             {
                 _soKgText = value;
                 OnPropertyChanged();
-                int kg;
-                if (int.TryParse(value, out kg) && kg >= 0)
-                {
+                string normalized = value?.Replace(',', '.') ?? "0";
+                decimal kg;
+                if (decimal.TryParse(normalized, NumberStyles.Any, CultureInfo.InvariantCulture, out kg) && kg >= 0)
                     SoKg = kg;
-                }
+                else
+                    SoKg = 0;
             }
         }
 
         private DateTime _ngayBatDau;
-        public DateTime NgayBatDau
-        {
-            get => _ngayBatDau;
-            set { _ngayBatDau = value; OnPropertyChanged(); }
-        }
+        public DateTime NgayBatDau { get => _ngayBatDau; set { _ngayBatDau = value; OnPropertyChanged(); } }
 
         private DateTime _ngayKetThuc;
-        public DateTime NgayKetThuc
-        {
-            get => _ngayKetThuc;
-            set { _ngayKetThuc = value; OnPropertyChanged(); }
-        }
+        public DateTime NgayKetThuc { get => _ngayKetThuc; set { _ngayKetThuc = value; OnPropertyChanged(); } }
 
         private long _tongTienSo;
-        public long TongTienSo
-        {
-            get => _tongTienSo;
-            set { _tongTienSo = value; OnPropertyChanged(); }
-        }
+        public long TongTienSo { get => _tongTienSo; set { _tongTienSo = value; OnPropertyChanged(); } }
 
         private string _tongTien;
-        public string TongTien
-        {
-            get => _tongTien;
-            set { _tongTien = value; OnPropertyChanged(); }
-        }
+        public string TongTien { get => _tongTien; set { _tongTien = value; OnPropertyChanged(); } }
 
         // === THÔNG TIN KHÁCH HÀNG ===
         private string _tenKhachHang;
-        public string TenKhachHang
-        {
-            get => _tenKhachHang;
-            set { _tenKhachHang = value; OnPropertyChanged(); }
-        }
+        public string TenKhachHang { get => _tenKhachHang; set { _tenKhachHang = value; OnPropertyChanged(); } }
 
         private string _soDienThoaiKH;
-        public string SoDienThoaiKH
-        {
-            get => _soDienThoaiKH;
-            set { _soDienThoaiKH = value; OnPropertyChanged(); }
-        }
+        public string SoDienThoaiKH { get => _soDienThoaiKH; set { _soDienThoaiKH = value; OnPropertyChanged(); } }
 
         private string _cmnd;
-        public string CMND
-        {
-            get => _cmnd;
-            set { _cmnd = value; OnPropertyChanged(); }
-        }
+        public string CMND { get => _cmnd; set { _cmnd = value; OnPropertyChanged(); } }
 
         // === LOẠI GIẶT ỦI ===
-        private System.Collections.ObjectModel.ObservableCollection<LOAIGIATUI> _loaiGiatUiList;
-        public System.Collections.ObjectModel.ObservableCollection<LOAIGIATUI> LoaiGiatUiList
+        private ObservableCollection<LOAIGIATUI> _loaiGiatUiList;
+        public ObservableCollection<LOAIGIATUI> LoaiGiatUiList
         {
             get => _loaiGiatUiList;
             set { _loaiGiatUiList = value; OnPropertyChanged(); }
@@ -174,11 +113,7 @@ namespace ql_ks.ViewModels
 
         // === TRẠNG THÁI ===
         private string _thongBao;
-        public string ThongBao
-        {
-            get => _thongBao;
-            set { _thongBao = value; OnPropertyChanged(); }
-        }
+        public string ThongBao { get => _thongBao; set { _thongBao = value; OnPropertyChanged(); } }
 
         private bool _isNewInvoice;
 
@@ -190,8 +125,7 @@ namespace ql_ks.ViewModels
         public HoaDonGiatUiViewModel(int maPhong)
         {
             _maPhongDaChon = maPhong;
-
-            LoaiGiatUiList = new System.Collections.ObjectModel.ObservableCollection<LOAIGIATUI>();
+            LoaiGiatUiList = new ObservableCollection<LOAIGIATUI>();
 
             LuuCommand = new Common_RelayCommand(_ => LuuHoaDon());
             HuyCommand = new Common_RelayCommand(_ => HuyHoaDon());
@@ -210,27 +144,18 @@ namespace ql_ks.ViewModels
         {
             try
             {
-                // 1. Thông tin phòng
                 MaPhong = _maPhongDaChon;
-
-                // 2. Nhân viên
                 LayThongTinNhanVien();
 
-                // 3. Danh sách loại giặt ủi
                 var loaiList = _db.LOAIGIATUIs.OrderBy(l => l.Ma_LoaiGU).ToList();
                 LoaiGiatUiList.Clear();
                 foreach (var l in loaiList)
-                {
                     LoaiGiatUiList.Add(l);
-                }
 
-                // Chọn mặc định loại đầu tiên
                 if (LoaiGiatUiList.Count > 0)
-                {
                     SelectedLoaiGU = LoaiGiatUiList[0];
-                }
 
-                // 4. Tìm hóa đơn chưa thanh toán của phòng
+                // Tìm hóa đơn chưa thanh toán của phòng
                 var hoaDon = (from hd in _db.HOADONs
                               join ct in _db.CHITIET_HDLT on hd.MA_HD equals ct.MA_HD
                               where ct.Ma_Phong == _maPhongDaChon
@@ -242,7 +167,6 @@ namespace ql_ks.ViewModels
                     MaHD = hoaDon.MA_HD;
                     _isNewInvoice = false;
 
-                    // Load thông tin khách hàng
                     if (hoaDon.MA_KH != null)
                     {
                         var kh = _db.KHACHHANGs.Find(hoaDon.MA_KH);
@@ -253,18 +177,12 @@ namespace ql_ks.ViewModels
                             CMND = kh.CMND_KH ?? "";
                         }
                     }
-
                     ThongBao = "Hóa đơn: " + MaHD;
                 }
                 else
                 {
-                    // Chưa có hóa đơn → tạo mới
                     _isNewInvoice = true;
-                    if (_db.HOADONs.Any())
-                        MaHD = _db.HOADONs.Max(h => h.MA_HD) + 1;
-                    else
-                        MaHD = 1;
-
+                    MaHD = _db.HOADONs.Any() ? _db.HOADONs.Max(h => h.MA_HD) + 1 : 1;
                     ThongBao = "Tạo hóa đơn giặt ủi mới";
                 }
 
@@ -277,17 +195,14 @@ namespace ql_ks.ViewModels
             }
         }
 
-        // === LẤY THÔNG TIN NHÂN VIÊN ===
         private void LayThongTinNhanVien()
         {
             try
             {
-                if (Login_CurrentSession.IsLogin
-                    && Login_CurrentSession.TaiKhoanDangNhap != null)
+                if (Login_CurrentSession.IsLogin && Login_CurrentSession.TaiKhoanDangNhap != null)
                 {
                     int maTK = Login_CurrentSession.TaiKhoanDangNhap.Ma_TK;
                     var nv = _db.NHANVIENs.FirstOrDefault(n => n.Ma_TK == maTK);
-
                     if (nv != null)
                     {
                         _maNV = nv.MA_NV;
@@ -296,8 +211,7 @@ namespace ql_ks.ViewModels
                     else
                     {
                         _maNV = null;
-                        TenNhanVien = "Admin (" +
-                            Login_CurrentSession.TaiKhoanDangNhap.TenDangNhap_TK + ")";
+                        TenNhanVien = "Admin (" + Login_CurrentSession.TaiKhoanDangNhap.TenDangNhap_TK + ")";
                     }
                 }
                 else
@@ -313,18 +227,19 @@ namespace ql_ks.ViewModels
             }
         }
 
-        // === TÍNH TỔNG TIỀN ===
+        // === TÍNH TỔNG TIỀN: số_kg × đơn_giá ===
         private void TinhTongTien()
         {
-            if (DonGia <= 0 || SoKg <= 0)
+            if (DonGia > 0 && SoKg > 0)
+            {
+                TongTienSo = (long)(SoKg * DonGia);
+                TongTien = TongTienSo.ToString("N0");
+            }
+            else
             {
                 TongTienSo = 0;
                 TongTien = "0";
-                return;
             }
-
-            TongTienSo = (long)(SoKg * DonGia);
-            TongTien = TongTienSo.ToString("N0");
         }
 
         // === LƯU HÓA ĐƠN ===
@@ -332,14 +247,12 @@ namespace ql_ks.ViewModels
         {
             try
             {
-                // Validate
                 if (SelectedLoaiGU == null)
                 {
                     MessageBox.Show("Vui lòng chọn loại giặt ủi!", "Thông báo",
                         MessageBoxButton.OK, MessageBoxImage.Warning);
                     return;
                 }
-
                 if (SoKg <= 0)
                 {
                     MessageBox.Show("Vui lòng nhập khối lượng giặt ủi!", "Thông báo",
@@ -352,19 +265,13 @@ namespace ql_ks.ViewModels
                 // Nếu chưa có hóa đơn → tạo mới
                 if (_isNewInvoice)
                 {
-                    // Tìm hoặc tạo khách hàng
                     KHACHHANG kh = null;
                     if (!string.IsNullOrWhiteSpace(CMND))
-                    {
                         kh = _db.KHACHHANGs.FirstOrDefault(k => k.CMND_KH == CMND);
-                    }
 
                     if (kh == null && !string.IsNullOrWhiteSpace(TenKhachHang))
                     {
-                        int maKHMoi = _db.KHACHHANGs.Any()
-                            ? _db.KHACHHANGs.Max(k => k.MA_KH) + 1
-                            : 1;
-
+                        int maKHMoi = _db.KHACHHANGs.Any() ? _db.KHACHHANGs.Max(k => k.MA_KH) + 1 : 1;
                         kh = new KHACHHANG
                         {
                             MA_KH = maKHMoi,
@@ -388,15 +295,12 @@ namespace ql_ks.ViewModels
                     _isNewInvoice = false;
                 }
 
-                // Tạo lượt giặt ủi mới
-                int maLuotMoi = _db.LUOTGIATUIs.Any()
-                    ? _db.LUOTGIATUIs.Max(l => l.Ma_LuotGU) + 1
-                    : 1;
-
+                // Tạo lượt giặt ủi
+                int maLuotMoi = _db.LUOTGIATUIs.Any() ? _db.LUOTGIATUIs.Max(l => l.Ma_LuotGU) + 1 : 1;
                 var luotGU = new LUOTGIATUI
                 {
                     Ma_LuotGU = maLuotMoi,
-                    SoKilogram_LuotGU = SoKg,
+                    SoKilogram_LuotGU = (int)Math.Ceiling(SoKg),
                     NgayBatDau_LuotGU = NgayBatDau,
                     NgayKetThuc_LuotGU = NgayKetThuc,
                     Ma_LoaiGU = SelectedLoaiGU.Ma_LoaiGU
@@ -404,10 +308,7 @@ namespace ql_ks.ViewModels
                 _db.LUOTGIATUIs.Add(luotGU);
 
                 // Tạo chi tiết hóa đơn giặt ủi
-                int maCTMoi = _db.CHITIET_HDGU.Any()
-                    ? _db.CHITIET_HDGU.Max(c => c.Ma_CTHDGU) + 1
-                    : 1;
-
+                int maCTMoi = _db.CHITIET_HDGU.Any() ? _db.CHITIET_HDGU.Max(c => c.Ma_CTHDGU) + 1 : 1;
                 var chiTiet = new CHITIET_HDGU
                 {
                     Ma_CTHDGU = maCTMoi,
@@ -432,13 +333,11 @@ namespace ql_ks.ViewModels
                     "Lưu hóa đơn giặt ủi thành công!\n\n" +
                     "Mã hóa đơn: " + MaHD + "\n" +
                     "Loại: " + SelectedLoaiGU.Ten_LoaiGU + "\n" +
-                    "Khối lượng: " + SoKg + " kg\n" +
+                    "Khối lượng: " + SoKg.ToString("N1") + " kg\n" +
                     "Thành tiền: " + TongTienSo.ToString("N0") + " VNĐ",
                     "Thành công", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 ThongBao = "Đã lưu - Mã HD: " + MaHD;
-
-                // Reset form cho lần nhập tiếp
                 SoKgText = "0";
             }
             catch (Exception ex)
@@ -448,31 +347,17 @@ namespace ql_ks.ViewModels
             }
         }
 
-        // === HỦY HÓA ĐƠN ===
         private void HuyHoaDon()
         {
-            var result = MessageBox.Show(
-                "Hủy hóa đơn giặt ủi đang tạo?",
+            var result = MessageBox.Show("Hủy hóa đơn giặt ủi đang tạo?",
                 "Xác nhận", MessageBoxButton.YesNo, MessageBoxImage.Question);
-
             if (result == MessageBoxResult.Yes)
             {
                 SoKgText = "0";
                 ThongBao = "Đã hủy";
-
-                // Đóng window
-                foreach (Window w in Application.Current.Windows)
-                {
-                    if (w.Title != null && w.Title.Contains("Hóa đơn"))
-                    {
-                        // Không đóng, chỉ reset
-                        break;
-                    }
-                }
             }
         }
 
-        // === INotifyPropertyChanged ===
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string name = null)
         {

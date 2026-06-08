@@ -17,7 +17,7 @@
 
         <!-- HEADER -->
         <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,10,0,16">
-            <TextBlock Text="PHẦN MỄM QUẢN LÍ KHÁCH SẠN" FontSize="26" FontWeight="Bold" Foreground="#30324A"/>
+            <TextBlock FontSize="26" FontWeight="Bold" Foreground="#30324A"><Run Text="PHẦN M"/><Run Language="vi-vn" Text="Ề"/><Run Text="M QUẢN LÍ KHÁCH SẠN"/></TextBlock>
             <TextBlock Text="DỊCH VỤ DI CHUYỂN" FontSize="16" Foreground="#6B7280" HorizontalAlignment="Center" Margin="0,4,0,0"/>
         </StackPanel>
 
@@ -65,19 +65,23 @@
                         <Run Text=" ₫"/>
                     </TextBlock>
 
-                    <!-- Các nút -->
-                    <Button Content="➕ Tạo đơn chuyển" Command="{Binding ThemDonCommand}" Background="#3498DB" Foreground="White" Height="40" Margin="0,14,0,0" BorderThickness="0" FontWeight="Bold" Cursor="Hand"/>
+                    <!-- ✅ ĐỔI TỪ "+Tạo đơn chuyển" → "+Tạo đơn di chuyển" -->
+                    <Button Content="➕ Tạo đơn di chuyển" Command="{Binding ThemDonCommand}" 
+                            Background="#3498DB" Foreground="White" Height="40" Margin="0,14,0,0" 
+                            BorderThickness="0" FontWeight="Bold" Cursor="Hand"/>
 
-                    <Button Content="🧾 Lập hóa đơn di chuyển" Command="{Binding LapHoaDonCommand}" Background="#2C3E50" Foreground="White" Height="40" Margin="0,8,0,0" BorderThickness="0" FontWeight="Bold" Cursor="Hand"/>
+                    <!-- ✅ XÓA NÚT "Xác Nhận" ở đây -->
 
-                    <Button Content="🔄 Làm mới" Command="{Binding LamMoiCommand}" Background="#95A5A6" Foreground="White" Height="40" Margin="0,8,0,0" BorderThickness="0" Cursor="Hand"/>
+                    <Button Content="🔄 Làm mới" Command="{Binding LamMoiCommand}" 
+                            Background="#95A5A6" Foreground="White" Height="40" Margin="0,8,0,0" 
+                            BorderThickness="0" Cursor="Hand"/>
                 </StackPanel>
             </Border>
 
             <!-- PHẢI: DANH SÁCH ĐƠN TẠO RA -->
             <Border Grid.Column="2" Background="White" CornerRadius="12" BorderBrush="#E5E7EB" BorderThickness="1" Padding="16">
                 <DockPanel>
-                    <TextBlock DockPanel.Dock="Top" Text="TRANG TIN ĐƠN DI CHUYỂN" FontSize="16" FontWeight="Bold" Foreground="#111827" Margin="0,0,0,14"/>
+                    <TextBlock DockPanel.Dock="Top" Text="TRANG TÍNH ĐƠN DI CHUYỂN" FontSize="16" FontWeight="Bold" Foreground="#111827" Margin="0,0,0,14"/>
 
                     <DataGrid ItemsSource="{Binding DanhSachDon}" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" GridLinesVisibility="Horizontal" RowHeight="34">
 
@@ -87,12 +91,23 @@
                             <DataGridTextColumn Header="Số lượng" Binding="{Binding SoLuong}" Width="80"/>
                             <DataGridTextColumn Header="Đơn giá (₫)" Binding="{Binding DonGia_CD, StringFormat={}{0:N0}}" Width="110"/>
                             <DataGridTextColumn Header="Thành tiền (₫)" Binding="{Binding ThanhTien, StringFormat={}{0:N0}}" Width="120" FontWeight="Bold"/>
-                            <DataGridTextColumn Header="Trạng thái" Binding="{Binding TrangThai}" Width="100"/>
+
+                            <!-- ✅ NÚT XÁC NHẬN CHỈ Ở ĐÂY -->
+                            <DataGridTemplateColumn Header="Trạng thái" Width="110">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Xác Nhận" 
+                                                Click="BtnXacNhan_Click" Tag="{Binding}"
+                                                Background="#27AE60" Foreground="White" Height="28" 
+                                                BorderThickness="0" FontWeight="Bold" Cursor="Hand"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
 
                             <DataGridTemplateColumn Header="Xóa" Width="60">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Content="-" 
+                                        <Button Content="✕" 
                                                 Click="BtnXoa_Click" Tag="{Binding}"
                                                 Background="#E74C3C" Foreground="White" Height="28" Width="28" 
                                                 BorderThickness="0" FontWeight="Bold" Cursor="Hand"/>

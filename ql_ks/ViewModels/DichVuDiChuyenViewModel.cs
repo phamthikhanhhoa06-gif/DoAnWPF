@@ -4,8 +4,6 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using ql_ks.Models;
@@ -19,17 +17,12 @@ namespace ql_ks.ViewModels
         private int _maPhong = 0;
         private string _thongBao = "";
 
-        // Danh sách để hiển thị lên ComboBox điểm đến
         public ObservableCollection<CHUYENDI> DanhSachDiemDen { get; set; }
-
-        // Danh sách phòng chọn được
-        public ObservableCollection<PhongChonVM> DanhSachPhong { get; set; }
-
-        // Danh sách đơn đã tạo (chưa thanh toán)
+        public ObservableCollection<PhongChonDC_VM> DanhSachPhong { get; set; }
         public ObservableCollection<DonDiChuyenVM> DanhSachDon { get; set; }
 
         private CHUYENDI _selectedDiemDen;
-        private decimal _tongTien = 0;
+        private long _tongTien = 0;
 
         public int MaPhong
         {
@@ -43,7 +36,7 @@ namespace ql_ks.ViewModels
             set { _thongBao = value; OnPropertyChanged(); }
         }
 
-        public decimal TongTien
+        public long TongTien
         {
             get => _tongTien;
             set { _tongTien = value; OnPropertyChanged(); }
@@ -60,19 +53,17 @@ namespace ql_ks.ViewModels
             }
         }
 
-        public ICommand LapHoaDonCommand { get; }
+        public ICommand ThemDonCommand { get; }
         public ICommand LamMoiCommand { get; }
-        public ICommand ThemDonCommand { get; } // Thêm đơn mới
 
         public DichVuDiChuyenViewModel()
         {
             DanhSachDiemDen = new ObservableCollection<CHUYENDI>();
-            DanhSachPhong = new ObservableCollection<PhongChonVM>();
+            DanhSachPhong = new ObservableCollection<PhongChonDC_VM>();
             DanhSachDon = new ObservableCollection<DonDiChuyenVM>();
 
-            LapHoaDonCommand = new DiChuyen_RelayCommand(_ => LapHoaDon());
-            LamMoiCommand = new DiChuyen_RelayCommand(_ => LamMoi());
             ThemDonCommand = new DiChuyen_RelayCommand(_ => ThemDon());
+            LamMoiCommand = new DiChuyen_RelayCommand(_ => LamMoiForm());
 
             TaiDuLieu();
         }
@@ -81,20 +72,24 @@ namespace ql_ks.ViewModels
         {
             try
             {
-                // Load danh sách điểm đến từ DB (Sân bay, Ga Sài Gòn, v.v.)
+                // Load điểm đến
                 var dsDiem = _db.CHUYENDIs.OrderBy(x => x.Ma_CD).ToList();
                 DanhSachDiemDen = new ObservableCollection<CHUYENDI>(dsDiem);
+                OnPropertyChanged(nameof(DanhSachDiemDen));
 
-                // Load phòng
+                // ✅ CHỈ LẤY PHÒNG ĐANG CÓ KHÁCH
                 var dsPhong = from p in _db.PHONGs
                               join lp in _db.LOAIPHONGs on p.Ma_LP equals lp.Ma_LP
-                              select new PhongChonVM
+                              where p.TinhTrang_Phong == "Có khách"
+                              orderby p.Ma_Phong
+                              select new PhongChonDC_VM
                               {
                                   MaPhong = p.Ma_Phong,
                                   HienThi = p.Ma_Phong + " - " + (lp.Ten_TP ?? "")
                               };
 
-                DanhSachPhong = new ObservableCollection<PhongChonVM>(dsPhong.ToList());
+                DanhSachPhong = new ObservableCollection<PhongChonDC_VM>(dsPhong.ToList());
+                OnPropertyChanged(nameof(DanhSachPhong));
 
                 if (DanhSachDiemDen.Count > 0)
                     SelectedDiemDen = DanhSachDiemDen.First();
@@ -107,21 +102,22 @@ namespace ql_ks.ViewModels
             }
         }
 
+        // ========== THÊM ĐƠN VÀO DANH SÁCH TẠM ==========
         private void ThemDon()
         {
             if (_maPhong == 0)
             {
-                ThongBao = "Vui lòng nhập số phòng!";
+                ThongBao = "⚠ Vui lòng chọn phòng!";
                 return;
             }
 
             if (_selectedDiemDen == null)
             {
-                ThongBao = "Vui lòng chọn điểm đến!";
+                ThongBao = "⚠ Vui lòng chọn điểm đến!";
                 return;
             }
 
-            // Kiểm tra đã có đơn này chưa (cùng phòng + cùng điểm đến)?
+            // Nếu đã có đơn cùng phòng + cùng điểm đến → tăng số lượng
             var exist = DanhSachDon.FirstOrDefault(x => x.MaPhong == _maPhong && x.Ma_CD == SelectedDiemDen.Ma_CD);
 
             if (exist != null)
@@ -130,6 +126,7 @@ namespace ql_ks.ViewModels
             }
             else
             {
+                // ✅ Tạo object MỚI hoàn toàn, không reference chung
                 DanhSachDon.Add(new DonDiChuyenVM
                 {
                     MaPhong = _maPhong,
@@ -138,67 +135,85 @@ namespace ql_ks.ViewModels
                     DonGia_CD = SelectedDiemDen.DonGia_CD ?? 0,
                     SoLuong = 1,
                     NgayDat = DateTime.Now,
-                    TrangThai = "Chờ xử lý"
+                    TrangThai = "Chờ"
                 });
             }
 
             CapNhatTongTien();
-            ThongBao = $"Đã thêm dịch vụ đi đến: {SelectedDiemDen.DiemDen_CD} cho phòng {_maPhong}";
+            ThongBao = $"✓ Đã thêm: {SelectedDiemDen.DiemDen_CD} cho phòng {_maPhong}";
         }
 
-        private void LapHoaDon()
+        // ========== XÓA 1 ĐƠN KHỎI DANH SÁCH TẠM ==========
+        public void XoaDon(DonDiChuyenVM item)
         {
-            if (_maPhong == 0)
-            {
-                MessageBox.Show("Vui lòng chọn phòng!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
+            if (item == null) return;
+            DanhSachDon.Remove(item);
+            CapNhatTongTien();
+        }
 
-            if (DanhSachDon.Count == 0)
-            {
-                MessageBox.Show("Chưa có đơn nào!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-
+        // ========== ✅ XÁC NHẬN 1 ĐƠN → ĐẨY VỀ HÓA ĐƠN PHÒNG ==========
+        public void XacNhanDon(DonDiChuyenVM item)
+        {
+            if (item == null) return;
             try
             {
-                // Tạo CHITIET_HDDC cho từng đơn trong danh sách
-                foreach (var don in DanhSachDon)
+                using (var db = new QLKhachSan_Model())
                 {
-                    CHITIET_HDDC ct = new CHITIET_HDDC
+                    // Tìm HOADON chưa thanh toán của phòng
+                    var hoaDon = (from hd in db.HOADONs
+                                  join ctlt in db.CHITIET_HDLT on hd.MA_HD equals ctlt.MA_HD
+                                  where ctlt.Ma_Phong == item.MaPhong
+                                        && hd.TinhTrang_HD == "Chưa thanh toán"
+                                  orderby hd.MA_HD descending
+                                  select hd).FirstOrDefault();
+
+                    if (hoaDon == null)
                     {
-                        Ma_CD = don.Ma_CD,
-                        TriGia_CTHDDC = don.DonGia_CD * don.SoLuong,
-                        ThoiGianLap_CTHDDC = DateTime.Now
+                        MessageBox.Show($"Phòng {item.MaPhong} chưa có hóa đơn lưu trú!\nKhông thể xác nhận.",
+                            "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        return;
+                    }
+
+                    int maCTMoi = db.CHITIET_HDDC.Any()
+                        ? db.CHITIET_HDDC.Max(c => c.Ma_CTHDDC) + 1
+                        : 1;
+
+                    var chiTiet = new CHITIET_HDDC
+                    {
+                        Ma_CTHDDC = maCTMoi,
+                        ThoiGianLap_CTHDDC = DateTime.Now,
+                        TriGia_CTHDDC = item.ThanhTien,
+                        MA_HD = hoaDon.MA_HD,
+                        Ma_CD = item.Ma_CD
                     };
 
-                    _db.CHITIET_HDDC.Add(ct);
+                    db.CHITIET_HDDC.Add(chiTiet);
+                    hoaDon.TriGia_HD = (hoaDon.TriGia_HD ?? 0) + item.ThanhTien;
+                    db.SaveChanges();
                 }
 
-                _db.SaveChanges();
+                // Xóa đơn khỏi danh sách tạm
+                DanhSachDon.Remove(item);
+                CapNhatTongTien();
 
-                MessageBox.Show(
-                    $"Đã tạo hóa đơn di chuyển thành công!\n\n" +
-                    $"Tổng số đơn: {DanhSachDon.Count}\n" +
-                    $"Tổng tiền: {TongTien:N0} đ",
-                    "Thành công",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Information);
-
-                LamMoi();
+                ThongBao = $"✓ Đã xác nhận đẩy về hóa đơn phòng {item.MaPhong}";
+                MessageBox.Show($"Đã xác nhận dịch vụ '{item.DiemDen_CD}' cho phòng {item.MaPhong}.\n" +
+                                $"Dữ liệu đã được đẩy về hóa đơn tổng.",
+                    "Thành công", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi lưu hóa đơn di chuyển: " + ex.Message);
+                MessageBox.Show("Lỗi xác nhận đơn: " + ex.Message, "Lỗi",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        private void LamMoi()
+        // ========== LÀM MỚI - KHÔNG XÓA DANH SÁCH ĐƠN ==========
+        private void LamMoiForm()
         {
+            // ✅ CHỈ reset form nhập, KHÔNG xóa DanhSachDon
             MaPhong = 0;
-            ThongBao = "Đã làm mới dữ liệu.";
-            DanhSachDon.Clear();
-            TongTien = 0;
+            ThongBao = "Đã làm mới form. Danh sách đơn vẫn được giữ nguyên.";
 
             if (DanhSachDiemDen.Count > 0)
                 SelectedDiemDen = DanhSachDiemDen.First();
@@ -218,14 +233,13 @@ namespace ql_ks.ViewModels
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 
-    // Class hiển thị đơn tạm thời
+    // ========== CLASS ĐƠN TẠM ==========
     public class DonDiChuyenVM : INotifyPropertyChanged
     {
         private int _soLuong = 1;
@@ -251,7 +265,6 @@ namespace ql_ks.ViewModels
         public long ThanhTien => DonGia_CD * SoLuong;
 
         public event PropertyChangedEventHandler PropertyChanged;
-
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

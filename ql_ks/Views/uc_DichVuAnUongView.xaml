@@ -14,7 +14,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- HEADER -->
+        <!-- HEADER: THANH CHỌN PHÒNG -->
         <Border Grid.Row="0"
                 Background="White"
                 Padding="15"
@@ -25,33 +25,87 @@
 
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <!-- Phòng -->
-                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
-                    <TextBlock Text="Mã phòng:"
-                               FontWeight="Bold"
-                               VerticalAlignment="Center"
-                               Foreground="#333"
-                               Margin="0,0,8,0"/>
+                <!-- TRÁI: Danh sách phòng có khách -->
+                <StackPanel Grid.Column="0" VerticalAlignment="Center">
+                    <TextBlock Margin="0,0,0,8">
+                        <Run Text="Chọn phòng phục vụ "
+                             FontWeight="Bold" Foreground="#333"/>
+                        <Run Text="(chỉ phòng đang có khách) "
+                             FontSize="11" Foreground="#999"/>
+                        <Run Text="{Binding ThongTinPhong}"
+                             FontWeight="Bold" Foreground="#8E44AD"/>
+                    </TextBlock>
 
-                    <TextBox Text="{Binding MaPhong, UpdateSourceTrigger=PropertyChanged}"
-                             Width="80"
-                             Height="32"
-                             Padding="8,3,8,3"
-                             VerticalContentAlignment="Center"
-                             Background="#F9FAFB"
-                             BorderBrush="#CBD5E1"
-                             BorderThickness="1"/>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                                  VerticalScrollBarVisibility="Disabled">
+                        <ItemsControl ItemsSource="{Binding DanhSachPhong}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Width="95" Height="58"
+                                            CornerRadius="8"
+                                            Margin="4"
+                                            Cursor="Hand"
+                                            Background="{Binding ColorBackground}"
+                                            BorderThickness="2">
+
+                                        <Border.Style>
+                                            <Style TargetType="Border">
+                                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                                        <Setter Property="BorderBrush" Value="#FFD700"/>
+                                                    </DataTrigger>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter Property="BorderBrush" Value="#FFD700"/>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+
+                                        <Border.InputBindings>
+                                            <MouseBinding MouseAction="LeftClick"
+                                                Command="{Binding DataContext.ChonPhongCommand,
+                                                    RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                                CommandParameter="{Binding}"/>
+                                        </Border.InputBindings>
+
+                                        <StackPanel HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center">
+                                            <TextBlock Text="{Binding Ma_Phong}"
+                                                       FontSize="18"
+                                                       FontWeight="Bold"
+                                                       Foreground="{Binding ColorText}"
+                                                       HorizontalAlignment="Center"/>
+                                            <TextBlock Text="{Binding Ten_TP}"
+                                                       FontSize="9"
+                                                       Foreground="{Binding ColorText}"
+                                                       HorizontalAlignment="Center"
+                                                       TextTrimming="CharacterEllipsis"
+                                                       MaxWidth="88"
+                                                       Opacity="0.9"/>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
                 </StackPanel>
 
-                <!-- Tổng tiền -->
-                <StackPanel Grid.Column="2"
+                <!-- PHẢI: Tổng tiền + Gửi Đơn -->
+                <StackPanel Grid.Column="1"
                             Orientation="Horizontal"
-                            VerticalAlignment="Center">
+                            VerticalAlignment="Center"
+                            Margin="15,0,0,0">
 
                     <TextBlock FontSize="18"
                                FontWeight="Bold"

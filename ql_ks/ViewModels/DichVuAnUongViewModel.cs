@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
@@ -13,6 +15,7 @@ namespace ql_ks.ViewModels
     public class DichVuAnUongViewModel : AnUong_BaseViewModel
     {
         private readonly QLKhachSan_Model _db = new QLKhachSan_Model();
+
         private List<AnUong_HelperViewModel> _allProducts = new List<AnUong_HelperViewModel>();
 
         private ObservableCollection<AnUong_HelperViewModel> _danhSachMonAn;
@@ -58,27 +61,13 @@ namespace ql_ks.ViewModels
             {
                 if (SetProperty(ref _maPhong, value))
                 {
-                    ValidateMaPhong();
+                    if (DanhSachDaChon != null)
+                        DanhSachDaChon.Clear();
+                    CapNhatTongTien();
                 }
             }
         }
 
-        // ==== LỖI MÃ PHÒNG ====
-        private string _loiMaPhong;
-        public string LoiMaPhong
-        {
-            get => _loiMaPhong;
-            set => SetProperty(ref _loiMaPhong, value);
-        }
-
-        private bool _coLoiMaPhong;
-        public bool CoLoiMaPhong
-        {
-            get => _coLoiMaPhong;
-            set => SetProperty(ref _coLoiMaPhong, value);
-        }
-
-        // ==== TÌM KIẾM ====
         private string _tuKhoa = "";
         public string TuKhoaTimKiem
         {
@@ -90,21 +79,6 @@ namespace ql_ks.ViewModels
                     LocDanhSach(value);
                 }
             }
-        }
-
-        // ==== LỖI TÌM KIẾM ====
-        private string _loiTimKiem;
-        public string LoiTimKiem
-        {
-            get => _loiTimKiem;
-            set => SetProperty(ref _loiTimKiem, value);
-        }
-
-        private bool _coLoiTimKiem;
-        public bool CoLoiTimKiem
-        {
-            get => _coLoiTimKiem;
-            set => SetProperty(ref _coLoiTimKiem, value);
         }
 
         private decimal _tongTien = 0;
@@ -139,7 +113,6 @@ namespace ql_ks.ViewModels
 
             LoadData();
             LoadDanhSachPhong();
-            ValidateMaPhong();
         }
 
         private void LoadDanhSachPhong()
@@ -235,42 +208,6 @@ namespace ql_ks.ViewModels
             }
         }
 
-        // ==== VALIDATE MÃ PHÒNG ====
-        private void ValidateMaPhong()
-        {
-            if (MaPhong <= 0)
-            {
-                LoiMaPhong = "⚠ Vui lòng chọn phòng (bấm chọn Card phòng phía trên)!";
-                CoLoiMaPhong = true;
-                DanhSachDaChon?.Clear();
-                CapNhatTongTien();
-                return;
-            }
-
-            try
-            {
-                bool tonTai = _db.PHONGs.Any(p => p.Ma_Phong == MaPhong && p.TinhTrang_Phong == "Có khách");
-                if (!tonTai)
-                {
-                    LoiMaPhong = "⚠ Phòng đang chọn không có khách hoặc không tồn tại!";
-                    CoLoiMaPhong = true;
-                    DanhSachDaChon?.Clear();
-                    CapNhatTongTien();
-                    return;
-                }
-            }
-            catch (Exception ex)
-            {
-                LoiMaPhong = "⚠ Lỗi kiểm tra trạng thái phòng: " + ex.Message;
-                CoLoiMaPhong = true;
-                return;
-            }
-
-            LoiMaPhong = "";
-            CoLoiMaPhong = false;
-        }
-
-        // ==== LỌC DANH SÁCH MÓN ĂN ====
         private void LocDanhSach(string key)
         {
             if (_allProducts == null) return;
@@ -278,8 +215,6 @@ namespace ql_ks.ViewModels
             if (string.IsNullOrWhiteSpace(key))
             {
                 DanhSachMonAn = new ObservableCollection<AnUong_HelperViewModel>(_allProducts);
-                LoiTimKiem = "";
-                CoLoiTimKiem = false;
             }
             else
             {
@@ -288,26 +223,14 @@ namespace ql_ks.ViewModels
                     .Where(x => (x.Ten_MH ?? "").ToLower().Contains(lowerKey))
                     .ToList();
                 DanhSachMonAn = new ObservableCollection<AnUong_HelperViewModel>(res);
-
-                if (res.Count == 0)
-                {
-                    LoiTimKiem = "⚠ Không tìm thấy mặt hàng \"" + key + "\"!";
-                    CoLoiTimKiem = true;
-                }
-                else
-                {
-                    LoiTimKiem = "";
-                    CoLoiTimKiem = false;
-                }
             }
         }
 
         private void ThemVaoGioHang(object parameter)
         {
-            ValidateMaPhong();
-            if (CoLoiMaPhong)
+            if (MaPhong == 0)
             {
-                MessageBox.Show(LoiMaPhong, "Lỗi gọi món", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Vui lòng chọn phòng (bấm vào card phòng phía trên) trước khi gọi món!");
                 return;
             }
 
@@ -345,22 +268,23 @@ namespace ql_ks.ViewModels
 
         private void CapNhatTongTien()
         {
-            TongTien = DanhSachDaChon?.Sum(x => x.ThanhTien) ?? 0;
+            TongTien = DanhSachDaChon.Sum(x => x.ThanhTien);
         }
 
-        // ✅ LƯU HÓA ĐƠN ĂN UỐNG VÀO DATABASE
+        // ✅ LƯU HÓA ĐƠN ĂN UỐNG VÀO DATABASE → ĐẨY VÀO HÓA ĐƠN TỔNG
         private void LuuHoaDon()
         {
-            ValidateMaPhong();
-            if (CoLoiMaPhong)
+            if (MaPhong == 0)
             {
-                MessageBox.Show(LoiMaPhong, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Vui lòng chọn phòng phục vụ!", "Thông báo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
             if (DanhSachDaChon.Count == 0)
             {
-                MessageBox.Show("Giỏ hàng đang trống!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Giỏ hàng đang trống!", "Thông báo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
@@ -369,7 +293,8 @@ namespace ql_ks.ViewModels
                 // 1. Tìm hóa đơn chưa thanh toán của phòng
                 var hoaDon = (from hd in _db.HOADONs
                               join ct in _db.CHITIET_HDLT on hd.MA_HD equals ct.MA_HD
-                              where ct.Ma_Phong == MaPhong && hd.TinhTrang_HD == "Chưa thanh toán"
+                              where ct.Ma_Phong == MaPhong
+                                    && hd.TinhTrang_HD == "Chưa thanh toán"
                               select hd).FirstOrDefault();
 
                 if (hoaDon == null)
@@ -384,7 +309,9 @@ namespace ql_ks.ViewModels
                 int maHD = hoaDon.MA_HD;
 
                 // 2. Lưu từng món trong giỏ hàng vào CHITIET_HDAU
-                int maCTMoi = _db.CHITIET_HDAU.Any() ? _db.CHITIET_HDAU.Max(c => c.Ma_CTHDAU) + 1 : 1;
+                int maCTMoi = _db.CHITIET_HDAU.Any()
+     ? _db.CHITIET_HDAU.Max(c => c.Ma_CTHDAU) + 1
+     : 1;
 
                 foreach (var item in DanhSachDaChon)
                 {
@@ -404,7 +331,7 @@ namespace ql_ks.ViewModels
                     maCTMoi++;
                 }
 
-                // 3. Cập nhật tổng tiền hóa đơn tổng
+                // 3. Cập nhật tổng tiền hóa đơn
                 long tongAnUong = DanhSachDaChon.Sum(x => (long)(x.GiaTien * x.SoLuong));
                 long tongHienTai = hoaDon.TriGia_HD ?? 0;
                 hoaDon.TriGia_HD = tongHienTai + tongAnUong;
@@ -430,7 +357,8 @@ namespace ql_ks.ViewModels
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi lưu hóa đơn ăn uống: " + ex.Message, "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Lỗi lưu hóa đơn ăn uống: " + ex.Message, "Lỗi",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

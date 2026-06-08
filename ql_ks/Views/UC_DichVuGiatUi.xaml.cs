@@ -26,9 +26,10 @@ namespace ql_ks.Views
             DataContext = new DichVuGiatUiViewModel();
         }
 
+
         private void BtnXacNhan_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is Button btn && btn.Tag is LuotGiatDaChonVM item)
+            if (sender is Button btn && btn.DataContext is LuotGiatDaChonVM item)
             {
                 Vm?.XacNhanDon(item);
             }

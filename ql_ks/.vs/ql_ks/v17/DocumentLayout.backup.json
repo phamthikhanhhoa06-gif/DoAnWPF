@@ -3,145 +3,102 @@
   "WorkspaceRootPath": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\da_wpf_app\\doanwpf\\ql_ks\\viewmodels\\dichvugiatuiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\dichvugiatuiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\da_wpf_app\\doanwpf\\ql_ks\\views\\uc_dichvugiatui.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvugiatui.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\da_wpf_app\\doanwpf\\ql_ks\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\da_wpf_app\\doanwpf\\ql_ks\\views\\uc_dichvugiatui.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvugiatui.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\da_wpf_app\\doanwpf\\ql_ks\\models\\loaigiatui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:models\\loaigiatui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\da_wpf_app\\doanwpf\\ql_ks\\views\\uc_dichvugiatui.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvugiatui.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\da_wpf_app\\doanwpf\\ql_ks\\views\\uc_dichvudichuyen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvudichuyen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\da_wpf_app\\doanwpf\\ql_ks\\viewmodels\\dichvuanuongviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\dichvuanuongviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\da_wpf_app\\doanwpf\\ql_ks\\viewmodels\\dichvudichuyenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:viewmodels\\dichvudichuyenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\da_wpf_app\\doanwpf\\ql_ks\\views\\uc_dichvudichuyen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvudichuyen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|d:\\da_wpf_app\\doanwpf\\ql_ks\\views\\uc_dichvuanuongview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3165F016-54FD-4B6E-95EF-09DD95858C77}|ql_ks.csproj|solutionrelative:views\\uc_dichvuanuongview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
-      "VerticalTabListWidth": 100,
+      "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 215,
-          "SelectedChildIndex": 0,
+          "DockedHeight": 274,
+          "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DichVuGiatUiViewModel.cs",
-              "DocumentMoniker": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\ViewModels\\DichVuGiatUiViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\DichVuGiatUiViewModel.cs",
-              "ToolTip": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\ViewModels\\DichVuGiatUiViewModel.cs",
-              "RelativeToolTip": "ViewModels\\DichVuGiatUiViewModel.cs",
-              "ViewState": "AgIAAMQBAAAAAAAAAAAUwNgBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T18:22:22.671Z",
+              "DocumentIndex": 4,
+              "Title": "uc_DichVuAnUongView.xaml",
+              "DocumentMoniker": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\Views\\uc_DichVuAnUongView.xaml",
+              "RelativeDocumentMoniker": "Views\\uc_DichVuAnUongView.xaml",
+              "ToolTip": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\Views\\uc_DichVuAnUongView.xaml",
+              "RelativeToolTip": "Views\\uc_DichVuAnUongView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-08T06:30:32.236Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UC_DichVuGiatUi.xaml.cs",
-              "DocumentMoniker": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\Views\\UC_DichVuGiatUi.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\UC_DichVuGiatUi.xaml.cs",
-              "ToolTip": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\Views\\UC_DichVuGiatUi.xaml.cs",
-              "RelativeToolTip": "Views\\UC_DichVuGiatUi.xaml.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAswCQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T18:21:30.897Z",
+              "DocumentIndex": 0,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-06-08T06:39:50.664Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "UC_DichVuGiatUi.xaml.cs",
+              "DocumentMoniker": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\Views\\UC_DichVuGiatUi.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\UC_DichVuGiatUi.xaml.cs",
+              "ToolTip": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\Views\\UC_DichVuGiatUi.xaml.cs",
+              "RelativeToolTip": "Views\\UC_DichVuGiatUi.xaml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAADgvxwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T06:38:27.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DichVuAnUongViewModel.cs",
+              "DocumentMoniker": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\ViewModels\\DichVuAnUongViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\DichVuAnUongViewModel.cs",
+              "ToolTip": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\ViewModels\\DichVuAnUongViewModel.cs",
+              "RelativeToolTip": "ViewModels\\DichVuAnUongViewModel.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAmwIQAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T06:34:37.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "UC_DichVuGiatUi.xaml",
               "DocumentMoniker": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\Views\\UC_DichVuGiatUi.xaml",
               "RelativeDocumentMoniker": "Views\\UC_DichVuGiatUi.xaml",
               "ToolTip": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\Views\\UC_DichVuGiatUi.xaml",
               "RelativeToolTip": "Views\\UC_DichVuGiatUi.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-06-07T18:13:40.725Z",
+              "WhenOpened": "2026-06-08T06:32:27.208Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LOAIGIATUI.cs",
-              "DocumentMoniker": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\Models\\LOAIGIATUI.cs",
-              "RelativeDocumentMoniker": "Models\\LOAIGIATUI.cs",
-              "ToolTip": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\Models\\LOAIGIATUI.cs",
-              "RelativeToolTip": "Models\\LOAIGIATUI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAUwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T18:14:44.367Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UC_DichVuDiChuyen.xaml",
-              "DocumentMoniker": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\Views\\UC_DichVuDiChuyen.xaml",
-              "RelativeDocumentMoniker": "Views\\UC_DichVuDiChuyen.xaml",
-              "ToolTip": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\Views\\UC_DichVuDiChuyen.xaml",
-              "RelativeToolTip": "Views\\UC_DichVuDiChuyen.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-06-07T17:55:34.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DichVuDiChuyenViewModel.cs",
-              "DocumentMoniker": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\ViewModels\\DichVuDiChuyenViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\DichVuDiChuyenViewModel.cs",
-              "ToolTip": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\ViewModels\\DichVuDiChuyenViewModel.cs",
-              "RelativeToolTip": "ViewModels\\DichVuDiChuyenViewModel.cs",
-              "ViewState": "AgIAAPAAAAAAAAAAAAAUwBcBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T17:56:40.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UC_DichVuDiChuyen.xaml.cs",
-              "DocumentMoniker": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\Views\\UC_DichVuDiChuyen.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\UC_DichVuDiChuyen.xaml.cs",
-              "ToolTip": "D:\\DA_WPF_App\\DoAnWPF\\ql_ks\\Views\\UC_DichVuDiChuyen.xaml.cs",
-              "RelativeToolTip": "Views\\UC_DichVuDiChuyen.xaml.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwC4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T17:55:52.167Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedHeight": 155,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
